@@ -1,0 +1,61 @@
+model:
+  table_name: entity_company
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/entity_company
+  data_format: delta
+  unique_key : ["continent","jurisdiction", "id"]
+  partition_by : ["continent","jurisdiction"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+  - table_name: silver.h_company
+    format: delta
+    data_location: s3a://lakehouse-silver/h_company
+    record_source: silver.h_company
+
+# demographic
+  - table_name: silver.bridge_company_demomgraphic
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_demomgraphic
+    record_source: silver.bridge_company_demomgraphic
+
+# Address
+  - table_name: silver.s_company_address
+    format: delta
+    data_location: s3a://lakehouse-silver/s_company_address
+    record_source: silver.s_company_address
+
+# Sanction
+  - table_name: silver.h_sanction
+    format: delta
+    data_location: s3a://lakehouse-silver/h_sanction
+    record_source: silver.h_sanction
+
+  - table_name: silver.s_sanction
+    format: delta
+    data_location: s3a://lakehouse-silver/s_sanction
+    record_source: silver.s_sanction
+
+  - table_name: silver.l_sanction_company
+    format: delta
+    data_location: s3a://lakehouse-silver/l_sanction_company
+    record_source: silver.l_sanction_company
+
+# industry
+  - table_name: silver.h_industry
+    format: delta
+    data_location: s3a://lakehouse-silver/h_industry
+    record_source: silver.h_industry
+
+  - table_name: silver.l_company_industry
+    format: delta
+    data_location: s3a://lakehouse-silver/l_company_industry
+    record_source: silver.l_company_industry
+
+# bridge company_key
+  - table_name: silver.bv_bridge_company_key
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+    record_source: silver.bv_bridge_company_key

@@ -1,0 +1,12 @@
+
+model:
+  table_name: 1tm_2412.entity_have_bol
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412/entity_have_bol
+  data_format: delta
+
+input_resources:
+- table_name: 1tm_2412.entity_have_bol
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/entity_have_bol

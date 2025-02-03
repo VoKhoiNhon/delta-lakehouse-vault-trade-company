@@ -1,0 +1,60 @@
+Row 1:
+caption: Membership
+datasets: ['eu_meps']
+first_seen: 2023-04-20T11:57:14
+id: eu-meps-0008f879fc79d0184861d40acf6eaa14d72dbf8e
+last_change: 2023-04-20T11:57:14
+last_seen: 2025-01-18T02:14:03
+properties: Row(date=None, endDate=None, member=['Q85537'], modifiedAt=None, organization=['NK-4vLiLeY59bCZraMeeB94kv'], role=None, startDate=None, summary=None)
+referents: []
+schema: Membership
+target: False
+----------------------------------------
+Row 2:
+caption: Membership
+datasets: ['eu_meps']
+first_seen: 2023-04-20T11:57:14
+id: eu-meps-005d627429eae40ae76949183be0a7827ed9b26a
+last_change: 2023-04-20T11:57:14
+last_seen: 2025-01-18T02:14:03
+properties: Row(date=None, endDate=None, member=['Q110513292'], modifiedAt=None, organization=['eu-meps-pg-group-of-the-progressive-alliance-of-socialists-and-democrats-in-the-european-parliament'], role=None, startDate=None, summary=None)
+referents: []
+schema: Membership
+target: False
+----------------------------------------
+Row 3:
+caption: Membership
+datasets: ['eu_meps']
+first_seen: 2024-07-16T02:14:04
+id: eu-meps-006819cc262a84d5adb19a7d41266e63ec9ce80d
+last_change: 2024-07-16T02:14:04
+last_seen: 2025-01-18T02:14:03
+properties: Row(date=None, endDate=None, member=['eu-meps-257106'], modifiedAt=None, organization=['eu-meps-pg-group-of-the-progressive-alliance-of-socialists-and-democrats-in-the-european-parliament'], role=None, startDate=None, summary=None)
+referents: []
+schema: Membership
+target: False
+----------------------------------------
+Row 4:
+caption: Membership
+datasets: ['eu_meps']
+first_seen: 2024-07-16T02:14:04
+id: eu-meps-00b47e348ae3ebae243202ebbaca6cd2ab92a8f0
+last_change: 2024-07-16T02:14:04
+last_seen: 2025-01-18T02:14:03
+properties: Row(date=None, endDate=None, member=['eu-meps-256985'], modifiedAt=None, organization=['eu-meps-npg-democratic-rally'], role=None, startDate=None, summary=None)
+referents: []
+schema: Membership
+target: False
+----------------------------------------
+Row 5:
+caption: Membership
+datasets: ['eu_meps']
+first_seen: 2024-07-16T02:14:04
+id: eu-meps-00c29d8e4025c1597d695a37ca8eb3c102c22029
+last_change: 2024-07-16T02:14:04
+last_seen: 2025-01-18T02:14:03
+properties: Row(date=None, endDate=None, member=['Q4891277'], modifiedAt=None, organization=['eu-meps-npg-eh-bildu'], role=None, startDate=None, summary=None)
+referents: []
+schema: Membership
+target: False
+----------------------------------------

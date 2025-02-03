@@ -1,0 +1,145 @@
+model:
+  table_name: entity
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/trade_service/entity
+  unique_key: id
+  data_format: delta
+  partition_by:
+    - jurisdiction
+  columns:
+    - name: id
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isUnique
+    - name: name
+      type: string
+      nullable: true
+    - name: description
+      type: string
+      nullable: true
+    - name: lei_code
+      type: string
+      nullable: true
+    - name: country_code
+      type: string
+      nullable: false
+    - name: country_name
+      type: string
+      nullable: false
+    - name: date_incorporated
+      type: date
+      nullable: true
+    - name: date_struck_off
+      type: date
+      nullable: true
+    - name: jurisdiction
+      type: string
+      nullable: true
+    - name: legal_form
+      type: string
+      nullable: true
+    - name: category
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: phone_numbers
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: emails
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: websites
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: linkedin_url
+      type: string
+      nullable: true
+    - name: twitter_url
+      type: string
+      nullable: true
+    - name: facebook_url
+      type: string
+      nullable: true
+    - name: fax_numbers
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: other_names
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: registration_number
+      type: string
+      nullable: true
+    - name: is_person
+      type: boolean
+      nullable: false
+    - name: is_trade
+      type: boolean
+      nullable: false
+    - name: is_sanction
+      type: boolean
+      nullable: false
+
+    - name: dv_loaddts
+      type: timestamp
+      nullable: false
+
+    - name: dv_recsrc
+      nullable: false
+      type: string
+      description: dv columns
+
+    - name: dv_source_version
+      type: string
+      description: dv columns
+
+    - name: dv_hashdiff
+      type: string
+      description: dv columns
+
+    - name: created_at
+      type: timestamp
+      nullable: false
+
+    - name: updated_at
+      type: timestamp
+      nullable: false
+
+input_resources:
+  - table_name: silver.bridge_company_key
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+    record_source: silver.bridge_company_key
+
+  - table_name: silver.bridge_company_demomgraphic
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_demomgraphic
+    record_source: silver.bridge_company_demomgraphic
+
+  - table_name: silver.l_sanction_company
+    format: delta
+    data_location: s3a://lakehouse-silver/l_sanction_company
+    record_source: silver.link_sanction_company
+
+  - table_name: silver.l_bol
+    format: delta
+    data_location: s3a://lakehouse-silver/l_bol
+    record_source: silver.l_bol

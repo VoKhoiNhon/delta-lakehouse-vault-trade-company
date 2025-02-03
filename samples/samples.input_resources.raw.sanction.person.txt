@@ -1,0 +1,60 @@
+Row 1:
+caption: SANAVBARI NIKITENKO
+datasets: ['interpol_red_notices']
+first_seen: 2024-03-04T17:09:51
+id: NK-224TRezPqwzhQZ37exWxtX
+last_change: 2024-08-08T18:27:02
+last_seen: 2025-01-24T00:27:04
+properties: Row(address=None, addressEntity=None, alias=None, appearance=None, birthCountry=None, birthDate=['1992-06-28'], birthPlace=['KOFARNIKHON TOWN'], citizenship=None, country=['tj'], createdAt=None, deathDate=None, description=None, education=None, email=None, ethnicity=None, eyeColor=['OTHD'], fatherName=None, firstName=['SANAVBARI'], gender=['female'], hairColor=['OTHD'], height=['0'], icijId=None, idNumber=None, incorporationDate=None, innCode=None, keywords=None, lastName=['NIKITENKO'], legalForm=None, leiCode=None, middleName=None, modifiedAt=None, motherName=None, name=['SANAVBARI NIKITENKO'], nameSuffix=None, nationality=['ru'], notes=None, npiCode=None, ogrnCode=None, passportNumber=None, phone=None, political=None, position=None, previousName=None, program=None, publisher=None, registrationNumber=None, religion=None, secondName=None, sector=None, socialSecurityNumber=None, sourceUrl=['https://ws-public.interpol.int/notices/v1/red/2019-108810'], status=None, summary=None, taxNumber=None, title=None, topics=['wanted', 'crime'], uniqueEntityId=None, weakAlias=None, website=None, weight=['0'], wikidataId=None)
+referents: ['ruterr-2cc9fc670c1ec3f8d1664c79c5ddc9957906834f', 'interpol-red-2019-108810']
+schema: Person
+target: True
+----------------------------------------
+Row 2:
+caption: АМИНАТ РАМЗАНОВНА АХМАДОВА
+datasets: ['ext_ru_egrul']
+first_seen: 2022-01-01T00:00:00
+id: NK-226haNo7aQsb2dqa64JMQa
+last_change: 2022-01-01T00:00:00
+last_seen: 2022-01-01T00:00:00
+properties: Row(address=None, addressEntity=None, alias=None, appearance=None, birthCountry=None, birthDate=None, birthPlace=None, citizenship=None, country=['ru'], createdAt=None, deathDate=None, description=None, education=None, email=None, ethnicity=None, eyeColor=None, fatherName=['РАМЗАНОВНА'], firstName=['АМИНАТ'], gender=None, hairColor=None, height=None, icijId=None, idNumber=None, incorporationDate=None, innCode=['201400694216'], keywords=None, lastName=['АХМАДОВА'], legalForm=None, leiCode=None, middleName=None, modifiedAt=None, motherName=None, name=['АМИНАТ РАМЗАНОВНА АХМАДОВА'], nameSuffix=None, nationality=None, notes=None, npiCode=None, ogrnCode=None, passportNumber=None, phone=None, political=None, position=None, previousName=None, program=None, publisher=None, registrationNumber=None, religion=None, secondName=None, sector=None, socialSecurityNumber=None, sourceUrl=None, status=None, summary=None, taxNumber=None, title=None, topics=None, uniqueEntityId=None, weakAlias=None, website=None, weight=None, wikidataId=None)
+referents: ['ru-inn-201400694216', 'rupep-person-20968']
+schema: Person
+target: False
+----------------------------------------
+Row 3:
+caption: Michael Kuajien
+datasets: ['us_trade_csl', 'us_sam_exclusions', 'us_ofac_sdn']
+first_seen: 2023-04-20T10:27:20
+id: NK-22HtK7WrxZ2sU3rmhz6PuZ
+last_change: 2024-09-10T07:55:01
+last_seen: 2025-01-24T00:11:11
+properties: Row(address=['Nairobi', 'NAIROBI, KEN'], addressEntity=['NK-iZ7vE5zgK9BsyPaiYTFYfj'], alias=['Michael Kuajien Duer Mayok', 'MICHAEL KUAJIEN DUER MAYOK', 'MICHAEL KUAJIAN', 'Michael Kuajian'], appearance=None, birthCountry=None, birthDate=['1979-01-01'], birthPlace=None, citizenship=None, country=['ke'], createdAt=['2019-12-27'], deathDate=None, description=None, education=None, email=None, ethnicity=None, eyeColor=None, fatherName=None, firstName=['MICHAEL', 'Michael'], gender=['male'], hairColor=None, height=None, icijId=None, idNumber=None, incorporationDate=None, innCode=None, keywords=None, lastName=['Kuajien Duer Mayok', 'Kuajien', 'KUAJIEN', 'Kuajian'], legalForm=None, leiCode=None, middleName=None, modifiedAt=None, motherName=None, name=['Michael Kuajien', 'KUAJIEN, Michael', 'MICHAEL KUAJIEN'], nameSuffix=None, nationality=['ss'], notes=None, npiCode=None, ogrnCode=None, passportNumber=None, phone=None, political=None, position=None, previousName=None, program=None, publisher=None, registrationNumber=None, religion=None, secondName=None, sector=None, socialSecurityNumber=None, sourceUrl=['https://sanctionssearch.ofac.treas.gov/Details.aspx?id=28033'], status=None, summary=None, taxNumber=None, title=None, topics=['sanction'], uniqueEntityId=None, weakAlias=None, website=None, weight=None, wikidataId=None)
+referents: ['ofac-28033', 'usgsa-s4mrbcf31']
+schema: Person
+target: True
+----------------------------------------
+Row 4:
+caption: YASIN M HUSSAIN
+datasets: ['us_hhs_exclusions', 'us_md_med_exclusions']
+first_seen: 2024-05-08T21:57:02
+id: NK-22JRrAHhpxzN8wN5pP6EGo
+last_change: 2024-10-15T07:43:06
+last_seen: 2025-01-23T21:57:02
+properties: Row(address=['11646 Sun Circle Way, Columbia MD 21044', '11646 SUN CIRCLE WAY, COLUMBIA, MD 21044'], addressEntity=None, alias=None, appearance=None, birthCountry=None, birthDate=['1965-01-19'], birthPlace=None, citizenship=None, country=['us'], createdAt=None, deathDate=None, description=None, education=None, email=None, ethnicity=None, eyeColor=None, fatherName=None, firstName=['YASIN', 'Yasin M.'], gender=None, hairColor=None, height=None, icijId=None, idNumber=None, incorporationDate=None, innCode=None, keywords=None, lastName=['Hussain', 'HUSSAIN'], legalForm=None, leiCode=None, middleName=['M'], modifiedAt=None, motherName=None, name=['YASIN M HUSSAIN', 'Yasin M. Hussain'], nameSuffix=None, nationality=None, notes=None, npiCode=None, ogrnCode=None, passportNumber=None, phone=None, political=None, position=['PHARMACIST (PHARMACY)'], previousName=None, program=None, publisher=None, registrationNumber=None, religion=None, secondName=None, sector=['Individual'], socialSecurityNumber=None, sourceUrl=None, status=None, summary=None, taxNumber=None, title=None, topics=['debarment'], uniqueEntityId=None, weakAlias=None, website=None, weight=None, wikidataId=None)
+referents: ['us-medmd-2fef4ada925f5621cc3e168c57638a181a4ea33c', 'us-fed-excl-yasin-m-hussain-21044-columbia']
+schema: Person
+target: True
+----------------------------------------
+Row 5:
+caption: Chanturiia Irakli
+datasets: ['ua_nsdc_sanctions']
+first_seen: 2023-04-20T10:50:14
+id: NK-22KNpaKJL84d8wpFudvLjN
+last_change: 2024-11-13T12:22:03
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=None, addressEntity=None, alias=['CHANTURIA IRAKLI', 'CHANTURIA IRAKLII', 'Чантурія Іраклі'], appearance=None, birthCountry=None, birthDate=['1983-05-29'], birthPlace=['Грузія'], citizenship=['ua', 'ge'], country=None, createdAt=None, deathDate=None, description=None, education=None, email=None, ethnicity=None, eyeColor=None, fatherName=None, firstName=None, gender=None, hairColor=None, height=None, icijId=None, idNumber=None, incorporationDate=None, innCode=None, keywords=None, lastName=None, legalForm=None, leiCode=None, middleName=None, modifiedAt=None, motherName=None, name=['Chanturiia Irakli', 'Чантурія Іраклі'], nameSuffix=None, nationality=None, notes=None, npiCode=None, ogrnCode=None, passportNumber=None, phone=None, political=None, position=None, previousName=None, program=None, publisher=None, registrationNumber=None, religion=None, secondName=None, sector=None, socialSecurityNumber=None, sourceUrl=None, status=None, summary=None, taxNumber=None, title=None, topics=['sanction'], uniqueEntityId=None, weakAlias=None, website=None, weight=None, wikidataId=None)
+referents: ['ua-nsdc-15330-canturia-irakli', 'ua-nazk-person-14268', 'ua-nsdc-person-203-2021-3365', 'ua-nabc-person-14268-chanturia-irakli']
+schema: Person
+target: True
+----------------------------------------

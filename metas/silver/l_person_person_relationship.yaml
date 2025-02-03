@@ -1,0 +1,58 @@
+model:
+  table_name: l_person_person_relationship
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/l_person_person_relationship
+  unique_key: [from_jurisdiction, to_jurisdiction, dv_hashkey_l_person_person_relationship]
+  data_format: delta
+  partition_by:
+    - to_jurisdiction
+  options:
+    "delta.autoOptimize.optimizeWrite": "true"
+  columns:
+    - name: dv_hashkey_l_person_person_relationship
+      type: string
+      nullable: false
+      description: dv hashkey
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+    - name: dv_source_version
+      type: string
+      description: dv columns
+
+    - name: dv_hashkey_from_person
+      type: string
+      nullable: false
+      description: dv hashkey of person
+    - name: dv_hashkey_to_person
+      type: string
+      nullable: false
+      description: dv hashkey of person
+
+    - name: from_jurisdiction
+      type: string
+      nullable: false
+    - name: to_jurisdiction
+      type: string
+      nullable: false
+    - name: related_type
+      type: string
+      nullable: false
+      description: related type
+    - name: start_date
+      type: date
+    - name: end_date
+      type: date
+
+input_resources:
+
+  - table_name: 1tm_2412.entity_link_personvsperson
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/entity_link_personvsperson
+    record_source: 1tm_2412.entity_link_personvsperson
+    process_job: jobs/silver/l_person_person_relationship/l_person_person_relationship__src_1tm.py

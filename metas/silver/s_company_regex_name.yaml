@@ -1,0 +1,59 @@
+
+note: first source using new ETL
+
+model:
+  table_name: s_company_regex_name
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/s_company_regex_name
+  unique_key: ["jurisdiction", "dv_hashkey_company"]
+  data_format: delta
+  partition_by:
+  - jurisdiction
+
+  columns:
+  - name: dv_hashkey_company
+    type: string
+    nullable: false
+  - name: dv_recsrc
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_source_version
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+
+  - name: jurisdiction
+    type: string
+  - name: registration_number
+    type: string
+  - name: name
+    type: string
+  - name: pure_name
+    type: string
+  # - name: non_special_chars
+  #   type: string
+  - name: regexed_name
+    type: string
+
+  - name: pure_name_replaced_by
+    type: string
+
+
+input_resources:
+- table_name: silver.h_company
+  format: delta
+  record_source: silver.h_company
+  data_location: s3a://lakehouse-silver/h_company
+  process_job: jobs/silver/l_company_verification/s_company_regex_name.py
+  filter: "{{ filter }}"
+
+# - table_name: silver.h_company
+#   format: delta
+#   record_source: silver.h_company
+#   data_location: s3a://lakehouse-silver/h_company
+#   process_job: jobs/silver/l_company_verification/l_company_verification_by_levenshtein.py

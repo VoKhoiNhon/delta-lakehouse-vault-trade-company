@@ -1,0 +1,102 @@
+model:
+  table_name: "silver.l_sanction_person"
+  database_name: "lakehouse-silver"
+  data_location: "s3a://lakehouse-silver{{env}}/l_sanction_person"
+  unique_key: "dv_hashkey_link_sanction"
+  data_format: "delta"
+  columns:
+    - name: dv_hashkey_link_sanction
+      type: string
+      nullable: false
+      description: dv hashkey
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+    - name: dv_source_version
+      type: string
+      description: dv columns
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: dv_hashkey_person
+      type: string
+      nullable: false
+      description: dv hashkey of person
+    - name: dv_hashkey_sanction
+      type: string
+      nullable: false
+      description: dv hashkey of sanction
+
+input_resources:
+  - table_name: bronze.sanction
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/sanction
+    record_source: bronze.sanction
+    process_job: jobs/silver/l_sanction/l_sanction_person__src_1tm_2412.py
+
+  - table_name: bronze.person
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/person_unique_id
+    record_source: bronze.person
+    process_job: jobs/silver/l_sanction/l_sanction_person__src_1tm_2412.py
+
+  ##################
+  # Bronze Sanction
+  ##################
+  - table_name: "silver.s_sanction.person"
+    format: "delta"
+    data_location: "s3a://lakehouse-silver{{env}}/s_sanction"
+    record_source: "https://www.opensanctions.org/datasets/default/"
+    process_job: "jobs/silver/l_sanction/l_sanction_person__src_sanction.py"
+    dv_source_version: "gov_sanction_person;{{load_date}}"
+    filter: "source_schema = 'person'"
+  - table_name: "silver.s_sanction.company"
+    format: "delta"
+    data_location: "s3a://lakehouse-silver{{env}}/s_sanction"
+    record_source: "https://www.opensanctions.org/datasets/default/"
+    process_job: "jobs/silver/l_sanction/l_sanction_company__src_sanction.py"
+    dv_source_version: "gov_sanction_company;{{load_date}}"
+    filter: "source_schema = 'company'"
+  - table_name: "silver.h_sanction"
+    format: "delta"
+    data_location: "s3a://lakehouse-silver{{env}}/h_sanction"
+    record_source: "https://www.opensanctions.org/datasets/default/"
+    process_job: "jobs/silver/h_sanction/h_sanction__src_sanction.py"
+    dv_source_version: "gov_sanction_sanction;{{load_date}}"
+
+#################
+# Spark Resources
+#################
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"

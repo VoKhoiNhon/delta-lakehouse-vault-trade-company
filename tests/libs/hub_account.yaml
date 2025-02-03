@@ -1,0 +1,88 @@
+version: 1.0.0
+
+model:
+  table_name: hub_account
+  database_name: db_silver
+  data_location: data/test/write
+  unique_key: key
+  partition_by:
+    - dv_recsrc
+  data_format: delta
+  columns:
+    - name: key
+      type: string
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: key
+    - name: dv_hashkey_account
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: dv hashkey
+
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isContainedIn
+          params:
+            - ["b1", "a2"]
+      description: dv columns
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: account_code
+      nullable: false
+      type: string
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: business key
+
+    - name: count
+      type: integer
+      tests:
+        - check: isComplete
+        - check: hasMax
+          params:
+            - "lambda x: x == 20"
+
+input_resources:
+  - table_name: gaccount
+    format: delta
+    data_location: data/test/src_g/load_date={{load_date}}
+    record_source: source_a
+    filter: null
+    process_job: bronze.yukon.py
+
+  - table_name: laccount
+    data_location: data/test/src_l
+    format: delta
+    record_source: source_b
+    filter: null
+    process_job: bronze.yukon.py
+
+sla:
+  - streaming
+
+reconciles:
+  - sources:
+      - bronze.gaccount
+    targets:
+      - silver.hub_account
+    source_sql: select COUNT(DISTINCT id) as cnt_distinct from source_table
+    target_sql: select count(*) as cnt_distinct from target_table
+
+  - sources:
+      - bronze.sat_gaccount
+    targets:
+      - silver.hub_account
+    source_sql: select count(*) as cnt from source_table
+    target_sql: select count(*) as cnt from target_table

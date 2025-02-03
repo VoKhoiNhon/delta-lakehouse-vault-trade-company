@@ -1,0 +1,60 @@
+Row 1:
+caption: Tovarystvo z obmezhenoiu vidpovidalnistiu "Zelinskyi Hrupp"
+datasets: ['ext_ru_egrul', 'ua_nsdc_sanctions']
+first_seen: 2022-01-01T00:00:00
+id: NK-223yQP6hRaMuiALDCJ6xbY
+last_change: 2024-03-06T18:31:06
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=['УЛ. ДУБИНИНСКАЯ Д. 57 СТР. 2, МОСКВА, 115054', 'Російська Федерація, 115054, м. Москва, вул. Дубінинська, буд. 57 (будова 2, антр. 1, прим. III, кімн. 12А)'], addressEntity=None, alias=['Общество с ограниченной ответственностью "Зелинский Групп"', 'Товариство з обмеженою відповідальністю "Зелінський Групп"', 'Limited Liability Company "Zelinsky Group"'], amount=None, bikCode=None, cageCode=None, cikCode=None, classification=None, country=None, createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, giiNumber=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=['2018-04-16'], innCode=['7725491052'], jurisdiction=['ru'], keywords=None, kppCode=['772501001'], legalForm=['Общества с ограниченной ответственностью'], leiCode=None, mainCountry=None, modifiedAt=None, name=['Tovarystvo z obmezhenoiu vidpovidalnistiu "Zelinskyi Hrupp"', 'Товариство з обмеженою відповідальністю "Зелінський Групп"', 'ООО "ЗЕЛИНСКИЙ ГРУПП"'], notes=None, npiCode=None, ogrnCode=['1187746408761'], okpoCode=None, opencorporatesUrl=None, permId=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, ricCode=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=None, taxNumber=None, ticker=None, topics=['sanction'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['ua-nsdc-26979-tovaristvo-z-obmezenou-vidpovidalnistu-zelinskij-grupp', 'ru-inn-7725491052', 'ua-nazk-company-11781']
+schema: Company
+target: True
+----------------------------------------
+Row 2:
+caption: Vidkryte aktsionerne tovarystvo "Elektrostalskyi khimikomekhanichnyi zavod imeni M.D.Zelinskoho"
+datasets: ['ru_nsd_isin', 'ext_ru_egrul', 'ua_nsdc_sanctions']
+first_seen: 2022-01-01T00:00:00
+id: NK-226GXBdQ5p6NjgrTpTQNVW
+last_change: 2024-03-06T18:31:06
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=['УЛ. КАРЛА МАРКСА Д.1, Г. ЭЛЕКТРОСТАЛЬ, МОСКОВСКАЯ, 144001', 'Російська Федерація, 144001, Московська обл., м. Електросталь, вул. Карла Маркса, буд. 1'], addressEntity=None, alias=['Open Joint-Stock Company "Elektrostal ChemicalMechanical Plant named after N.D.Zelinsky"', 'Відкрите акціонерне товариство "Електростальський хімікомеханічний завод імені М.Д.Зелінського"', 'Открытое акционерное общество "Электростальский химикомеханический завод имени Н.Д.Зелинского"'], amount=None, bikCode=None, cageCode=None, cikCode=None, classification=None, country=['ru'], createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, giiNumber=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=['2002-07-18'], innCode=['5053002307'], jurisdiction=['ru'], keywords=None, kppCode=['505301001'], legalForm=['Публичные акционерные общества'], leiCode=None, mainCountry=None, modifiedAt=None, name=['Відкрите акціонерне товариство "Електростальський хімікомеханічний завод імені М.Д.Зелінського"', 'Vidkryte aktsionerne tovarystvo "Elektrostalskyi khimikomekhanichnyi zavod imeni M.D.Zelinskoho"', 'Открытое акционерное общество "Электростальский химико-механический завод имени Н.Д.Зелинского"', 'ОАО "ЭЛЕКТРОСТАЛЬСКИЙ ХИМИКО-МЕХАНИЧЕСКИЙ ЗАВОД ИМЕНИ Н.Д. ЗЕЛИНСКОГО"', 'ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭЛЕКТРОСТАЛЬСКИЙ ХИМИКО-МЕХАНИЧЕСКИЙ ЗАВОД"'], notes=None, npiCode=None, ogrnCode=['1025007108390'], okpoCode=None, opencorporatesUrl=None, permId=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, ricCode=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=None, taxNumber=None, ticker=None, topics=['sanction'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['ua-nazk-company-11783', 'ru-inn-5053002307', 'ua-nsdc-26980-vidkrite-akcionerne-tovaristvo-elektrostalskij-himikomehanicnij-zavod-imeni-m-d-zelinskogo']
+schema: Company
+target: True
+----------------------------------------
+Row 3:
+caption: Pryvatne pidpryiemstvo "Mahistar-SH"
+datasets: ['ua_nsdc_sanctions', 'ext_ua_edr']
+first_seen: 2022-02-23T00:00:00
+id: NK-228ZdYZVXaZBSBgVwapnks
+last_change: 2024-04-05T15:22:01
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=['Україна, 79034, Львівська обл., місто Львів, ВУЛИЦЯ НАВРОЦЬКОГО, будинок 33', 'Україна, 79034, м. Львів, вул. Навроцького, буд. 33.,'], addressEntity=None, alias=['Private Enterprise "Magistar-SG"', 'ПРИВАТНЕ ПІДПРИЄМСТВО "МАГІСТАР-СГ"'], amount=None, bikCode=None, cageCode=None, cikCode=None, classification=['46.13 Діяльність посередників у торгівлі деревиною, будівельними матеріалами та санітарно-технічними виробами'], country=None, createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, giiNumber=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=['ua'], keywords=None, kppCode=None, legalForm=None, leiCode=None, mainCountry=None, modifiedAt=None, name=['ПП "МАГІСТАР-СГ"', 'Pryvatne pidpryiemstvo "Mahistar-SH"', 'Приватне підприємство "Магістар-СГ"'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, permId=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=['42206417'], ricCode=None, sector=None, sourceUrl=None, status=['зареєстровано'], summary=None, swiftBic=None, taxNumber=None, ticker=None, topics=['sanction'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['oc-companies-ua-42206417', 'ua-nsdc-14826-privatne-pidpriemstvo-magistar-sg', 'ua-nazk-company-4133', 'ua-edr-42206417-ade6595049246ab53a6a6160972bef9d24493b0f', 'ua-nabc-company-4133-private-enterprise-master-sg', 'ua-nsdc-org-169-2021-269']
+schema: Company
+target: True
+----------------------------------------
+Row 4:
+caption: Aktsionerne tovarystvo "Elektroahrehat"
+datasets: ['ext_ru_egrul', 'ua_nsdc_sanctions']
+first_seen: 2022-01-01T00:00:00
+id: NK-228jBYSTdUSvbZvsKsiHh6
+last_change: 2024-03-06T18:31:06
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=['УЛ. АГРЕГАТНАЯ 2-Я Д.5А, Г. КУРСК, КУРСКАЯ, 305022', 'Російська Федерація, 305022, Курська обл., м. Курськ, вул. Агрегатна, 2-а, буд. 5А', 'Російська Федерація, 630015, Новосибірська обл., м. Новосибірськ, вул. Планетна, буд. 30'], addressEntity=None, alias=['Акционерное общество "Электроагрегат"', 'Акціонерне товариство "Електроагрегат"', 'Joint-stock company "Electroagregat"'], amount=None, bikCode=None, cageCode=None, cikCode=None, classification=None, country=None, createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, giiNumber=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=['2002-12-17'], innCode=['5401103595', '4631005223'], jurisdiction=['ru'], keywords=None, kppCode=['463201001'], legalForm=['Непубличные акционерные общества'], leiCode=None, mainCountry=None, modifiedAt=None, name=['Акціонерне товариство "Електроагрегат"', 'Aktsionerne tovarystvo "Elektroahrehat"', 'ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭЛЕКТРОАГРЕГАТ"', 'ОТКРЫТОЕ АКЦИОНЕРГОЕ ОБЩЕСТВО "ЭЛЕКТРОАГРЕГАТ"', 'АО "ЭЛЕКТРОАГРЕГАТ"'], notes=None, npiCode=None, ogrnCode=['1025400524313', '1024600965531'], okpoCode=None, opencorporatesUrl=None, permId=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, ricCode=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=None, taxNumber=None, ticker=None, topics=['sanction'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['ru-inn-4631005223', 'ua-nsdc-22640-akcionerne-tovaristvo-elektroagregat', 'ua-nsdc-22639-akcionerne-tovaristvo-elektroagregat', 'ua-nazk-company-8268']
+schema: Company
+target: True
+----------------------------------------
+Row 5:
+caption: Grupo Mecánica del Vuelo Sistemas, S.A.U.
+datasets: ['iadb_sanctions']
+first_seen: 2023-11-10T00:00:00
+id: NK-22FBSypYXKBCkX2JoWwgrk
+last_change: 2024-06-13T00:00:00
+last_seen: 2024-06-13T00:00:00
+properties: Row(address=None, addressEntity=None, alias=None, amount=None, bikCode=None, cageCode=None, cikCode=None, classification=None, country=['vn'], createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, giiNumber=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=['es'], keywords=None, kppCode=None, legalForm=None, leiCode=None, mainCountry=None, modifiedAt=None, name=['Grupo Mecánica del Vuelo Sistemas, S.A.U.'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, permId=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, ricCode=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=None, taxNumber=None, ticker=None, topics=None, uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['wbdeb-557030', 'iadb-firm-grupo-mecanica-del-vuelo-sistemas-s-a-u', 'adb-22e1865e5ba5f2e1e1ebf4c98b38b895586fbaf0', 'afdb-ee48b8adf8a68c73e940a849b196f049676e08a2', 'iadb-1685']
+schema: Company
+target: False
+----------------------------------------

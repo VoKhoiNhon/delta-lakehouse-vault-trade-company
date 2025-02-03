@@ -1,0 +1,25 @@
+model:
+  table_name: sanction
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/sanction
+  data_format: delta
+  unique_key : ["id"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": true
+
+input_resources:
+  - table_name: silver.s_sanction
+    format: delta
+    data_location: s3a://lakehouse-silver/s_sanction
+    record_source: silver.s_sanction
+
+  - table_name: silver.l_sanction_company
+    format: delta
+    data_location: s3a://lakehouse-silver/l_sanction_company
+    record_source: silver.l_sanction_company
+
+  - table_name: silver.l_sanction_person
+    format: delta
+    data_location: s3a://lakehouse-silver/l_sanction_person
+    record_source: silver.l_sanction_person

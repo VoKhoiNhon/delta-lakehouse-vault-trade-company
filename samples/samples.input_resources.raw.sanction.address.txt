@@ -1,0 +1,60 @@
+Row 1:
+caption: 9525, Cham Holding Building, Daraa Highway, Ashrafiyat Sahnaya Rif Dimashq, SYRIAN ARAB REPUBLIC
+datasets: ['eu_fsf', 'be_fod_sanctions']
+first_seen: 2023-07-26T20:01:14
+id: NK-237wefHJBnvXrDfySWnJ7u
+last_change: 2023-07-27T00:02:57
+last_seen: 2025-01-24T00:17:02
+properties: Row(city=['Ashrafiyat Sahnaya  Rif Dimashq'], country=['sy'], full=['9525, Cham Holding Building, Daraa Highway, Ashrafiyat Sahnaya Rif Dimashq, SYRIAN ARAB REPUBLIC'], postOfficeBox=['9525'], postalCode=None, region=None, remarks=None, state=None, street=['Cham Holding Building, Daraa Highway'], summary=None)
+referents: ['addr-512fd7bf61bab7b80c06b39fe91473e97e0bfc90', 'addr-8703990ed2c07c04ff4fa66d881125158f64af17', 'addr-8d8657b14c78224b72e7326bbcb62acdba6a8e26', 'addr-3f755f31b395298160edec6f626fdb023162ac91', 'addr-b4fd174dba06354b39aa39ca2a27f7fbc3d4f607']
+schema: Address
+target: False
+----------------------------------------
+Row 2:
+caption: 46 Prospekt Tekstilshchikov, 156000 Kostroma
+datasets: ['au_dfat_sanctions', 'us_ofac_sdn', 'jp_mof_sanctions']
+first_seen: 2022-03-18T01:17:44
+id: NK-23CjUzBExufV6dc7yCv9Jr
+last_change: 2023-11-02T16:38:16
+last_seen: 2025-01-24T00:38:02
+properties: Row(city=['Kostroma'], country=['ru'], full=['46 Prospekt Tekstilshchikov, Kostroma 156000, Russian Federation', '46 Prospekt Tekstilshchikov, 156000 Kostroma', '46 Prospekt Tekstilshchikov, Kostroma 156000, Russia'], postOfficeBox=None, postalCode=['156000'], region=None, remarks=None, state=None, street=['46 Prospekt Tekstilshchikov'], summary=None)
+referents: ['addr-ba43e533ec2125e23bed74a9f584afa24c5ad548', 'addr-6919ef3888df57c599b8b1eedf9164e8221abacf', 'addr-9ef61dfa13b0b26beb4778cc6f067a269d3e3f4f', 'addr-6e19e435197fa67ff31cae478884079f0ef88dc6', 'addr-bcd424c57e9ef3ef7da24b357fd26da432b786b2']
+schema: Address
+target: False
+----------------------------------------
+Row 3:
+caption: PO Box 35494, Mezza'h Vellat Sharqia'h, beside the Saudi Arabia Consulate, Damascus
+datasets: ['ch_seco_sanctions', 'us_ofac_sdn']
+first_seen: 2023-07-26T20:01:14
+id: NK-24My525T3zL49Lbe77pyek
+last_change: 2023-11-02T16:38:16
+last_seen: 2025-01-24T00:11:11
+properties: Row(city=['Damascus'], country=['sy'], full=["PO Box 35494, Mezza'h Vellat Sharqia'h, beside the Saudi Arabia Consulate, Damascus", "P.O. Box 35494, Mezza'h Vellat Sharqia'h, beside the Consulate of Saudi Arabia, Damascus, Syrian Arab Republic"], postOfficeBox=['P.O. Box 35494'], postalCode=None, region=None, remarks=None, state=None, street=["PO Box 35494, Mezza'h Vellat Sharqia'h, beside the Saudi Arabia Consulate", "Mezza'h Vellat Sharqia'h, beside the Consulate of Saudi Arabia"], summary=None)
+referents: ['addr-ea4fc9329d45d007329e385ca38e6baab274480d', 'addr-d66be9e57ff1185a2a15d244135982a93bfed327', 'addr-3b03d527412fdd547cfad2ffc5178a5a6af654b8', 'addr-82739be12579c79ac888eb802f50692686bcf7dc', 'addr-baf2d046f36baa554f43eb46d246617962e484fb']
+schema: Address
+target: False
+----------------------------------------
+Row 4:
+caption: Mir Ali, North Waziristan Agency, Federal Administered Tribal Areas, PAKISTAN
+datasets: ['eu_travel_bans', 'au_dfat_sanctions', 'be_fod_sanctions', 'ar_repet', 'eu_fsf', 'gb_hmt_sanctions', 'jp_mof_sanctions', 'un_sc_sanctions']
+first_seen: 2021-09-27T09:09:30
+id: NK-24Xsf6vXazkprXSNrkaxVU
+last_change: 2023-07-27T00:03:07
+last_seen: 2025-01-24T00:42:02
+properties: Row(city=['Mir Ali, North Waziristan Agency, Federal Administered Tribal Areas', 'North Waziristan Agency'], country=['pk'], full=['Mir Ali, North Waziristan Agency, Federal Administered Tribal Areas', 'Mir Ali, North Waziristan Agency, Pakistan', 'Mir Ali, North Waziristan Agency, Federal Administered Tribal Areas, PAKISTAN', 'Mir Ali, North Waziristan Agency, Federal Administered Tribal Areas, Pakistan'], postOfficeBox=None, postalCode=None, region=['Federal Administered Tribal Areas'], remarks=None, state=None, street=['Mir Ali'], summary=None)
+referents: ['addr-5c8ed284c1518b96ce9e2b9bc8f8599ab72631f4', 'addr-5e59309a63345f9352ec496be5c363e1311f2e9c', 'addr-05ad868fb8daa7effad33b2fcd4022a2e15eb2c8', 'addr-acfa6ed9b553e157613892094d2541d18002fcd2']
+schema: Address
+target: False
+----------------------------------------
+Row 5:
+caption: Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing 65127, Indonesia
+datasets: ['eu_travel_bans', 'au_dfat_sanctions', 'be_fod_sanctions', 'ar_repet', 'us_ofac_sdn', 'eu_fsf', 'gb_hmt_sanctions', 'ch_seco_sanctions', 'jp_mof_sanctions', 'un_sc_sanctions']
+first_seen: 2022-06-01T12:22:27
+id: NK-29qKCuGkrjgrF6tEDnpbPH
+last_change: 2024-09-11T09:48:03
+last_seen: 2025-01-24T00:42:02
+properties: Row(city=['Jodipan, Blimbing, Malang', 'Malang', 'Malang, 65127', 'Blimbing'], country=['id'], full=['Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing, Malang, 65127，Indonesia', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing, Malang', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing 65127, Indonesia', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing, Malang, 65127', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing, Malang, 65127, Indonesia', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing, Malang 65127, INDONESIA'], postOfficeBox=None, postalCode=['65127'], region=['Malang'], remarks=None, state=None, street=['Jalan Ir. H. Juanda 8/10, RT/RW 002/001', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan', 'Jalan Ir. H. Juanda 8/10, RT/RW 002/001, Jodipan, Blimbing'], summary=None)
+referents: ['addr-4333b72fe149683d3910bec3853e9c37b8f26167', 'addr-0876397122b61da61b0e305bde51fadb4a9ddd96', 'addr-861245c4459d24686502daff82cc0fa3be102732', 'addr-85e46b93ee41d85db8f46268c8cab3377aa25df4', 'addr-5837bed218f9a23b28e5d82f2f073b12807672b5', 'addr-4d04a600995fe07eeeabcf285482e8a8ff67b9fb', 'addr-7654a47f51f642a2c99336a8bc77d1d2654173fa', 'addr-e8262614aba73f66892886bc4c793c139c030afe', 'addr-cc4a402e7dce161eeff851fd8353e6664745d0ea', 'addr-0dffaec3aeff8978b804dab3ce161ec04002f03f', 'addr-90df4e264e2e76a6e55334c676fd9016947df5ca']
+schema: Address
+target: False
+----------------------------------------

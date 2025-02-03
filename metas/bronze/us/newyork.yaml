@@ -1,0 +1,20 @@
+
+note: first source using new ETL
+
+model:
+  table_name: us_newyork
+  database_name: database_name
+  data_location:  s3a://lakehouse-bronze/us_newyork
+  unique_key: id
+  data_format: delta
+
+
+input_resources:
+- table_name: raw.US.newyork
+  format: csv
+  data_location: s3a://lakehouse-raw/US/newyork/2024-06-11
+  record_source: source_
+  process_job: jobs/bronze/yukon/yukon.py
+  options:
+    inferschema: true
+    header : True

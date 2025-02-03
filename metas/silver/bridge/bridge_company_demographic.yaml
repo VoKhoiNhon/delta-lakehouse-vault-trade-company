@@ -1,0 +1,159 @@
+
+note: first source using new ETL
+
+model:
+  table_name: bridge_company_demomgraphic
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/bridge_company_demomgraphic
+  unique_key: dv_hashdiff
+  data_format: delta
+  partition_by:
+    - jurisdiction
+  columns:
+  - name: dv_hashkey_company
+    type: string
+    nullable: false
+    description: dv hashkey
+  - name: dv_recsrc
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+
+  - name: dv_hashdiff
+    nullable: false
+    type: string
+    description: dv columns
+
+  - name: dv_source_version
+    nullable: false
+    type: string
+    description: dv columns
+
+  - name: jurisdiction
+    type: string
+    nullable: false
+  - name: registration_number
+    type: string
+  - name: name
+    type: string
+    nullable: false
+  - name: pure_name
+    type: string
+    nullable: false
+
+  - name: lei_code
+    type: string
+    nullable: true
+  - name: description
+    type: string
+    nullable: true
+  - name: date_incorporated
+    type: date
+    nullable: true
+  - name: date_struck_off
+    type: date
+    nullable: true
+  - name: legal_form
+    type: string
+    nullable: true
+  - name: category
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: phone_numbers
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: emails
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: websites
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: linkedin_url
+    type: string
+    nullable: true
+  - name: twitter_url
+    type: string
+    nullable: true
+  - name: facebook_url
+    type: string
+    nullable: true
+  - name: fax_numbers
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: other_names
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: no_of_employees
+    type: integer
+    # type:
+    #   type: array
+    #   elementType: string
+    #   containsNull: true
+    # nullable: true
+  - name: image_url
+    type: string
+    nullable: true
+  - name: authorised_capital
+    type: decimal(10,0)
+    nullable: true
+  - name: paid_up_capital
+    type: decimal(10,0)
+    nullable: true
+  - name: currency_code
+    type: string
+    nullable: true
+  - name: status
+    type: string
+    nullable: true
+  - name: status_code
+    type: integer
+    nullable: true
+  - name: status_desc
+    type: string
+    nullable: true
+  - name: is_branch
+    type: boolean
+    nullable: false
+
+input_resources:
+- table_name: silver.bridge_company_key
+  format: delta
+  data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+  record_source: silver.bridge_company_key
+  process_job: jobs/silver/bridge_company_verified_reg/bridge_company_demomgraphic.py
+  filter: "{{ filter }}"
+
+- table_name: silver.s_company_demographic
+  format: delta
+  data_location: s3a://lakehouse-silver/s_company_demographic
+  record_source: silver.s_company_demographic
+  process_job: jobs/silver/bridge_company_verified_reg/bridge_company_demomgraphic.py
+  filter:  "{{ filter }}"
+
+- table_name: silver.bridge_company_verified
+  format: delta
+  data_location: s3a://lakehouse-silver/bridge_company_demomgraphic
+  record_source: silver.bridge_company_verified
+  process_job: jobs/silver/bridge_company_verified_reg/bridge_company_demomgraphic.py

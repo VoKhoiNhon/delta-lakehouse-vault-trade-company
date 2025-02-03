@@ -1,0 +1,62 @@
+
+model:
+  table_name: l_company_industry
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/l_company_industry
+  unique_key: [jurisdiction, dv_hashkey_l_c_i]
+  data_format: delta
+  partition_by:
+  - jurisdiction
+
+  columns:
+    - name: dv_hashkey_l_c_i
+      type: string
+      nullable: false
+      description: dv hashkey
+
+    - name: dv_hashkey_industry
+      type: string
+      nullable: false
+      description: dv hashkey
+
+    - name: dv_hashkey_company
+      type: string
+      nullable: false
+      description: dv hashkey
+
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: jurisdiction
+      nullable: false
+      type: string
+
+    - name: dv_source_version
+      nullable: false
+      type: string
+      description: dv columns
+
+    - name: type
+      type: boolean
+
+
+input_resources:
+
+- table_name: bronze.mexico
+  format: delta
+  data_location: s3a://lakehouse-bronze/mexico
+  record_source: https://siem.economia.gob.mx/
+  process_job: jobs/silver/lookup/lookup_company_industry.py
+
+- table_name: 1tm_2412.company_unique_id_industry
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/company_unique_id_industry
+  record_source: old data
+  process_job: jobs/silver/h_industry/h_industry__src_1tm.py

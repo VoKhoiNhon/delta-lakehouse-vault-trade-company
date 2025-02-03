@@ -1,0 +1,210 @@
+version: "3.8"
+services:
+  #############################
+  # PROCESSING
+  #############################
+  spark-master:
+    image: bitnami/spark:3.5.1-custom
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_WEBUI_PORT=8080
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_HOST=spark-master
+    ports:
+      - 8080:8080
+      - 7077:7077
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ${PROJECT_DIR:-.}/docker/spark/log4j2.properties:/opt/bitnami/spark/conf/log4j2.properties
+      - ${PROJECT_DIR:-.}:/opt/itc
+    networks:
+      - itc_networks
+    profiles:
+      - processing
+  spark-worker:
+    image: bitnami/spark:3.5.1-custom
+    ports:
+      - 8081:8081
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ${PROJECT_DIR:-.}/docker/spark/log4j2.properties:/opt/bitnami/spark/conf/log4j2.properties
+      - ${PROJECT_DIR:-.}:/opt/itc
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_WEBUI_PORT=8081
+      - SPARK_WORKER_MEMORY=${SPARK_WORKER_MEMORY:-'20G'}
+      - SPARK_WORKER_CORES=${SPARK_WORKER_CORES:-10}
+      - SPARK_EVENTLOG_ENABLED=true
+    networks:
+      - itc_networks
+    profiles:
+      - processing
+  spark-history-server:
+    image: bitnami/spark:3.5.1-custom
+    hostname: history-server
+    ports:
+      - 18080:18080
+    command: "/opt/bitnami/spark/sbin/start-history-server.sh"
+    environment:
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    depends_on:
+      - spark-master
+      - spark-worker
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ${PROJECT_DIR:-.}/docker/spark/log4j2.properties:/opt/bitnami/spark/conf/log4j2.properties
+      - spark_history_server_logs:/opt/bitnami/spark/logs
+    networks:
+      - itc_networks
+    profiles:
+      - processing
+  pyjob:
+    image: pyjob:latest
+    hostname: pyjob
+    command: "tail -f /dev/null"
+    ports:
+      - 4040:4040
+    env_file:
+      - ${PROJECT_DIR:-.}/configs/.prod.env
+    volumes:
+      - ${PROJECT_DIR:-.}:/opt/itc
+      - spark_history_server_logs:/opt/bitnami/spark/logs
+    networks:
+      - itc_networks
+    profiles:
+      - processing
+
+  #############################
+  # STORAGE
+  #############################
+  #minio:
+  #  image: minio/minio:latest
+  #  hostname: minio
+  #  ports:
+  #    - 9000:9000 # API
+  #    - 9001:9001 # WebUI
+  #  command: server --console-address ":9001" /data
+  #  environment:
+  #    - MINIO_ROOT_USER=admin
+  #    - MINIO_ROOT_PASSWORD=super_admin
+  #  volumes:
+  #    - minio_data:/data
+  #  networks:
+  #    - itc_networks
+  #  profiles:
+  #    - storage
+
+  postgres:
+    image: postgres:13
+    hostname: postgres
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=default
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+      - ${PROJECT_DIR:-.}/docker/postgres/init-multiple-dbs.sql:/docker-entrypoint-initdb.d/init-multiple-dbs.sql
+    networks:
+      - itc_networks
+    profiles:
+      - storage
+  #############################
+  # QUERY ENGINE 
+  #############################
+  hive-metastore:
+    image: hive-metastore:latest
+    hostname: hive-metastore
+    ports:
+      - 9083:9083
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/trino/conf/metastore-site.xml:/opt/apache-hive-metastore-3.0.0-bin/conf/metastore-site.xml
+      - ${PROJECT_DIR:-.}/docker/trino/conf/core-site.xml:/opt/apache-hive-metastore-3.0.0-bin/conf/core-site.xml
+      - ${PROJECT_DIR:-.}/docker/trino/conf/hive-site.xml:/opt/apache-hive-metastore-3.0.0-bin/conf/hive-site.xml
+    environment:
+      - METASTORE_DB_HOSTNAME=postgres
+      - METASTORE_TYPE=postgres
+    networks:
+      - itc_networks
+    profiles:
+      - query
+  trino-coordinator:
+    image: trinodb/trino:latest
+    hostname: trino-coordinator
+    ports:
+      - 9090:8080
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/hive.properties:/etc/trino/catalog/hive.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/bronze.properties:/etc/trino/catalog/bronze.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/silver.properties:/etc/trino/catalog/silver.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/gold.properties:/etc/trino/catalog/gold.properties
+      - ${PROJECT_DIR:-.}/docker/trino/conf:/etc/trino/conf
+      - ${PROJECT_DIR:-.}/docker/trino/coordinators_config.properties:/etc/trino/config.properties
+    environment:
+      - JVM_ARGS=-Xmx2G
+    depends_on:
+      - postgres
+    networks:
+      - itc_networks
+    profiles:
+      - query
+  trino-worker:
+    image: trinodb/trino:latest
+    volumes:
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/hive.properties:/etc/trino/catalog/hive.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/bronze.properties:/etc/trino/catalog/bronze.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/silver.properties:/etc/trino/catalog/silver.properties
+      - ${PROJECT_DIR:-.}/docker/trino/catalogs/gold.properties:/etc/trino/catalog/gold.properties
+      - ${PROJECT_DIR:-.}/docker/trino/conf:/etc/trino/conf
+      - ${PROJECT_DIR:-.}/docker/trino/worker_config.properties:/etc/trino/config.properties
+    environment:
+      - JVM_ARGS=-Xmx2G
+    depends_on:
+      - postgres
+    networks:
+      - itc_networks
+    profiles:
+      - query
+    deploy:
+      replicas: 2
+  ##########################
+  # DISTRIBUTION
+  ##########################
+  registry:
+    image: registry:latest
+    hostname: registry
+    restart: always
+    ports:
+      - 5000:5000 # API
+    networks:
+      - itc_networks
+    profiles:
+      - distribution
+
+  ##########################
+  # ANALYTICS
+  ##########################
+  jupyter-lab:
+    image: jupyter-lab:latest
+    command: "python3 -m jupyterlab --ip '0.0.0.0' --no-browser --allow-root "
+    ports:
+      - 8888:8888
+    volumes:
+      - ${PROJECT_DIR:-.}:/opt/itc
+    env_file:
+      - ${PROJECT_DIR:-.}/configs/.prod.env
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    networks:
+      - itc_networks
+    profiles:
+      - analytics
+networks:
+  itc_networks:
+    name: itc_networks
+volumes:
+  postgresql_data:
+  spark_history_server_logs:

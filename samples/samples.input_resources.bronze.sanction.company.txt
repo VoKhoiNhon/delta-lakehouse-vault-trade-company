@@ -1,0 +1,205 @@
+Row 1:
+jurisdiction: ru
+other_names: ['Общество с ограниченной ответственностью "Зелинский Групп"', 'Товариство з обмеженою відповідальністю "Зелінський Групп"', 'Limited Liability Company "Zelinsky Group"', 'Tovarystvo z obmezhenoiu vidpovidalnistiu "Zelinskyi Hrupp"', 'ООО "ЗЕЛИНСКИЙ ГРУПП"']
+address: УЛ. ДУБИНИНСКАЯ Д. 57 СТР. 2, МОСКВА, 115054
+date_struck_off: None
+date_incorporated: 2018-04-16
+inn_code: 7725491052
+lei_code: None
+kpp_code: 772501001
+ogrn_code: 1187746408761
+perm_id: None
+bik_code: None
+cage_code: None
+duns_code: None
+icij_id: None
+id_number: None
+npi_code: None
+okpo_code: None
+ric_code: None
+vat_code: None
+registration_number: None
+tax_number: None
+sector: None
+status: None
+program: None
+description: None
+notes: None
+summary: None
+sector_combined: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+main_country: None
+country: None
+company_name: Tovarystvo z obmezhenoiu vidpovidalnistiu "Zelinskyi Hrupp"
+load_date: 20250125
+country_name: ru
+description_full: 
+pure_name: tovarystvo z obmezhenoiu vidpovidalnistiu zelinskyi hrupp
+----------------------------------------
+Row 2:
+jurisdiction: ru
+other_names: ['Open Joint-Stock Company "Elektrostal ChemicalMechanical Plant named after N.D.Zelinsky"', 'Відкрите акціонерне товариство "Електростальський хімікомеханічний завод імені М.Д.Зелінського"', 'Открытое акционерное общество "Электростальский химикомеханический завод имени Н.Д.Зелинского"', 'Vidkryte aktsionerne tovarystvo "Elektrostalskyi khimikomekhanichnyi zavod imeni M.D.Zelinskoho"', 'Открытое акционерное общество "Электростальский химико-механический завод имени Н.Д.Зелинского"', 'ОАО "ЭЛЕКТРОСТАЛЬСКИЙ ХИМИКО-МЕХАНИЧЕСКИЙ ЗАВОД ИМЕНИ Н.Д. ЗЕЛИНСКОГО"', 'ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭЛЕКТРОСТАЛЬСКИЙ ХИМИКО-МЕХАНИЧЕСКИЙ ЗАВОД"']
+address: УЛ. КАРЛА МАРКСА Д.1, Г. ЭЛЕКТРОСТАЛЬ, МОСКОВСКАЯ, 144001
+date_struck_off: None
+date_incorporated: 2002-07-18
+inn_code: 5053002307
+lei_code: None
+kpp_code: 505301001
+ogrn_code: 1025007108390
+perm_id: None
+bik_code: None
+cage_code: None
+duns_code: None
+icij_id: None
+id_number: None
+npi_code: None
+okpo_code: None
+ric_code: None
+vat_code: None
+registration_number: None
+tax_number: None
+sector: None
+status: None
+program: None
+description: None
+notes: None
+summary: None
+sector_combined: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+main_country: None
+country: ru
+company_name: Vidkryte aktsionerne tovarystvo "Elektrostalskyi khimikomekhanichnyi zavod imeni M.D.Zelinskoho"
+load_date: 20250125
+country_name: ru
+description_full: 
+pure_name: vidkryte aktsionerne tovarystvo elektrostalskyi khimikomekhanichnyi zavod imeni mdzelinskoho
+----------------------------------------
+Row 3:
+jurisdiction: ua
+other_names: ['Private Enterprise "Magistar-SG"', 'ПРИВАТНЕ ПІДПРИЄМСТВО "МАГІСТАР-СГ"', 'ПП "МАГІСТАР-СГ"', 'Pryvatne pidpryiemstvo "Mahistar-SH"', 'Приватне підприємство "Магістар-СГ"']
+address: Україна, 79034, Львівська обл., місто Львів, ВУЛИЦЯ НАВРОЦЬКОГО, будинок 33
+date_struck_off: None
+date_incorporated: None
+inn_code: None
+lei_code: None
+kpp_code: None
+ogrn_code: None
+perm_id: None
+bik_code: None
+cage_code: None
+duns_code: None
+icij_id: None
+id_number: None
+npi_code: None
+okpo_code: None
+ric_code: None
+vat_code: None
+registration_number: 42206417
+tax_number: None
+sector: None
+status: зареєстровано
+program: None
+description: None
+notes: None
+summary: None
+sector_combined: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+main_country: None
+country: None
+company_name: Pryvatne pidpryiemstvo "Mahistar-SH"
+load_date: 20250125
+country_name: ua
+description_full: 
+pure_name: pryvatne pidpryiemstvo mahistarsh
+----------------------------------------
+Row 4:
+jurisdiction: ru
+other_names: ['Акционерное общество "Электроагрегат"', 'Акціонерне товариство "Електроагрегат"', 'Joint-stock company "Electroagregat"', 'Aktsionerne tovarystvo "Elektroahrehat"', 'ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭЛЕКТРОАГРЕГАТ"', 'ОТКРЫТОЕ АКЦИОНЕРГОЕ ОБЩЕСТВО "ЭЛЕКТРОАГРЕГАТ"', 'АО "ЭЛЕКТРОАГРЕГАТ"']
+address: УЛ. АГРЕГАТНАЯ 2-Я Д.5А, Г. КУРСК, КУРСКАЯ, 305022
+date_struck_off: None
+date_incorporated: 2002-12-17
+inn_code: 5401103595-4631005223
+lei_code: None
+kpp_code: 463201001
+ogrn_code: 1025400524313-1024600965531
+perm_id: None
+bik_code: None
+cage_code: None
+duns_code: None
+icij_id: None
+id_number: None
+npi_code: None
+okpo_code: None
+ric_code: None
+vat_code: None
+registration_number: None
+tax_number: None
+sector: None
+status: None
+program: None
+description: None
+notes: None
+summary: None
+sector_combined: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+main_country: None
+country: None
+company_name: Aktsionerne tovarystvo "Elektroahrehat"
+load_date: 20250125
+country_name: ru
+description_full: 
+pure_name: aktsionerne tovarystvo elektroahrehat
+----------------------------------------
+Row 5:
+jurisdiction: es
+other_names: ['Grupo Mecánica del Vuelo Sistemas, S.A.U.']
+address: None
+date_struck_off: None
+date_incorporated: None
+inn_code: None
+lei_code: None
+kpp_code: None
+ogrn_code: None
+perm_id: None
+bik_code: None
+cage_code: None
+duns_code: None
+icij_id: None
+id_number: None
+npi_code: None
+okpo_code: None
+ric_code: None
+vat_code: None
+registration_number: None
+tax_number: None
+sector: None
+status: None
+program: None
+description: None
+notes: None
+summary: None
+sector_combined: None
+is_sanctioned: None
+emails: None
+phone_numbers: None
+websites: None
+main_country: None
+country: vn
+company_name: Grupo Mecánica del Vuelo Sistemas, S.A.U.
+load_date: 20250125
+country_name: vn
+description_full: 
+pure_name: grupo mecánica del vuelo sistemas sau
+----------------------------------------

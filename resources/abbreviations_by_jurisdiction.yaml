@@ -1,0 +1,48 @@
+Pakistan:
+    - pvt
+    - smc
+    - private
+    - smc private
+    - pvt lt
+Argentina:
+    - s a
+    - s r l
+    - s a s
+Australia:
+    - pty
+    - s r l
+# ---------------------------------
+Sweden:
+    - ab
+    - aktiebolag
+    - aktiebolaget
+Denmark:
+    - aps
+"Russian Federation":
+    - общество с ограниченной ответственностью
+    - акционерное
+    - общество
+Mexico:
+    - sa
+    - rl
+    - sa c v
+France:
+    - sci
+Germany:
+    - gmbh
+    - mbh
+Norway:
+    - as
+    - ans
+Spain:
+    - s.l.
+    - s.l.u.
+Italy:
+    - s.r.l.
+Canada:
+    - ltee
+"Viet Nam":
+    - joint stock company
+    - công ty tnhh
+Indonesia:
+    - pt

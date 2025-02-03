@@ -1,0 +1,91 @@
+model:
+  table_name: s_port
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/s_port
+  unique_key: dv_hashkey_port
+  data_format: delta
+  partition_by:
+  columns:
+  - name: dv_hashkey_port
+    type: string
+    nullable: false
+    description: dv hashkey
+  - name: dv_recsrc
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+  - name: dv_status
+    nullable: false
+    type: integer
+    description: dv status
+  - name: dv_valid_from
+    nullable: false
+    type: date
+    description: dv valid from
+  - name: dv_valid_to
+    type: date
+    description: dv valid to
+  - name: dv_hashdiff
+    nullable: false
+    type: string
+    description: dv columns
+
+  - name: dv_source_version
+    nullable: false
+    type: string
+    description: dv columns
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+
+  - name: port_code
+    type: string
+  - name: port_name
+    type: string
+  - name: emails
+    type: string
+  - name: address
+    type: string
+  - name: phone_number
+    type: string
+  - name: fax_number
+    type: string
+  - name: port_type
+    type: string
+  - name: port_size
+    type: string
+  - name: website
+    type: string
+  - name: terminal
+    type: boolean
+  - name: state
+    type: string
+  - name: locode
+    type: string
+  - name: status
+    type: string
+  - name: latitude
+    type: float
+  - name: longitude
+    type: float
+  - name: country_name
+    type: string
+  - name: country_code
+    type: string
+
+input_resources:
+- table_name: bronze.us.import
+  format: delta
+  data_location: s3a://lakehouse-bronze/us_import
+  record_source: From_Tristan_11_2024
+  process_job:
+- table_name: 1tm_2412.port
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/port
+  record_source: bronze.1tm_2412
+  process_job:

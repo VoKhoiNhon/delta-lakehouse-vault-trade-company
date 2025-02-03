@@ -1,0 +1,60 @@
+Row 1:
+caption: Representative in Mozambique
+datasets: ['kp_rusi_reports']
+first_seen: 2023-08-08T13:49:31
+id: kprusi-002922087ee997dbfe8aabef77bca6cc3ed223be
+last_change: 2023-08-08T13:49:31
+last_seen: 2025-01-23T17:29:02
+properties: Row(date=None, employee=['kprusi-75a7d9d55a22bc168b4bf9b6682247f6d7df71cf'], employer=['kprusi-619e7ea6c631197f12434f8f5e8ef0bfafce1184'], endDate=None, modifiedAt=None, role=['Representative in Mozambique'], sourceUrl=None, startDate=None, summary=None)
+referents: []
+schema: Employment
+target: False
+----------------------------------------
+Row 2:
+caption: Employee/Shareholer
+datasets: ['kp_rusi_reports']
+first_seen: 2023-08-08T13:49:31
+id: kprusi-005e6976fd6376931e71611d22f215518c2065b1
+last_change: 2023-08-08T13:49:31
+last_seen: 2025-01-23T17:29:02
+properties: Row(date=None, employee=['NK-eDZ9hhHzZbUC8aozFC6eMK'], employer=['kprusi-d90489a3d7d2729702b5e1f9991a533cc5a0c8fe'], endDate=None, modifiedAt=None, role=['Employee/Shareholer'], sourceUrl=None, startDate=None, summary=None)
+referents: []
+schema: Employment
+target: False
+----------------------------------------
+Row 3:
+caption: Representative based in Dandong, China
+datasets: ['kp_rusi_reports']
+first_seen: 2023-08-08T13:49:31
+id: kprusi-00af0df397a8451b783f9a28c56e40153077bbef
+last_change: 2023-08-08T13:49:31
+last_seen: 2025-01-23T17:29:02
+properties: Row(date=None, employee=['kprusi-1a850b1e4053d3e1424b9737e63b67c54cdfb481'], employer=['NK-gvnfXiktwGwVuqDRMUbRBJ'], endDate=None, modifiedAt=None, role=['Representative based in Dandong, China'], sourceUrl=None, startDate=None, summary=None)
+referents: []
+schema: Employment
+target: False
+----------------------------------------
+Row 4:
+caption: Legal representative
+datasets: ['kp_rusi_reports']
+first_seen: 2024-05-02T17:29:01
+id: kprusi-00d5cd4adcebb4a98ef46091d5f63114438ff286
+last_change: 2024-05-02T17:29:01
+last_seen: 2025-01-23T17:29:02
+properties: Row(date=None, employee=['kprusi-0acff380c96ad5f120580ea7415ba74b3ed791cb'], employer=['kprusi-80825fa5817b398de7beb33bf58799baec1ca69e'], endDate=None, modifiedAt=None, role=['Legal representative'], sourceUrl=None, startDate=None, summary=None)
+referents: []
+schema: Employment
+target: False
+----------------------------------------
+Row 5:
+caption: Director and shareholder
+datasets: ['kp_rusi_reports']
+first_seen: 2023-08-08T13:49:31
+id: kprusi-00dfee40a989161ffdfd7fea43d9c281cb617a14
+last_change: 2023-08-08T13:49:31
+last_seen: 2025-01-23T17:29:02
+properties: Row(date=None, employee=['kprusi-2108d45822c43ba1b0590e97c31ea979d6469867'], employer=['kprusi-8cbdf690fbae34b9d3b7b3a2356aa65f86e3bc95'], endDate=None, modifiedAt=None, role=['Director and shareholder'], sourceUrl=None, startDate=None, summary=None)
+referents: []
+schema: Employment
+target: False
+----------------------------------------

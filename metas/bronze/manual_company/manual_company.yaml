@@ -1,0 +1,28 @@
+model:
+  table_name: manual_company
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/manual/company"
+  unique_key: key
+  partition_by: ["load_date"]
+  data_format: delta
+  load_date    : "20241226"
+  options:
+    mergeSchema: true
+
+input_resources:
+- table_name: raw_manual_company
+  format: csv
+  data_location: "s3a://lakehouse-raw/manual/company/company-20241226/data/*.csv"
+  load_date    : "20241226"
+  record_source: jobs/bronze/manual_company/manual_company.py
+  filter:
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"
+

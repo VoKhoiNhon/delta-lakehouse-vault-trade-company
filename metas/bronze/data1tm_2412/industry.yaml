@@ -1,0 +1,27 @@
+
+note: 1tm_2412
+
+model:
+  table_name: 1tm_2412.industry
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412/industry
+  options:
+    "delta.autoOptimize.optimizeWrite": "true"
+
+
+input_resources:
+- table_name: 1tm_2412.industry
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/industry
+
+- table_name: bronze.company
+  record_source: bronze
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/company
+
+- table_name: 1tm_2412.company_industry
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/company_industry
+

@@ -1,0 +1,40 @@
+model:
+  table_name: company_industry
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/company_industry
+  unique_key: id
+  data_format: delta
+  columns:
+  - name: id
+    type: string
+    nullable: false
+    tests:
+      - check: isComplete
+      - check: isUnique
+  - name: company_id
+    type: string
+    nullable: true
+  - name: industry_id
+    type: string
+    nullable: true
+  - name: type
+    type: boolean
+    nullable: true
+  - name: created_at
+    type: timestamp
+    nullable: false
+  - name: updated_at
+    type: timestamp
+    nullable: false
+
+input_resources:
+
+- table_name: silver.bridge_company_key
+  format: delta
+  data_location: s3a://lakehouse-silver/bridge_company_key
+  record_source: silver.bridge_company_key
+
+- table_name: silver.link_company_industry
+  format: delta
+  data_location: s3a://lakehouse-silver/link_company_industry
+  record_source: silver.link_company_industry

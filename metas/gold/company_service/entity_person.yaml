@@ -1,0 +1,45 @@
+model:
+  table_name: entity_person
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/entity_person
+  data_format: delta
+  unique_key : ["continent","jurisdiction", "id"]
+  partition_by : ["continent","jurisdiction"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+
+  - table_name: silver.h_person
+    format: delta
+    data_location: s3a://lakehouse-silver/h_person
+    record_source: silver.h_person
+
+# demographic
+  - table_name: silver.s_person_demographic
+    format: delta
+    data_location: s3a://lakehouse-silver/s_person_demographic
+    record_source: silver.s_person_demographic
+
+# Address
+  - table_name: silver.s_person_address
+    format: delta
+    data_location: s3a://lakehouse-silver/s_person_address
+    record_source: silver.s_person_address
+
+# Sanction
+  - table_name: silver.h_sanction
+    format: delta
+    data_location: s3a://lakehouse-silver/h_sanction
+    record_source: silver.h_sanction
+
+  - table_name: silver.s_sanction
+    format: delta
+    data_location: s3a://lakehouse-silver/s_sanction
+    record_source: silver.s_sanction
+
+  - table_name: silver.l_sanction_person
+    format: delta
+    data_location: s3a://lakehouse-silver/l_sanction_person
+    record_source: silver.l_sanction_person

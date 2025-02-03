@@ -1,0 +1,43 @@
+model:
+  table_name: entity_link
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/entity_link
+  data_format: delta
+  unique_key : ["continent", "to_jurisdiction", id]
+  partition_by : ["continent","to_jurisdiction"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+
+  - table_name: gold.entity_company
+    format: delta
+    data_location: s3a://lakehouse-gold/company_service/entity_company
+    record_source: gold.entity_company
+
+  - table_name: gold.entity_person
+    format: delta
+    data_location: s3a://lakehouse-gold/company_service/entity_person
+    record_source: gold.entity_person
+
+  - table_name: silver.l_company_company_relationship
+    format: delta
+    data_location: s3a://lakehouse-silver/l_company_company_relationship
+    record_source: silver.l_company_company_relationship
+
+  - table_name: silver.l_person_company_relationship
+    format: delta
+    data_location: s3a://lakehouse-silver/l_person_company_relationship
+    record_source: silver.l_person_company_relationship
+
+  - table_name: silver.l_person_person_relationship
+    format: delta
+    data_location: s3a://lakehouse-silver/l_person_person_relationship
+    record_source: silver.l_person_person_relationship
+
+# bridge company_key
+  - table_name: silver.bv_bridge_company_key
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+    record_source: silver.bv_bridge_company_key

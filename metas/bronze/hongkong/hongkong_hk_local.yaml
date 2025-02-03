@@ -1,0 +1,35 @@
+model:
+  table_name: hongkong_company_src_local
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/hongkong/company/hk_local"
+  partition_by: ["load_date"]
+  unique_key: registration_number
+  data_format: delta
+  # columns:
+  # - name: registration_number
+  #   type: string
+  # - name: corporate_name
+  #   type: string
+  # - name: regist_date
+  #   type: string
+  # - name: company_type
+  #   type: string
+  # - name: address
+  #   type: string
+  # - name: load_date
+  #   type: date
+  load_date: "20241129"
+  options:
+    mergeSchema: true
+
+input_resources:
+- table_name: raw_hongkong3
+  format: json
+  data_location: "s3a://lakehouse-raw/hongkong/company-{load_date}/hk_local/data/*.json"
+  record_source: "https://data.cr.gov.hk/searchResultLocal?lang=en"
+  process_job: jobs/bronze/hongkong/hongkong_hk_local.py
+  load_date: "20241129"
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"

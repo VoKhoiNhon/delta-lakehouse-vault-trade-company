@@ -1,0 +1,70 @@
+model:
+  table_name: kentucky
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/kentucky/company
+  partition_by: ["load_date"]
+  unique_key: name
+  data_format: delta
+  columns:
+    - name: dv_hashkey_
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: dv hashkey
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+      description: dv columns
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: full_name
+      type: string
+      nullable: true
+    - name: full_address
+      type: string
+      nullable: true
+    - name: position
+      type: string
+      nullable: true
+    - name: type
+      type: integer
+      nullable: true
+    - name: position_code
+      type: integer
+      nullable: true
+    - name: registration_number
+      type: string
+      nullable: true
+    - name: name
+      type: string
+      nullable: true
+
+    - name: load_date
+      type: date
+    - name: jurisdiction
+      type: string
+    - name: country_name
+      type: string
+    - name: country_code
+      type: string
+    - name: is_person
+      type: boolean
+
+input_resources:
+  - table_name: raw_kentucky
+    format: csv
+    data_location: "s3a://lakehouse-raw/kentucky/company-{{20240904}}/data"
+    record_source: "https://web.sos.ky.gov/BusSearchNProfile/search.aspx"
+    options:
+      header: True
+      sep: ","
+      quote: '"'
+      escape: '"'
+      multiline: True

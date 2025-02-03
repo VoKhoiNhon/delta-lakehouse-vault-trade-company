@@ -1,0 +1,26 @@
+model:
+  table_name: address
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/address
+  data_format: delta
+  unique_key : ["id"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": true
+
+input_resources:
+  - table_name: silver.s_company_address
+    format: delta
+    data_location: s3a://lakehouse-silver/s_company_address
+    record_source: silver.s_company_address
+
+  - table_name: silver.s_person_address
+    format: delta
+    data_location: s3a://lakehouse-silver/s_person_address
+    record_source: silver.s_person_address
+
+  # bridge company_key
+  - table_name: silver.bridge_company_key
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+    record_source: silver.bridge_company_key

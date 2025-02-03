@@ -1,0 +1,75 @@
+
+note: first source using new ETL
+
+model:
+  table_name: l_company_verification
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/l_company_verification
+  unique_key: ["jurisdiction", "dv_hashkey_company"]
+  data_format: delta
+  partition_by:
+  - jurisdiction
+
+  columns:
+  - name: dv_hashkey_verification
+    type: string
+    nullable: false
+    description: concat_ws(':', dv_hashkey_company, verified_dv_hashkey_company)
+
+  - name: dv_hashkey_company
+    type: string
+    nullable: false
+  - name: dv_recsrc
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_source_version
+    type: string
+    nullable: false
+    description: dv columns
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+
+  - name: jurisdiction
+    type: string
+
+  - name: name
+    type: string
+  - name: pure_name
+    type: string
+  - name: regexed_name
+    type: string
+  - name: verified_registration_number
+    type: string
+  - name: verified_dv_hashkey_company
+    type: string
+  - name: verified_recsrc
+    type: string
+  - name: verified_name
+    type: string
+  - name: verified_pure_name
+    type: string
+  - name: verified_regexed_name
+    type: string
+  - name: distance
+    type: integer
+  - name: similarity_percentage
+    type: double
+  - name: verify_method
+    type: string
+
+input_resources:
+- table_name: silver.s_company_regex_name
+  format: delta
+  record_source: silver.s_company_regex_name
+  data_location: s3a://lakehouse-silver/s_company_regex_name
+  process_job: jobs/silver/l_company_verification/l_company_verification_by_regex_name.py
+
+- table_name: silver.h_company
+  format: delta
+  record_source: silver.h_company
+  data_location: s3a://lakehouse-silver/h_company
+  process_job: jobs/silver/l_company_verification/l_company_verification_by_levenshtein.py
+  filter: "{{ filter }}"

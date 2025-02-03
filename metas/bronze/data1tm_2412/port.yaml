@@ -1,0 +1,13 @@
+note: first source using new ETL
+
+model:
+  table_name: 1tm_2412.port
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412.port
+  data_format: delta
+
+input_resources:
+- table_name: 1tm_2412.port
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412.port

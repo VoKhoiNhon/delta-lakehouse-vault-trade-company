@@ -1,0 +1,175 @@
+Row 1:
+amount: 7381
+assessed_unit_price_in_fc: 10.2459858039216
+assessed_value_in_bdt: 1571541.32
+be_date: 2024-07-25
+be_no: 671728
+bill_id: -296392707
+billid: 296392707
+bol_number: N/A
+buyer: New Hope Farms Bangladesh Ltd.
+customs_office_code: 101 - Custom House, Dhaka
+date: 2024-08-01
+declared_unit_price_in_fc: 5.78901960784314
+descript: ROSS 308 BROILER BREEDER PARENT STOCK DAY-OLD MALE CHICKS
+exchange_rate: 117.94
+foreign_currency: USD
+g_weight_in_kg: 147
+hs: 01051110
+hs_codd_desc: Fowls Of The Species Gallus Domestic(Parent Stock One Day Chick)
+importer_address: Village-Mamarishpur, PO-Mollikbari,
+importer_id: 002683647-0103
+manifest_no: N/A
+n_weight_in_kg: 36
+origin_country: MY
+quantity: 1275
+seller: LEONG HUP AGRO BUSINESS SDN MALAYSI
+total_customs_duties_cd_rd_sd_vat_fp_tk: 0
+type: IM-4
+type_of_package: N/A
+unit_of_quantity: N/A
+raw: 1
+name: LEONG HUP AGRO BUSINESS SDN MALAYSI
+load_date: 20241217
+pure_name: leong hup agro business sdn malaysi
+----------------------------------------
+Row 2:
+amount: 1969
+assessed_unit_price_in_fc: 10.1924705882353
+assessed_value_in_bdt: 416888.28
+be_date: 2024-07-25
+be_no: 671728
+bill_id: -296392708
+billid: 296392708
+bol_number: N/A
+buyer: New Hope Farms Bangladesh Ltd.
+customs_office_code: 101 - Custom House, Dhaka
+date: 2024-08-01
+declared_unit_price_in_fc: 5.79117647058824
+descript: ROSE 308 PARENT STOCK 4% LOSS TRANSPORTATION
+exchange_rate: 117.94
+foreign_currency: USD
+g_weight_in_kg: 59
+hs: 01051110
+hs_codd_desc: Fowls Of The Species Gallus Domestic(Parent Stock One Day Chick)
+importer_address: Village-Mamarishpur, PO-Mollikbari,
+importer_id: 002683647-0103
+manifest_no: N/A
+n_weight_in_kg: 10
+origin_country: MY
+quantity: 340
+seller: LEONG HUP AGRO BUSINESS SDN MALAYSI
+total_customs_duties_cd_rd_sd_vat_fp_tk: 0
+type: IM-4
+type_of_package: N/A
+unit_of_quantity: N/A
+raw: 1
+name: LEONG HUP AGRO BUSINESS SDN MALAYSI
+load_date: 20241217
+pure_name: leong hup agro business sdn malaysi
+----------------------------------------
+Row 3:
+amount: 43350
+assessed_unit_price_in_fc: 10.2
+assessed_value_in_bdt: 10429924.84
+be_date: 2024-07-25
+be_no: 671776
+bill_id: -296392709
+billid: 296392709
+bol_number: N/A
+buyer: New Hope Farms Bangladesh Ltd.
+customs_office_code: 101 - Custom House, Dhaka
+date: 2024-08-01
+declared_unit_price_in_fc: 5.1
+descript: ROSS 308 BROILER BREEDER PARENT STOCK DAY-OLD FEMALE CHICKS
+exchange_rate: 117.94
+foreign_currency: USD
+g_weight_in_kg: 344
+hs: 01051110
+hs_codd_desc: Fowls Of The Species Gallus Domestic(Parent Stock One Day Chick)
+importer_address: Village-Mamarishpur, PO-Mollikbari,
+importer_id: 002683647-0103
+manifest_no: N/A
+n_weight_in_kg: 244
+origin_country: MY
+quantity: 8500
+seller: LEONG HUP AGRO BUSINESS SDN MALAYSI
+total_customs_duties_cd_rd_sd_vat_fp_tk: 0
+type: IM-4
+type_of_package: N/A
+unit_of_quantity: N/A
+raw: 1
+name: LEONG HUP AGRO BUSINESS SDN MALAYSI
+load_date: 20241217
+pure_name: leong hup agro business sdn malaysi
+----------------------------------------
+Row 4:
+amount: 7381
+assessed_unit_price_in_fc: 10.1886745098039
+assessed_value_in_bdt: 1562750.85
+be_date: 2024-07-25
+be_no: 671776
+bill_id: -296392710
+billid: 296392710
+bol_number: N/A
+buyer: New Hope Farms Bangladesh Ltd.
+customs_office_code: 101 - Custom House, Dhaka
+date: 2024-08-01
+declared_unit_price_in_fc: 5.78901960784314
+descript: ROSS 308 BROILER BREEDER PARENT STOCK DAY-OLD MALE CHICKS
+exchange_rate: 117.94
+foreign_currency: USD
+g_weight_in_kg: 147
+hs: 01051110
+hs_codd_desc: Fowls Of The Species Gallus Domestic(Parent Stock One Day Chick)
+importer_address: Village-Mamarishpur, PO-Mollikbari,
+importer_id: 002683647-0103
+manifest_no: N/A
+n_weight_in_kg: 36
+origin_country: MY
+quantity: 1275
+seller: LEONG HUP AGRO BUSINESS SDN MALAYSI
+total_customs_duties_cd_rd_sd_vat_fp_tk: 0
+type: IM-4
+type_of_package: N/A
+unit_of_quantity: N/A
+raw: 1
+name: LEONG HUP AGRO BUSINESS SDN MALAYSI
+load_date: 20241217
+pure_name: leong hup agro business sdn malaysi
+----------------------------------------
+Row 5:
+amount: 1969
+assessed_unit_price_in_fc: 10.1924705882353
+assessed_value_in_bdt: 416888.28
+be_date: 2024-07-25
+be_no: 671776
+bill_id: -296392711
+billid: 296392711
+bol_number: N/A
+buyer: New Hope Farms Bangladesh Ltd.
+customs_office_code: 101 - Custom House, Dhaka
+date: 2024-08-01
+declared_unit_price_in_fc: 5.79117647058824
+descript: ROSE 308 PARENT STOCK 4% LOSS TRANSPORTATION
+exchange_rate: 117.94
+foreign_currency: USD
+g_weight_in_kg: 59
+hs: 01051110
+hs_codd_desc: Fowls Of The Species Gallus Domestic(Parent Stock One Day Chick)
+importer_address: Village-Mamarishpur, PO-Mollikbari,
+importer_id: 002683647-0103
+manifest_no: N/A
+n_weight_in_kg: 10
+origin_country: MY
+quantity: 340
+seller: LEONG HUP AGRO BUSINESS SDN MALAYSI
+total_customs_duties_cd_rd_sd_vat_fp_tk: 0
+type: IM-4
+type_of_package: N/A
+unit_of_quantity: N/A
+raw: 1
+name: LEONG HUP AGRO BUSINESS SDN MALAYSI
+load_date: 20241217
+pure_name: leong hup agro business sdn malaysi
+----------------------------------------

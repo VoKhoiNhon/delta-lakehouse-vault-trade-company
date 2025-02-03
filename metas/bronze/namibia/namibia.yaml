@@ -1,0 +1,37 @@
+model:
+  table_name: namibia
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/namibia/company
+  partition_by: ["load_date"]
+  unique_key: Name
+  data_format: delta
+  load_date: "20241128"
+  options:
+    mergeSchema: true
+  # columns:
+  # - name: "registration_no"
+  #   type: integer
+  # - name: "company_name"
+  #   type: string
+  # - name: "date_registered"
+  #   type: string
+  # - name: "status"
+  #   type: string
+  # - name: "bo_status"
+  #   type: string
+  # - name: "load_date"
+  #   type: date
+input_resources:
+  - table_name   : raw_namibia
+    format       : csv
+    data_location: s3a://lakehouse-raw/namibia/company-{load_date}/data
+    record_source: https://www.bipa.na/search/?doing_wp_cron=1729129294.6139109134674072265625
+    process_job  : jobs/bronze/namibia/namibia.py
+    options:
+      header: true
+    load_date: "20241128"
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"
+

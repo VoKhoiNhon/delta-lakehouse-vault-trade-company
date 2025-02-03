@@ -1,0 +1,80 @@
+model:
+  table_name: l_company_company_relationship
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/l_company_company_relationship
+  unique_key: [from_jurisdiction, to_jurisdiction, dv_hashkey_l_company_company_relationship]
+  data_format: delta
+  partition_by:
+  - to_jurisdiction
+  options:
+    "delta.autoOptimize.optimizeWrite": "true"
+
+  columns:
+    - name: dv_hashkey_l_company_company_relationship
+      type: string
+      nullable: false
+      description: dv hashkey
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: dv_source_version
+      type: string
+      description: dv columns
+
+    - name: dv_hashkey_from_company
+      type: string
+      nullable: false
+      description: dv hashkey of company
+
+    - name: dv_hashkey_to_company
+      type: string
+      nullable: false
+      description: dv hashkey of company
+
+    - name: from_jurisdiction
+      type: string
+      nullable: false
+    - name: to_jurisdiction
+      type: string
+      nullable: false
+
+    - name: position
+      type: string
+      nullable: false
+      description: position
+
+    - name: position_code
+      type: integer
+      nullable: false
+      description: position code
+
+    - name: start_date
+      type: date
+    - name: end_date
+      type: date
+
+
+input_resources:
+  - table_name: 1tm_2412.entity_link_compvscomp
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/entity_link_compvscomp
+    record_source: 1tm_2412.entity_link_compvscomp
+    process_job: jobs/silver/l_company_company_relationship/l_company_company_relationship__src_1tm.py
+
+  - table_name: 2tm.l_company_company_relationship
+    format: delta
+    data_location: s3a://lakehouse-silver/secondtime/l_company_company_relationship_2
+    record_source: 2tm.l_company_company_relationship
+    process_job: jobs/silver/l_company_company_relationship/l_company_company_relationship__src_2tm.py
+
+  # - table_name: bronze.kentucky
+  #   format: delta
+  #   data_location: s3a://lakehouse-bronze/kentucky/company
+  #   record_source: https://web.sos.ky.gov/BusSearchNProfile/search.aspx
+  #   process_job: jobs/silver/l_company_company_relationship__src_kentucky.py

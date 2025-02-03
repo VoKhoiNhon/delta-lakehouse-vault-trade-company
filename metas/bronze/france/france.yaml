@@ -1,0 +1,27 @@
+
+note: first source using new ETL
+
+model:
+  table_name   : france
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/france/company"
+  partition_by : ["load_date"]
+  unique_key   : entity_name
+  data_format  : delta
+  load_date: "20240903"
+  options:
+    mergeSchema: true
+input_resources:
+  - table_name   : raw_france
+    format       : json
+    data_location: "s3a://lakehouse-raw/france/company-{load_date}/data/stock_*.json"
+    record_source: "offical"
+    process_job  : jobs/bronze/france.py
+    options:
+      multiline          : true
+      inferschema        : true
+    load_date: "20240903"
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"

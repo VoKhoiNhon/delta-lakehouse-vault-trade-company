@@ -1,0 +1,19 @@
+
+note: 1tm_2412
+
+model:
+  table_name: bronze.sanction
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412/sanction
+  data_format: delta
+  load_date: "20241219"
+  options:
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+- table_name: 1tm_2412.sanction
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/sanction
+  process_job: jobs/bronze/1tm_2412/sanction.py
+  load_date    : "20241219"

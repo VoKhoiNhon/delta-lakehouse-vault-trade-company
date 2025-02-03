@@ -1,0 +1,37 @@
+model:
+  table_name: port
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/port"
+  unique_key: port_code
+  data_format: delta
+  partition_by: ["load_date"]
+  load_date: "{{load_date}}"
+  env: "{{ env }}"
+
+
+input_resources:
+  - table_name   : raw.world_port
+    format       : com.crealytics.spark.excel
+    data_location: "s3a://lakehouse-raw/port/world_port.xlsx"
+    record_source: "https://ndclibrary.sec.usace.army.mil/searchResults?series=Schedule%20K%20Foreign%20Port%20Codes"
+    process_job  : jobs/bronze/port/port.py
+    options:
+      header: "true"
+      sheetName: "All Current Schedule K Codes"
+
+  - table_name   : raw.us_port
+    format       : csv
+    data_location: "s3a://lakehouse-raw/port/US_port.csv"
+    record_source: "https://www.cbp.gov/sites/default/files/assets/documents/2020-Jan/ACE%20Appendix%20E%20Schedule%20D%20January%202020%20%281%29.pdf"
+    process_job  : jobs/bronze/port/port.py
+    options:
+      header: "true"
+
+  - table_name   : raw.jurisdiction
+    format       : csv
+    data_location: resources/jurisdiction.csv
+    record_source: "resources/jurisdiction.csv"
+    process_job  : jobs/bronze/port/port.py
+    options:
+      header: "true"
+

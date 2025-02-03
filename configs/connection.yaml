@@ -1,0 +1,34 @@
+# Connection for DB/Storage
+trino:
+  host    : "trino"
+  port    : "8080"
+  user    : "admin"
+  password : None
+  catalog : "hive"
+  schema  : "datalake"
+  url     : "jdbc:trino://trino:8080/hive"
+
+s3:
+  region_name : "fra2"
+
+spark:
+  spark.app.name                       : "default"
+  spark.local.dir                      : "/data/nfs"
+  spark.jars.packages                  : "io.delta:delta-spark_2.12:3.1.0,org.elasticsearch:elasticsearch-spark-30_2.12:8.12.2,org.apache.hadoop:hadoop-aws:3.3.1,com.crealytics:spark-excel_2.12:0.14.0"
+  spark.sql.extensions                 : "io.delta.sql.DeltaSparkSessionExtension"
+  spark.sql.catalog.spark_catalog      : "org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  spark.hadoop.fs.s3a.path.style.access: "true"
+  spark.driver.memory                  : "12g"
+  spark.executor.memory                : "18g"
+  spark.executor.cores                 : "8"
+  spark.dynamicAllocation.enabled      : "true"
+  spark.dynamicAllocation.minExecutors : "1"
+  spark.dynamicAllocation.maxExecutors : "8"
+  spark.sql.autoBroadcastJoinThreshold : "100MB"
+  spark.sql.shuffle.partitions         : "50"
+  spark.eventLog.enabled               : "true"
+  spark.eventLog.dir                   : "/opt/bitnami/spark/logs"
+  spark.history.fs.logDirectory        : "/opt/bitnami/spark/logs"
+  spark.sql.parquet.datetimeRebaseModeInWrite: "LEGACY"
+  spark.sql.parquet.datetimeRebaseModeInRead: "LEGACY"
+  spark.sql.legacy.timeParserPolicy: "LEGACY"

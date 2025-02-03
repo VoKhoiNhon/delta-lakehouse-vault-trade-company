@@ -1,0 +1,27 @@
+note: Newfoundland & Labrador
+# Example run:
+# python3 jobs/bronze/newfoundland_and_labrador/newfoundland_and_labrador_company_person.py
+# --payload '{"load_date":"20250110", "env":"/test_on_s3"}'
+model:
+  table_name: newfoundland_and_labrador
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze{{ env }}/canada/newfoundland_and_labrador/company_person"
+  partition_by: ["load_date"]
+  unique_key: company_name
+  data_format: delta
+  load_date: "{{ load_date }}"
+  options:
+    mergeSchema: true
+input_resources:
+  - table_name: raw_newfoundland_and_labrador_company
+    format: json
+    data_location: "s3a://lakehouse-raw/newfoundland_and_labrador/company-{{ load_date }}/data/*.json"
+    record_source: "https://cado.eservices.gov.nl.ca/Company/CompanyNameNumberSearch.aspx"
+    process_job: jobs/bronze/newfoundland_and_labrador/newfoundland_and_labrador_company_person.py
+    options:
+      multiline: true
+      inferschema: true
+    spark_resources:
+      spark.driver.memory: '{{ spark_driver_memory | default("4g") }}'
+      spark.executor.memory: '{{ spark_executor_memory | default("4g") }}'
+      spark.executor.cores: "{{ spark_executor_cores | default(5) }}"

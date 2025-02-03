@@ -1,0 +1,37 @@
+model:
+  table_name: lookup_jurisdiction
+  database_name: lakehouse-silver
+  data_location: s3a://lakehouse-silver/lookup_jurisdiction
+  unique_key: jurisdiction
+  data_format: delta
+
+  columns:
+    - name: country_name
+      type: string
+    - name: jurisdiction
+      type: string
+    - name: is_state
+      type: boolean
+    - name: country_code
+      type: string
+    - name: alpha2_code
+      type: string
+    - name: alpha3_code
+      type: string
+    - name: numeric_code
+      type: string
+    - name: official_name
+      type: string
+    - name: continent
+      type: string
+      description: just to break down elastic search indices, not very accurate
+
+
+input_resources:
+- table_name: lookup_jurisdiction_with_continents
+  format: csv
+  data_location: resources/lookup_jurisdiction_with_continents.csv
+  record_source: bronze.lookup.jurisdiction
+  process_job: jobs/silver/lookup/jurisdiction.py
+  options:
+    header: true

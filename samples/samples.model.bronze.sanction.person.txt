@@ -1,0 +1,115 @@
+Row 1:
+dv_hashkey_person: 0acec11ad7a72e68b5f1a37d0c9a3a0c
+dv_recsrc: https://www.opensanctions.org/datasets/default/
+dv_loaddts: 2025-01-25 10:07:19.067358
+dv_hashdiff: None
+dv_source_version: gov_sanction_person;20250125
+jurisdiction: cf
+name: Jacques Ngaina
+full_address: None
+street: None
+city: None
+region: None
+state: None
+province: None
+country_code: None
+country_name: cf
+postal_code: None
+latitude: None
+longitude: None
+type: 1
+start_date: None
+end_date: None
+----------------------------------------
+Row 2:
+dv_hashkey_person: 0cffeaa8a53ce0d90b1fc675b7d7b6bb
+dv_recsrc: https://www.opensanctions.org/datasets/default/
+dv_loaddts: 2025-01-25 10:07:19.067358
+dv_hashdiff: None
+dv_source_version: gov_sanction_person;20250125
+jurisdiction: cf
+name: Roger Gbéda
+full_address: None
+street: None
+city: None
+region: None
+state: None
+province: None
+country_code: None
+country_name: cf
+postal_code: None
+latitude: None
+longitude: None
+type: 1
+start_date: None
+end_date: None
+----------------------------------------
+Row 3:
+dv_hashkey_person: 0da254f3cca0b909d4aad361cab97be4
+dv_recsrc: https://www.opensanctions.org/datasets/default/
+dv_loaddts: 2025-01-25 10:07:19.067358
+dv_hashdiff: None
+dv_source_version: gov_sanction_person;20250125
+jurisdiction: cf
+name: Hugues-Abdias Ndolingar
+full_address: None
+street: None
+city: None
+region: None
+state: None
+province: None
+country_code: None
+country_name: cf
+postal_code: None
+latitude: None
+longitude: None
+type: 1
+start_date: None
+end_date: None
+----------------------------------------
+Row 4:
+dv_hashkey_person: 0fe6b0dd84deeb6708dd165902ccbbd5
+dv_recsrc: https://www.opensanctions.org/datasets/default/
+dv_loaddts: 2025-01-25 10:07:19.067358
+dv_hashdiff: None
+dv_source_version: gov_sanction_person;20250125
+jurisdiction: cf
+name: Corneille Serekoisse
+full_address: None
+street: None
+city: None
+region: None
+state: None
+province: None
+country_code: None
+country_name: cf
+postal_code: None
+latitude: None
+longitude: None
+type: 1
+start_date: None
+end_date: None
+----------------------------------------
+Row 5:
+dv_hashkey_person: 10e84efbd0ec82a075a7c38654ad491b
+dv_recsrc: https://www.opensanctions.org/datasets/default/
+dv_loaddts: 2025-01-25 10:07:19.067358
+dv_hashdiff: None
+dv_source_version: gov_sanction_person;20250125
+jurisdiction: cf
+name: Léa Doumta Lea Doumbta
+full_address: None
+street: None
+city: None
+region: None
+state: None
+province: None
+country_code: None
+country_name: cf
+postal_code: None
+latitude: None
+longitude: None
+type: 1
+start_date: None
+end_date: None
+----------------------------------------

@@ -1,0 +1,442 @@
+ag
+a g
+s a
+pvt
+s r l
+s a s
+sci
+aps
+общество
+акционерное
+общество с ограниченной ответственностью
+pty
+aktiebolag
+aktiebolaget
+smc private
+pvt lt
+aktiengesellschaft
+ag co kg
+a g co k g
+aktiengesellschaft co kommanditgesellschaft
+aör
+association
+assoc
+a s s o c
+b corp
+b corporation
+benefit corporation
+bv
+branch
+cio
+c i o
+charitable incorporated organisation
+cc
+civil co
+cv
+cic
+cic
+c i c
+community interest company
+co
+company
+c o
+ltd
+limited
+l t d
+company limited by guarantee
+co-op
+cooperative
+co op
+inc
+incorporated
+i n c
+corp
+corporation
+c o r p
+eg
+ek
+e k
+eingetragener kaufmann
+eingetragene kauffrau
+ev
+e v
+eingetragener verein
+eurl
+ewiv
+se
+s e
+societas europaea
+european company
+se
+fzc
+fze
+fz llc
+fzllc
+friendly society
+gp
+g p
+general partnership
+gbr
+g b r
+gesellschaft bürgerlichen rechts
+gmbh
+g m b h
+gesellschaft mit beschränkter haftung
+gesellschaft mbh
+gmbh & co kg
+g m b h co k g
+gesellschaft mit beschränkter haftung co kommanditgesellschaft
+gmbh co kgaa
+inc
+ips
+i p s
+industrial and provident society
+jv
+j v
+joint venture
+jsc
+kk
+kg
+k g
+kommanditgesellschaft
+kgaa
+k g a a
+kommanditgesellschaft auf aktien
+kgaa co kg
+kdör
+ltd
+limited
+l t d
+llc
+l l c
+limited liability company
+limited liability co
+ltd liability company
+ltd liability company
+lllp
+l l l p
+limited liability limited partnership
+llp
+l l p
+limited liability partnership
+lp
+limited partnership
+co
+company
+c o
+s corp
+c corp
+public benefit corp
+professional assoc
+professional assoc
+pa
+p a
+nv
+nonprofit corporation
+nonprofit corp
+nonprofit inc
+n p corp
+n p corporation
+og
+ohg
+o h g
+offene handelsgesellschaft
+partg
+p a r t g
+partnerschaftsgesellschaft
+partgmbb
+pte ltd
+pvt ltd
+ltd
+limited
+l t d
+pc
+p c
+professional corporation
+pllc
+p l l c
+professional limited liability company
+pty ltd
+pjsc
+plc
+p l c
+public limited company
+royal charter
+r c
+slp
+s l p
+scottish limited partnership
+cv
+srl
+sl
+se
+sl
+srl
+sce
+se
+s e
+công ty tnhh
+joint stock company
+europäische aktiengesellschaft
+europäische gesellschaft
+sarl
+sarl de famille
+sarls
+sa
+sc
+scop
+sdr
+sgp
+spfpl
+sel
+sicav
+snc
+se
+spa
+sas
+sole est
+sole proprietorship
+sole trader
+spj
+spk
+ska
+sp z oo
+sp zoo
+stiftung
+stiftgmbh
+stg
+trust
+unlimited
+unlimited company
+ulp
+u l p
+unlimited liability partnership
+ug
+u g
+unternehmergesellschaft
+unternehmergesellschaft haftungsbeschränkt
+ug haftungsbeschränkt
+u g haftungsbeschränkt
+vof
+vvag
+v v a g
+versicherungsverein auf gegenseitigkeit
+intl
+international
+coltd
+co ltd
+co ag
+co a g
+co s a
+co pvt
+co s r l
+co s a s
+co sci
+co aps
+co pty
+co aktiebolag
+co aktiebolaget
+co smc private
+co pvt lt
+co aktiengesellschaft
+ag co kg
+aktiengesellschaft co kommanditgesellschaft
+gmbh co kommanditgesellschaft
+co association
+co assoc
+co a s s o c
+co b corp
+co b corporation
+company benefit corporation
+co bv
+co branch
+co cio
+co c i o
+company charitable incorporated organisation
+co cc
+co civil
+co cv
+co cic
+co c i c
+c o
+co ltd
+co limited
+co l t d
+co cooperative
+co inc
+co incorporated
+co i n c
+co corp
+co corporation
+co c o r p
+co eg
+co ek
+co e k
+co eingetragener kaufmann
+co eingetragene kauffrau
+co ev
+co e v
+co eingetragener verein
+co eurl
+co ewiv
+co se
+co s e
+co societas europaea
+co european company
+co se
+co fzc
+co fze
+co fz llc
+co fzllc
+co friendly society
+co gp
+co g p
+co general partnership
+co gbr
+co g b r
+co gesellschaft bürgerlichen rechts
+co gmbh
+co g m b h
+co gesellschaft mit beschränkter haftung
+co gesellschaft mbh
+co gmbh co kg
+gmbh co kg
+co co g m b h co k g
+co gesellschaft mit beschränkter haftung co kommanditgesellschaft
+co gmbh co kgaa
+co inc
+co ips
+co i p s
+co industrial and provident society
+co jv
+co j v
+co joint venture
+co jsc
+co kk
+co kg
+co k g
+co kommanditgesellschaft
+co kgaa
+co k g a a
+co kommanditgesellschaft auf aktien
+co kgaa & co kg
+co ltd
+co limited
+co l t d
+co llc
+co l l c
+co limited liability company
+co limited liability co
+co ltd liability company
+co ltd liability company
+co lllp
+co l l l p
+co limited liability limited partnership
+co llp
+co l l p
+co limited liability partnership
+co lp
+co limited partnership
+co s corp
+co c corp
+co public benefit corp
+co professional assoc
+co professional assoc
+co pa
+co p a
+co nv
+co nonprofit corporation
+co nonprofit corp
+co nonprofit inc
+co n p corp
+co n p corporation
+co og
+co ohg
+co o h g
+co offene handelsgesellschaft
+co partg
+co p a r t g
+co partnerschaftsgesellschaft
+co partgmbb
+co pte ltd
+co pvt ltd
+co ltd
+co limited
+co l t d
+co pc
+co p c
+co professional corporation
+co pllc
+co p l l c
+co professional limited liability company
+co pty ltd
+co pjsc
+co plc
+co p l c
+co public limited company
+co royal charter
+co r c
+co slp
+co s l p
+co scottish limited partnership
+co cv
+co srl
+co sl
+co se
+co sl
+co srl
+co sce
+co se
+co s e
+công ty tnhh
+joint stock company
+europäische aktiengesellschaft
+europäische gesellschaft
+co sarl
+co sarl de famille
+co sarls
+co sa
+co sc
+co scop
+co sdr
+co sgp
+co spfpl
+co sel
+co sicav
+co snc
+co se
+co spa
+co sas
+co sole est
+co sole proprietorship
+co sole trader
+co spj
+co spk
+co ska
+co sp z oo
+co sp zoo
+co stiftung
+co stiftgmbh
+co stg
+co trust
+co unlimited
+co unlimited company
+co ulp
+co u l p
+co unlimited liability partnership
+co ug
+co u g
+co unternehmergesellschaft
+co unternehmergesellschaft haftungsbeschränkt
+co ug haftungsbeschränkt
+co u g haftungsbeschränkt
+co vof
+co vvag
+co v v a g
+co versicherungsverein auf gegenseitigkeit
+co intl
+co international
+co trust services
+gmbh co og
+co gmbh co kommanditgesellschaft
+trust co branch

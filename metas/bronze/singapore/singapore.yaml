@@ -1,0 +1,26 @@
+
+note: first source using new ETL
+
+model:
+  table_name   : singapore
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/singapore/company"
+  partition_by : ["load_date"]
+  unique_key   : entity_name
+  data_format  : delta
+  load_date    : "20240612"
+  options:
+    mergeSchema: true
+input_resources:
+  - table_name   : raw_singapore
+    format       : csv
+    data_location: "s3a://lakehouse-raw/singapore/company-{load_date}/data/*.csv"
+    record_source: "offical"
+    process_job  : jobs/bronze/singapore.py
+    options:
+      header : true
+    load_date: "20240612"
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"

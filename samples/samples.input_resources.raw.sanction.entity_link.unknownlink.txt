@@ -1,0 +1,60 @@
+Row 1:
+caption: Other link
+datasets: ['sy_obsalytics_opensyr']
+first_seen: 2023-02-01T00:00:00
+id: NK-6LTkLZGkABcEXFuSW8YQDN
+last_change: 2023-02-01T00:00:00
+last_seen: 2023-02-01T00:00:00
+properties: Row(date=None, endDate=None, modifiedAt=['2019'], object=['NK-3yDHEpYztFSyYfYdPVdQD7'], publisher=None, role=['Executive Device', 'جهاز مركزي', 'جهاز تنفيذي'], startDate=None, status=None, subject=['NK-WQf9qpsNMirvpbyVUCvs7D'], summary=['تتبع المؤسسة لوزارة الدفاع وتتلقى منها الدعم', 'Foundation for the Ministry of Defense and receives support'])
+referents: ['opensyr-rel-mrtbtt-b-2887-168']
+schema: UnknownLink
+target: False
+----------------------------------------
+Row 2:
+caption: Other link
+datasets: ['nz_russia_sanctions']
+first_seen: 2024-03-21T15:31:49
+id: NK-9CvvhWg4M2qWybua5XCkpe
+last_change: 2024-03-21T15:31:49
+last_seen: 2025-01-23T22:58:02
+properties: Row(date=None, endDate=None, modifiedAt=None, object=['nz-ru-named-kamaz'], publisher=None, role=["Associate of 'Kamaz'"], startDate=None, status=None, subject=['NK-gUYNE8i9X4TEu3pHudwYjC'], summary=None)
+referents: ['nz-ru-0a1aa3c7e7b03015ce4ac93da3ee67b97695a21b', 'nz-ru-97e12542c18de7e9a833326856c667c16cbf9dd2']
+schema: UnknownLink
+target: False
+----------------------------------------
+Row 3:
+caption: Other link
+datasets: ['nz_russia_sanctions']
+first_seen: 2024-03-21T15:31:49
+id: NK-DfKhF8WoRNCbQJkjgkQoqN
+last_change: 2024-03-21T15:31:49
+last_seen: 2025-01-23T22:58:02
+properties: Row(date=None, endDate=None, modifiedAt=None, object=['NK-n3mqNyNNPRiqGcWtWR9Uoq'], publisher=None, role=["Associate of 'Tactical Missiles Corporation Joint Stock Company'"], startDate=None, status=None, subject=['NK-fJNBfsgomyod6V5JXFcQSh'], summary=None)
+referents: ['nz-ru-dd6a7fd2d74a2d0c0348e0063b3f365a39ce741f', 'nz-ru-330e947dab5676f7d067209c21f606b5cbf99d89']
+schema: UnknownLink
+target: False
+----------------------------------------
+Row 4:
+caption: Other link
+datasets: ['sy_obsalytics_opensyr']
+first_seen: 2023-02-01T00:00:00
+id: NK-G5QoERCWxxsudmpKJrKL2t
+last_change: 2023-02-01T00:00:00
+last_seen: 2023-02-01T00:00:00
+properties: Row(date=None, endDate=None, modifiedAt=['2019'], object=['NK-dDbPwteGDYbsbN4vu7NMYw'], publisher=None, role=['Coalition', 'تعاون_تحالف'], startDate=None, status=None, subject=['NK-gk9DSbLqtwPKy8SKVuSn5h'], summary=['يرتبط المعهد بمركز الدراسات والبحوث على عدة مستويات', 'The Institute is associated with the Center for Studies and Research on several levels'])
+referents: ['opensyr-rel-mrtbtt-b-940-905']
+schema: UnknownLink
+target: False
+----------------------------------------
+Row 5:
+caption: Other link
+datasets: ['ch_seco_sanctions']
+first_seen: 2023-12-08T00:00:00
+id: NK-Q8Zebhs7CKZdxVDpy9RcFa
+last_change: 2023-12-08T00:00:00
+last_seen: 2025-01-18T00:00:00
+properties: Row(date=None, endDate=None, modifiedAt=None, object=['NK-bMv7pjm5ShsjBMeMxhvcad'], publisher=None, role=['related-to'], startDate=None, status=None, subject=['NK-kWzGyBabYvJa4znxS2Lat8'], summary=None)
+referents: ['ch-seco-11387-related-to', 'fr-ga-6bf3562251d9b0032a302d683bdd8a3bfc614241']
+schema: UnknownLink
+target: False
+----------------------------------------

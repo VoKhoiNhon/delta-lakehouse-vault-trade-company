@@ -1,0 +1,23 @@
+note: 1tm_2412
+
+model:
+  table_name: bronze.person_1tm
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412/person
+  # data_location: data/lakehouse-bronze/1tm_2412/person
+  unique_key: name
+  data_format: delta
+  load_date: "20241222"
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+  - table_name: 1tm_2412.person
+    format: delta
+    data_location: "s3a://lakehouse-raw/1tm_2412/person"
+    record_source: "entity person"
+    process_job: jobs/bronze/data1tm_2412/person.py
+    spark_resources:
+      spark.driver.memory: "10g"
+      spark.executor.memory: "10g"

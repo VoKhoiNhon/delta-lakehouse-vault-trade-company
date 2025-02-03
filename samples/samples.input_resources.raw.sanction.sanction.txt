@@ -1,0 +1,60 @@
+Row 1:
+caption: Debarred
+datasets: ['adb_sanctions']
+first_seen: 2024-09-04T06:30:03
+id: adb-00a93ea211d7eaa3ee4c0478748d9fcf6650b060
+last_change: 2024-09-04T06:30:03
+last_seen: 2025-01-23T06:30:03
+properties: Row(authority=['Asian Development Bank'], authorityId=None, country=None, date=None, description=None, duration=None, endDate=['2032-11-13'], entity=['adb-7aac4d1482f96819b13d94dbd9aad824fe5ed404'], listingDate=None, modifiedAt=None, program=['Debarred'], programId=None, programUrl=None, provisions=None, publisher=None, reason=['Cross-Debarment: IDB'], recordId=None, sourceUrl=['https://lnadbg4.adb.org/oga0009p.nsf/sancALL1P?OpenView&count=999'], startDate=['2023-01-13'], status=None, summary=None, unscId=None)
+referents: []
+schema: Sanction
+target: False
+----------------------------------------
+Row 2:
+caption: Accepted Proposed Sanction
+datasets: ['adb_sanctions']
+first_seen: 2024-08-01T06:30:03
+id: adb-00c4fd5ea306e53799572a77fcc98ca6eb4a2af2
+last_change: 2024-08-01T06:30:03
+last_seen: 2025-01-23T06:30:03
+properties: Row(authority=['Asian Development Bank'], authorityId=None, country=None, date=None, description=None, duration=None, endDate=['2027-07-22'], entity=['NK-i8pFkogEhvKthSfc4gFoRx'], listingDate=None, modifiedAt=None, program=['Accepted Proposed Sanction'], programId=None, programUrl=None, provisions=None, publisher=None, reason=['Affiliate of a debarred entity'], recordId=None, sourceUrl=['https://lnadbg4.adb.org/oga0009p.nsf/sancALL1P?OpenView&count=999'], startDate=['2024-07-22'], status=None, summary=None, unscId=None)
+referents: []
+schema: Sanction
+target: False
+----------------------------------------
+Row 3:
+caption: Accepted Proposed Sanction
+datasets: ['adb_sanctions']
+first_seen: 2024-07-31T06:30:02
+id: adb-00cdf440ffa6bfa75a8af77faf77d02c5748924e
+last_change: 2024-07-31T06:30:02
+last_seen: 2025-01-23T06:30:03
+properties: Row(authority=['Asian Development Bank'], authorityId=None, country=None, date=None, description=None, duration=None, endDate=['2027-07-22'], entity=['NK-nx7mrkRumNX5QyZu9QVzsY'], listingDate=None, modifiedAt=None, program=['Accepted Proposed Sanction'], programId=None, programUrl=None, provisions=None, publisher=None, reason=['Affiliate of a debarred entity'], recordId=None, sourceUrl=['https://lnadbg4.adb.org/oga0009p.nsf/sancALL1P?OpenView&count=999'], startDate=['2024-07-22'], status=None, summary=None, unscId=None)
+referents: []
+schema: Sanction
+target: False
+----------------------------------------
+Row 4:
+caption: Accepted Proposed Sanction
+datasets: ['adb_sanctions']
+first_seen: 2024-08-01T06:30:03
+id: adb-011fe4f06fba85ff9192addc59e191ab59701d5c
+last_change: 2024-08-01T06:30:03
+last_seen: 2025-01-23T06:30:03
+properties: Row(authority=['Asian Development Bank'], authorityId=None, country=None, date=None, description=None, duration=None, endDate=['2027-07-22'], entity=['NK-TyKNnRB56xVVyAQ3jhhhfb'], listingDate=None, modifiedAt=None, program=['Accepted Proposed Sanction'], programId=None, programUrl=None, provisions=None, publisher=None, reason=['Affiliate of a debarred entity'], recordId=None, sourceUrl=['https://lnadbg4.adb.org/oga0009p.nsf/sancALL1P?OpenView&count=999'], startDate=['2024-07-22'], status=None, summary=None, unscId=None)
+referents: []
+schema: Sanction
+target: False
+----------------------------------------
+Row 5:
+caption: Debarred
+datasets: ['adb_sanctions']
+first_seen: 2023-04-20T12:50:18
+id: adb-01a028f3132428ea75c022cebccd414c2a5dc990
+last_change: 2023-04-20T12:50:18
+last_seen: 2025-01-23T06:30:03
+properties: Row(authority=['Asian Development Bank'], authorityId=None, country=None, date=None, description=None, duration=None, endDate=None, entity=['NK-VoCsdo362TiTH84sjP4pE3'], listingDate=None, modifiedAt=None, program=['Debarred'], programId=None, programUrl=None, provisions=None, publisher=None, reason=["Violated ADB's Procurement Guidelines 1.14(a)(ii), 1.14(a)(iv) Integrity Principles and Guidelines 2.A(ii), 2.A(iv), 2.A(vii),2.A(viii)"], recordId=None, sourceUrl=['https://lnadbg4.adb.org/oga0009p.nsf/sancALL1P?OpenView&count=999'], startDate=['2010-10-27'], status=None, summary=None, unscId=None)
+referents: []
+schema: Sanction
+target: False
+----------------------------------------

@@ -1,0 +1,25 @@
+model:
+  table_name: turkey
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/turkey/company"
+  unique_key: registration_number
+  data_format: delta
+
+input_resources:
+  - table_name   : raw_turkey_company_detail
+    format       : json
+    data_location: "s3a://lakehouse-raw/turkey/company-20241217/company_detail.jsonl"
+    record_source: "https://bilgibankasi.ito.org.tr/en/data-bank/company-details"
+    process_job  : jobs/bronze/turkey.py
+
+  - table_name   : raw_turkey_company_branch_address
+    format       : json
+    data_location: "s3a://lakehouse-raw/turkey/company-20241217/company_branch_addres.jsonl"
+    record_source: "https://bilgibankasi.ito.org.tr/en/data-bank/company-details"
+    process_job  : jobs/bronze/turkey.py
+
+  - table_name   : raw_turkey_company_officials
+    format       : json
+    data_location: "s3a://lakehouse-raw/turkey/company-20241217/company_officials.jsonl"
+    record_source: "https://bilgibankasi.ito.org.tr/en/data-bank/company-details"
+    process_job  : jobs/bronze/turkey.py

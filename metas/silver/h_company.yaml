@@ -1,0 +1,184 @@
+model:
+  table_name: "silver.h_company"
+  database_name: "lakehouse-bronze"
+  data_location: "s3a://lakehouse-silver{{env}}/h_company"
+  unique_key: ["jurisdiction", "dv_hashkey_company"]
+  data_format: "delta"
+  partition_by:
+  - jurisdiction
+
+  columns:
+    - name: dv_hashkey_company
+      type: string
+      nullable: false
+      description: dv hashkey
+
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: dv_source_version
+      nullable: false
+      type: string
+      description: dv columns
+
+    - name: jurisdiction
+      type: string
+      nullable: false
+
+    - name: registration_number
+      type: string
+    - name: name
+      type: string
+      nullable: false
+
+    - name: pure_name
+      type: string
+      nullable: false
+
+    - name: has_regnum
+      type: integer
+
+input_resources:
+- table_name: manual_company
+  format: delta
+  data_location: s3a://lakehouse-bronze/manual/company
+  record_source: bronze.manual_company
+  process_job: jobs/silver/h_company/h_company__src_manual_company.py
+
+- table_name: 1tm_2412.company
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/company
+  record_source: bronze.1tm_company
+  process_job: jobs/silver/h_company/h_company__src_1tm_company.py
+
+
+- table_name: 2tm.company
+  format: delta
+  record_source: 2tm
+  data_location: s3a://lakehouse-silver/secondtime/h_company_2
+  process_job: jobs/silver/h_company/h_company__src_2tm.py
+
+
+# - table_name: bronze.taiwan
+#   format: delta
+#   data_location: s3a://lakehouse-bronze/taiwan
+#   record_source: bronze.taiwan
+#   process_job: jobs/silver/h_company/h_company-s_company_taiwan.py
+
+# - table_name: bronze.newyork
+#   format: delta
+#   data_location: s3a://lakehouse-bronze/us_newyork
+#   record_source: https://data.gcis.nat.gov.tw/od/datacategory
+#   process_job: jobs/silver/h_company/h_company-src_newyork.py
+
+
+# - table_name: bronze.opensanctions
+#   format: delta
+#   data_location: s3a://lakehouse-bronze/sanction
+#   record_source: https://www.opensanctions.org/datasets/default/
+#   process_job: jobs/silver/h_company/h_company__src_opensacntion.py
+
+###################
+# Bronze Bangladesh
+###################
+- table_name: "bronze.bangladesh"
+  format: "delta"
+  data_location: "s3a://lakehouse-bronze{{env}}/bangladesh/company"
+  record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+  process_job: "jobs/silver/h_company/h_company__src_bangladesh_company.py"
+  dv_source_version: "gov_bangladesh_company;{{load_date}}"
+
+# - table_name: bronze.test_levenshtein
+#   format: delta
+#   data_location: s3a://lakehouse-bronze/test_levenshtein
+#   record_source: a
+#   process_job: jobs/silver/h_company/h_company__test_levenshtein.py
+
+- table_name: bronze.colombia
+  format: delta
+  data_location: s3a://lakehouse-bronze/colombia/company_person
+  record_source: https://www.datos.gov.co/en/Comercio-Industria-y-Turismo/Personas-Naturales-Personas-Jur-dicas-y-Entidades-/c82u-588k/about_data
+  process_job: jobs/silver/h_company/h_company__src_colombia.py
+
+- table_name: new_trade_6kUSD
+  format: delta
+  data_location: s3a://warehouse/test_on_s3/trade_6k_USD_silver
+  record_source: 6kUSD
+  process_job: jobs/silver/h_company/h_company__src_6k_USD.py
+
+- table_name: 172_Dat.bol
+  format: delta
+  data_location: s3a://lakehouse-bronze/trade_data/trade_dat_data
+  record_source: NBD Data;https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch
+  process_job: jobs/silver/h_company/6kusd/h_company__src_172_Dat.py
+  filter: load_date == {{load_date}}
+
+- table_name: trade_nbd
+  format: delta
+  data_location: s3a://lakehouse-bronze/trade_data/trade_nbd
+  record_source: https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch
+  process_job: jobs/silver/h_company/h_company__src_trade_nbd.py
+  filter: load_date == {{load_date}}
+
+- table_name: colombia.import_2016-2024
+  format: delta
+  data_location: s3a://lakehouse-bronze/colombia/Trade/2016-2024
+  record_source: gov_colombia_trade;https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  process_job: jobs/silver/h_company/h_company__src_colombia_import_2016_2024.py
+
+- table_name: bronze.newfoundland_and_labrador
+  format: delta
+  data_location: s3a://lakehouse-bronze{{env}}/canada/newfoundland_and_labrador/company_person
+  record_source: https://cado.eservices.gov.nl.ca/Company/CompanyNameNumberSearch.aspx
+  process_job: jobs/silver/h_company/h_company__src_newfoundland_and_labrador.py
+
+##################
+# Bronze Sanction
+##################
+- table_name: "bronze.sanction.company"
+  format: "delta"
+  data_location: "s3a://lakehouse-bronze{{env}}/sanction/company"
+  record_source: "https://www.opensanctions.org/datasets/default/"
+  process_job: "jobs/silver/h_company/h_company__src_sanction.py"
+  dv_source_version: "gov_sanction_company;{{load_date}}"
+
+#################
+# Spark Resources
+#################
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"
+

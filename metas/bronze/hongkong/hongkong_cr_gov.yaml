@@ -1,0 +1,36 @@
+model:
+  table_name: hongkong_company_src1
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/hongkong/company/cr_gov"
+  partition_by: ["load_date"]
+  unique_key: registration_number
+  data_format: delta
+  # columns:
+  # - name: registration_number
+  #   type: string
+  # - name: name
+  #   type: string
+  # - name: regist_date
+  #   type: string
+  # - name: company_type
+  #   type: string
+  # - name: load_date
+  #   type: date
+  load_date: "20241129"
+  options:
+    mergeSchema: true
+
+input_resources:
+- table_name: raw_hongkong1
+  format: csv
+  data_location: "s3a://lakehouse-raw/hongkong/company-{load_date}/cr_gov/data/*.csv"
+  record_source: "https://www.icris.cr.gov.hk/csci/"
+  process_job: jobs/bronze/hongkong/hongkong_cr_gov.py
+  options:
+    header: true
+    escape: '"'
+  load_date    : "20241129"
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"

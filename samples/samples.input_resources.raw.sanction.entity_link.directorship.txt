@@ -1,0 +1,60 @@
+Row 1:
+caption: vice-president of
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-23LEHhvV463Lwi9Z7gPR2f
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(date=None, description=None, director=['icijol-80042776'], endDate=['2011-01-14'], modifiedAt=None, organization=['icijol-82006030'], publisher=['Paradise Papers - Appleby'], role=['vice-president of', 'director of'], startDate=['2003-10-01'], status=['Resigned'], summary=None)
+referents: ['icijol-80042776-82006030-vice-president-of', 'icijol-80042776-82006030-director-of']
+schema: Directorship
+target: False
+----------------------------------------
+Row 2:
+caption: vice-president of
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-243GMwLcJXzi7vrMSFyzLX
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(date=None, description=None, director=['icijol-80038309'], endDate=['2006-01-10'], modifiedAt=None, organization=['icijol-82006250'], publisher=['Paradise Papers - Appleby'], role=['vice-president of', 'director of'], startDate=['2004-03-12'], status=['Resigned'], summary=None)
+referents: ['icijol-80038309-82006250-vice-president-of', 'icijol-80038309-82006250-director-of']
+schema: Directorship
+target: False
+----------------------------------------
+Row 3:
+caption: director of
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-25znS2mAte8qivabpHLvBa
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(date=None, description=None, director=['icijol-56044043'], endDate=None, modifiedAt=None, organization=['icijol-55047787'], publisher=['Paradise Papers - Malta corporate registry'], role=['director of', 'legal representative of'], startDate=None, status=None, summary=None)
+referents: ['icijol-56044043-55047787-legal-representative-of', 'icijol-56044043-55047787-director-of']
+schema: Directorship
+target: False
+----------------------------------------
+Row 4:
+caption: director of
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-26ujHjMeYXdBf9ZXw4c5C5
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(date=None, description=None, director=['icijol-56020796'], endDate=None, modifiedAt=None, organization=['icijol-55078218'], publisher=['Paradise Papers - Malta corporate registry'], role=['director of', 'legal representative of'], startDate=None, status=None, summary=None)
+referents: ['icijol-56020796-55078218-legal-representative-of', 'icijol-56020796-55078218-director-of']
+schema: Directorship
+target: False
+----------------------------------------
+Row 5:
+caption: director of
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-2DN88wSwFGQXKTgUr4MqKK
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(date=None, description=None, director=['icijol-80103990'], endDate=['2012-07-31'], modifiedAt=None, organization=['icijol-82007198'], publisher=['Paradise Papers - Appleby'], role=['vice-president of', 'director of'], startDate=['2006-07-04'], status=['Resigned'], summary=None)
+referents: ['icijol-80103990-82007198-vice-president-of', 'icijol-80103990-82007198-director-of']
+schema: Directorship
+target: False
+----------------------------------------

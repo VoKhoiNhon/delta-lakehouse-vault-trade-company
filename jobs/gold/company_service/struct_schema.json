@@ -1,0 +1,501 @@
+{
+    "fields": [
+        {
+            "metadata": {},
+            "name": "to_entity",
+            "nullable": true,
+            "type": {
+                "fields": [
+                    {
+                        "metadata": {},
+                        "name": "id",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "is_person",
+                        "nullable": true,
+                        "type": "boolean"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "is_sanctioned",
+                        "nullable": true,
+                        "type": "boolean"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "is_trade",
+                        "nullable": true,
+                        "type": "boolean"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "name",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "description",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "lei_code",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "country_code",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "country_name",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "registration_number",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "date_incorporated",
+                        "nullable": true,
+                        "type": "date"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "date_struck_off",
+                        "nullable": true,
+                        "type": "date"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "jurisdiction",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "legal_form",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "category",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "phone_numbers",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "emails",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "websites",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "linkedin_url",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "twitter_url",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "facebook_url",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    {
+                        "metadata": {},
+                        "name": "fax_numbers",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "other_names",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": "string",
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "addresses",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": {
+                                "fields": [
+                                    {
+                                        "metadata": {},
+                                        "name": "type",
+                                        "nullable": true,
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "start_date",
+                                        "nullable": true,
+                                        "type": "timestamp"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "end_date",
+                                        "nullable": true,
+                                        "type": "timestamp"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "full_address",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "street",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "city",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "region",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "state",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "province",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "country_code",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "postal_code",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "latitude",
+                                        "nullable": true,
+                                        "type": "float"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "longitude",
+                                        "nullable": true,
+                                        "type": "float"
+                                    }
+                                ],
+                                "type": "struct"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "statuses",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": {
+                                "fields": [
+                                    {
+                                        "metadata": {},
+                                        "name": "status",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "status_code",
+                                        "nullable": true,
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "status_desc",
+                                        "nullable": true,
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "struct"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "industries",
+                        "nullable": true,
+                        "type": {
+                            "containsNull": true,
+                            "elementType": {
+                                "fields": [
+                                    {
+                                        "metadata": {},
+                                        "name": "type",
+                                        "nullable": true,
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "industry_code",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "desc",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "country_code",
+                                        "nullable": true,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "metadata": {},
+                                        "name": "standard_type",
+                                        "nullable": true,
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "struct"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "company",
+                        "nullable": true,
+                        "type": {
+                            "fields": [
+                                {
+                                    "metadata": {},
+                                    "name": "image_url",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "no_of_employees",
+                                    "nullable": true,
+                                    "type": "integer"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "authorised_capital",
+                                    "nullable": true,
+                                    "type": "float"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "paid_up_capital",
+                                    "nullable": true,
+                                    "type": "float"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "currency_code",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "is_branch",
+                                    "nullable": true,
+                                    "type": "boolean"
+                                }
+                            ],
+                            "type": "struct"
+                        }
+                    },
+                    {
+                        "metadata": {},
+                        "name": "person",
+                        "nullable": true,
+                        "type": {
+                            "fields": [
+                                {
+                                    "metadata": {},
+                                    "name": "first_name",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "last_name",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "middle_name",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "full_name",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "image_url",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "dob",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "birthplace",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "nationality",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "country_of_residence",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "accuracy_level",
+                                    "nullable": true,
+                                    "type": "float"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "gender",
+                                    "nullable": true,
+                                    "type": "integer"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "skills",
+                                    "nullable": true,
+                                    "type": {
+                                        "containsNull": true,
+                                        "elementType": "string",
+                                        "type": "array"
+                                    }
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "job_summary",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "salary",
+                                    "nullable": true,
+                                    "type": "string"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "yoe",
+                                    "nullable": true,
+                                    "type": "integer"
+                                },
+                                {
+                                    "metadata": {},
+                                    "name": "industry",
+                                    "nullable": true,
+                                    "type": "string"
+                                }
+                            ],
+                            "type": "struct"
+                        }
+                    }
+                ],
+                "type": "struct"
+            }
+        }
+    ],
+    "type": "struct"
+}

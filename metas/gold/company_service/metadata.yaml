@@ -1,0 +1,15 @@
+model:
+  table_name: metadata
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/metadata
+  data_format: delta
+  unique_key : ["id"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": true
+
+input_resources:
+  - table_name: silver.bridge_company_demographic
+    format: delta
+    data_location: s3a://lakehouse-silver/bridge_company_demomgraphic
+    record_source: silver.bridge_company_demographic

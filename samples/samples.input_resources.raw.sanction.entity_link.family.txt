@@ -1,0 +1,60 @@
+Row 1:
+caption: Family
+datasets: ['wikidata']
+first_seen: 2023-07-18T22:03:41
+id: NK-2dJmJbL7LdPSDxivEdE3rP
+last_change: 2023-07-18T22:03:41
+last_seen: 2025-01-23T00:47:02
+properties: Row(date=None, description=None, endDate=None, modifiedAt=None, person=['Q2622956'], relationship=['child'], relative=['Q55104689'], sourceUrl=None, startDate=None, summary=None)
+referents: ['wd-p40-q2622956-q55104689', 'wd-p22-q2622956-q55104689']
+schema: Family
+target: False
+----------------------------------------
+Row 2:
+caption: Family
+datasets: ['wikidata']
+first_seen: 2023-12-31T00:47:01
+id: NK-2q7jLNWihmz9QSBHnDbaNj
+last_change: 2024-01-01T00:47:01
+last_seen: 2025-01-23T00:47:02
+properties: Row(date=None, description=None, endDate=None, modifiedAt=None, person=['Q4096680'], relationship=['spouse'], relative=['Q303918'], sourceUrl=None, startDate=None, summary=None)
+referents: ['wd-p26-q303918-q4096680']
+schema: Family
+target: False
+----------------------------------------
+Row 3:
+caption: Family
+datasets: ['wikidata']
+first_seen: 2023-07-18T22:03:41
+id: NK-2qdamfZmiaQxAD7u9NSp3a
+last_change: 2024-11-10T00:55:51
+last_seen: 2025-01-23T00:47:02
+properties: Row(date=None, description=None, endDate=None, modifiedAt=None, person=['Q5269831'], relationship=['relative', 'son of paternal aunt'], relative=['Q44329'], sourceUrl=None, startDate=None, summary=None)
+referents: ['wd-p1038-q44329-q5269831']
+schema: Family
+target: False
+----------------------------------------
+Row 4:
+caption: Family
+datasets: ['wikidata']
+first_seen: 2023-07-18T22:03:41
+id: NK-33CsJD9gQCfo44hidjephK
+last_change: 2024-02-15T04:24:56
+last_seen: 2025-01-23T00:47:02
+properties: Row(date=None, description=None, endDate=None, modifiedAt=None, person=['Q16482703'], relationship=['child', 'father'], relative=['Q104731524'], sourceUrl=None, startDate=None, summary=None)
+referents: ['wd-p40-q104731524-q16482703', 'wd-p22-q104731524-q16482703']
+schema: Family
+target: False
+----------------------------------------
+Row 5:
+caption: Family
+datasets: ['ng_join_dots', 'wikidata']
+first_seen: 2023-07-18T22:03:41
+id: NK-3g7h7GXW5YYqdoeLPpk82h
+last_change: 2023-11-30T00:48:40
+last_seen: 2025-01-23T05:29:02
+properties: Row(date=None, description=None, endDate=None, modifiedAt=None, person=['Q19730927'], relationship=['child', 'father', 'Child'], relative=['Q114905567'], sourceUrl=None, startDate=None, summary=None)
+referents: ['wd-p22-q114905567-q19730927', 'ng-dots-fiyinfoluwa-osinbajo-child-of-yemi-osinbajo', 'wd-p40-q114905567-q19730927']
+schema: Family
+target: False
+----------------------------------------

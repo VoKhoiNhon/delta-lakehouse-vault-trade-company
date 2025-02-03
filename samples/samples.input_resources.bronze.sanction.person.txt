@@ -1,0 +1,215 @@
+Row 1:
+other_names: ['SANAVBARI NIKITENKO']
+person_name: SANAVBARI NIKITENKO
+dob: 1992-06-28
+birthplace: KOFARNIKHON TOWN
+address: None
+date_incorporated: None
+nationality: ru
+inn_code: None
+lei_code: None
+ogrn_code: None
+icij_id: None
+id_number: None
+npi_code: None
+passport_number: None
+registration_number: None
+tax_number: None
+status: None
+position: None
+education: None
+description: None
+notes: None
+summary: None
+is_sanctioned: False
+emails: None
+phone_numbers: None
+websites: None
+program: None
+title: None
+first_name: SANAVBARI
+last_name: NIKITENKO
+middle_name: None
+full_name: SANAVBARI NIKITENKO
+gender: female
+country_name: tj
+load_date: 20250117
+description_full: description: 
+Note: 
+Summary: 
+Position: 
+Education: 
+gender_numeric: 1
+----------------------------------------
+Row 2:
+other_names: ['АМИНАТ РАМЗАНОВНА АХМАДОВА']
+person_name: АМИНАТ РАМЗАНОВНА АХМАДОВА
+dob: None
+birthplace: None
+address: None
+date_incorporated: None
+nationality: None
+inn_code: 201400694216
+lei_code: None
+ogrn_code: None
+icij_id: None
+id_number: None
+npi_code: None
+passport_number: None
+registration_number: None
+tax_number: None
+status: None
+position: None
+education: None
+description: None
+notes: None
+summary: None
+is_sanctioned: False
+emails: None
+phone_numbers: None
+websites: None
+program: None
+title: None
+first_name: АМИНАТ
+last_name: АХМАДОВА
+middle_name: None
+full_name: АМИНАТ РАМЗАНОВНА АХМАДОВА
+gender: None
+country_name: ru
+load_date: 20250117
+description_full: description: 
+Note: 
+Summary: 
+Position: 
+Education: 
+gender_numeric: 0
+----------------------------------------
+Row 3:
+other_names: ['Michael Kuajian', 'MICHAEL KUAJIEN DUER MAYOK', 'MICHAEL KUAJIAN', 'Michael Kuajien Duer Mayok', 'Michael Kuajien', 'MICHAEL KUAJIEN', 'KUAJIEN, Michael']
+person_name: Michael Kuajien
+dob: 1979-01-01
+birthplace: None
+address: Nairobi
+date_incorporated: None
+nationality: ss
+inn_code: None
+lei_code: None
+ogrn_code: None
+icij_id: None
+id_number: None
+npi_code: None
+passport_number: None
+registration_number: None
+tax_number: None
+status: None
+position: None
+education: None
+description: None
+notes: None
+summary: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+program: None
+title: None
+first_name: Michael - MICHAEL
+last_name: KUAJIEN - Kuajian - Kuajien Duer Mayok - Kuajien
+middle_name: None
+full_name: Michael Kuajien MICHAEL KUAJIEN KUAJIEN, Michael
+gender: male
+country_name: ke
+load_date: 20250117
+description_full: description: 
+Note: 
+Summary: 
+Position: 
+Education: 
+gender_numeric: 0
+----------------------------------------
+Row 4:
+other_names: ['YASIN M HUSSAIN', 'Yasin M. Hussain']
+person_name: YASIN M HUSSAIN
+dob: 1965-01-19
+birthplace: None
+address: 11646 Sun Circle Way, Columbia MD 21044
+date_incorporated: None
+nationality: None
+inn_code: None
+lei_code: None
+ogrn_code: None
+icij_id: None
+id_number: None
+npi_code: None
+passport_number: None
+registration_number: None
+tax_number: None
+status: None
+position: PHARMACIST (PHARMACY)
+education: None
+description: None
+notes: None
+summary: None
+is_sanctioned: False
+emails: None
+phone_numbers: None
+websites: None
+program: None
+title: None
+first_name: YASIN - Yasin M.
+last_name: Hussain - HUSSAIN
+middle_name: M
+full_name: YASIN M HUSSAIN Yasin M. Hussain
+gender: None
+country_name: us
+load_date: 20250117
+description_full: description: 
+Note: 
+Summary: 
+Position: PHARMACIST (PHARMACY)
+Education: 
+gender_numeric: 0
+----------------------------------------
+Row 5:
+other_names: ['Чантурія Іраклі', 'CHANTURIA IRAKLI', 'CHANTURIA IRAKLII', 'Chanturiia Irakli']
+person_name: Chanturiia Irakli
+dob: 1983-05-29
+birthplace: Грузія
+address: None
+date_incorporated: None
+nationality: ge
+inn_code: None
+lei_code: None
+ogrn_code: None
+icij_id: None
+id_number: None
+npi_code: None
+passport_number: None
+registration_number: None
+tax_number: None
+status: None
+position: None
+education: None
+description: None
+notes: None
+summary: None
+is_sanctioned: True
+emails: None
+phone_numbers: None
+websites: None
+program: None
+title: None
+first_name: None
+last_name: None
+middle_name: None
+full_name: Чантурія Іраклі Chanturiia Irakli
+gender: None
+country_name: Unknown
+load_date: 20250117
+description_full: description: 
+Note: 
+Summary: 
+Position: 
+Education: 
+gender_numeric: 0
+----------------------------------------

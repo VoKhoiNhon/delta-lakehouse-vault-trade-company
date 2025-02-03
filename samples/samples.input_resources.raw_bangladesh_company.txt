@@ -1,0 +1,30 @@
+Row 1:
+Entity Type: Private Company
+EntityName: 0
+Name Status: Registered [ Reg. No. C-40953 ]
+SL.: 1
+----------------------------------------
+Row 2:
+Entity Type: Private Company
+EntityName: AMP DEVELOPMENT (PVT) LTD.
+Name Status: Registered [ Reg. No. CH-6272 ]
+SL.: 1
+----------------------------------------
+Row 3:
+Entity Type: Private Company
+EntityName: A.M.P. Knit Composite Ltd.
+Name Status: Registered [ Reg. No. 70427 ]
+SL.: 2
+----------------------------------------
+Row 4:
+Entity Type: Private Company
+EntityName: ATC Modern Home Builders & Constructions Limited
+Name Status: Registered [ Reg. No. C-166240 ]
+SL.: 3
+----------------------------------------
+Row 5:
+Entity Type: Private Company
+EntityName: AMP  COMMUNICATION  LTD.
+Name Status: Registered [ Reg. No. C-84935 ]
+SL.: 4
+----------------------------------------

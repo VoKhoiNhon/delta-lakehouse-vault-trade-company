@@ -1,0 +1,60 @@
+Row 1:
+caption: Xinjiang Xinmuwei Clothing Co., Ltd
+datasets: ['shu_uyghur_companies']
+first_seen: 2024-12-19T21:42:45
+id: NK-22JT8frx32YRjjYnnwxsyy
+last_change: 2024-12-19T21:42:45
+last_seen: 2025-01-18T10:34:00
+properties: Row(address=['Dunkuzilaike Village, Industrial Park, Duolu Township, Luopu County, Hotan, Xinjiang 2 Number', '新疆和田洛浦县多鲁乡产业园墩库孜来克村2号', 'No. 2, Dunkuzilaike Village, Duolu Township Industrial Park, Luopu County, Hotan, Xinjiang'], addressEntity=None, alias=None, classification=['4. Priority Sector Apparel'], country=['cn'], createdAt=None, description=None, dissolutionDate=None, dunsCode=None, email=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=None, keywords=None, legalForm=None, leiCode=None, modifiedAt=None, name=['Xinjiang Xinmuwei Clothing Co., Ltd.', '新疆新慕惟服饰有限公司', 'Xinjiang Xinmuwei Clothing Co., Ltd'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, phone=None, previousName=None, program=['Companies Named in Media and Academic Reports as engaging in Labour Transfers or other XUAR Government Programs', 'Companies operating in the Uyghur region'], publisher=None, registrationNumber=None, sector=['Cotton/Textile/Apparel', '零售/批发,服装/纺织/皮革', 'Retail/Wholesale, Apparel/Textile/Leather'], sourceUrl=None, status=None, summary=None, swiftBic=None, taxNumber=None, topics=['export.risk'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['shu-xj-243afcff4135be546158b1401a219e6cc835db6d', 'shu-xj-71deafd480dfa0ea41e5a698c4f241e6b5e885a7']
+schema: Organization
+target: True
+----------------------------------------
+Row 2:
+caption: Limited Liability Company Specialized Developer Alabuga South Park
+datasets: ['us_ofac_sdn', 'us_trade_csl', 'us_sam_exclusions', 'ua_nsdc_sanctions']
+first_seen: 2024-02-23T14:10:55
+id: NK-22MHXvQQufBgTjUWgUbWb8
+last_change: 2024-12-03T11:56:57
+last_seen: 2025-01-24T00:22:03
+properties: Row(address=['UL. SH-2 (OEZ ALABUGA TER.), D. 15/5, POMESHCH. 3, YELABUGA, REPUBLIC OF TATARSTAN, RUS, 423601', 'Російська Федерація, 423601, Республіка Татарстан, м. Єлабуга, територія особливої економічної зони "Алабуга", вул. Ш-2, будова 15/5, прим. 3', 'ul. Sh-2 (OEZ Alabuga Ter.), D. 15/5, Pomeshch. 3, 423601 Yelabuga', 'Российская Федерация, 423601, Республика Татарстан, г. Елабуга, территория особой экономической зоны "Алабуга", ул. Ш-2, строение 15/5, пом. 3'], addressEntity=['addr-e4bd08c72e59e39d49d7b0bba917df75258689f0'], alias=['LLC Specialized Developer Alabuga South Park', 'OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК', 'LIMITED LIABILITY COMPANY SPECIALIZED DEVELOPER ALABUGA SOUTH PARK', 'Общество с ограниченной ответственностью "Специализированный застройщик "Алабуга Южный Парк"', 'Limited Liability Company "Specialized Developer "Alabuga South Park"', 'LLC SPECIALIZED DEVELOPER ALABUGA SOUTH PARK'], classification=None, country=['ru'], createdAt=['2024-02-23'], description=None, dissolutionDate=None, dunsCode=None, email=None, icijId=None, idNumber=['52120883'], imoNumber=None, incorporationDate=['2023-06-06'], innCode=['1674005078'], jurisdiction=['ru'], keywords=None, legalForm=None, leiCode=None, modifiedAt=None, name=['Tovarystvo z obmezhenoiu vidpovidalnistiu "Spetsializovanyi zabudovnyk "Alabuha Pivdennyi Park"', 'Товариство з обмеженою відповідальністю "Спеціалізований забудовник "Алабуга Південний Парк"', 'LIMITED LIABILITY COMPANY SPECIALIZED DEVELOPER ALABUGA SOUTH PARK', 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК', 'Limited Liability Company Specialized Developer Alabuga South Park', 'LLC SPECIALIZED DEVELOPER ALABUGA SOUTH PARK'], notes=None, npiCode=None, ogrnCode=['1231600029825'], okpoCode=None, opencorporatesUrl=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=['C526RHBSEVC3', '1231600029825', 'U1EZWUPPYNN3'], sector=['Construction of buildings'], sourceUrl=['https://sanctionssearch.ofac.treas.gov/Details.aspx?id=47297'], status=None, summary=None, swiftBic=None, taxNumber=['1674005078'], topics=['sanction'], uniqueEntityId=['C526RHBSEVC3', 'U1EZWUPPYNN3'], vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['ofac-47297', 'usgsa-s4mrtxrwj', 'usgsa-s4mrs26dw', 'ua-nazk-company-12680', 'ua-nsdc-27786-tovaristvo-z-obmezenou-vidpovidalnistu-specializovanij-zabudovnik-alabuga-pivdennij-park']
+schema: Organization
+target: True
+----------------------------------------
+Row 3:
+caption: PROVINCIA DI MANTOVA
+datasets: ['iso9362_bic']
+first_seen: 2023-03-16T00:00:00
+id: NK-22TPu6C93XCcD5jLVgUJw4
+last_change: 2024-10-21T00:00:00
+last_seen: 2025-01-18T10:31:56
+properties: Row(address=['VIA PRINCIPE AMEDEO 30 MANTOVA 46100 MANTOVA ITALY', 'VIA PRINCIPE AMEDEO 30 MANTOVA 46100 ITALY'], addressEntity=None, alias=None, classification=None, country=['it'], createdAt=['2014-09-06'], description=None, dissolutionDate=None, dunsCode=None, email=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=None, keywords=None, legalForm=None, leiCode=None, modifiedAt=['2014-09-06'], name=['PROVINCIA DI MANTOVA'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=['PRNOIT21'], taxNumber=None, topics=['fin.bank'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['lei-815600779A7F8D5BA141', 'bic-PRNOIT21']
+schema: Organization
+target: False
+----------------------------------------
+Row 4:
+caption: DUNDEE SECURITIES EUROPE LIMITED
+datasets: ['iso9362_bic']
+first_seen: 2023-03-16T00:00:00
+id: NK-22m4JhEphecFMM6hYEjWNY
+last_change: 2024-10-21T00:00:00
+last_seen: 2025-01-18T10:31:56
+properties: Row(address=['94 MOUNT STREET LONDON LONDON W1Y 5HG UNITED KINGDOM', '94 MOUNT STREET LONDON W1Y 5HG UNITED KINGDOM', '94 MOUNT STREET FLOOR 1 LONDON LONDON W1K 2SZ UNITED KINGDOM'], addressEntity=None, alias=None, classification=None, country=['gb'], createdAt=['2001-12-01'], description=None, dissolutionDate=None, dunsCode=None, email=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=None, keywords=None, legalForm=None, leiCode=None, modifiedAt=['2020-03-26'], name=['DUNDEE SECURITIES EUROPE LIMITED'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=['BEPRGB21', 'MIPAGB21'], taxNumber=None, topics=['fin.bank'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['bic-BEPRGB21', 'bic-MIPAGB21']
+schema: Organization
+target: False
+----------------------------------------
+Row 5:
+caption: APPLIED FINANCE CAPITAL MANAGEMENT LLC
+datasets: ['iso9362_bic']
+first_seen: 2023-03-16T00:00:00
+id: NK-22o6iap3n8F3cJHMvqiCgi
+last_change: 2024-10-21T00:00:00
+last_seen: 2025-01-18T10:31:56
+properties: Row(address=['COND. ATLANTIS 404 AVE. PONCE DE LEON, APT. 1804 SAN JUAN 00901 PUERTO RICO', 'COND. ATLANTIS 404 AVE. PONCE DE LEON, APT. 1804 SAN JUAN SAN JUAN 00901 PUERTO RICO'], addressEntity=None, alias=None, classification=None, country=['pr'], createdAt=['2022-08-06'], description=None, dissolutionDate=None, dunsCode=None, email=None, icijId=None, idNumber=None, imoNumber=None, incorporationDate=None, innCode=None, jurisdiction=None, keywords=None, legalForm=None, leiCode=None, modifiedAt=['2022-08-06'], name=['APPLIED FINANCE CAPITAL MANAGEMENT LLC'], notes=None, npiCode=None, ogrnCode=None, okpoCode=None, opencorporatesUrl=None, phone=None, previousName=None, program=None, publisher=None, registrationNumber=None, sector=None, sourceUrl=None, status=None, summary=None, swiftBic=['AFCPPRS2'], taxNumber=None, topics=['fin.bank'], uniqueEntityId=None, vatCode=None, weakAlias=None, website=None, wikidataId=None)
+referents: ['lei-54930024GPIYHWUPSW72', 'bic-AFCPPRS2']
+schema: Organization
+target: False
+----------------------------------------

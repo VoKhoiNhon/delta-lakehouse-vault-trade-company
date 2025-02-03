@@ -1,0 +1,55 @@
+Row 1:
+port_code: 0101
+port_name: Portland, Maine
+previous_port_name: None
+country_name: United States
+latitude: None
+longitude: None
+country_code: US
+jurisdiction: Maine
+load_date: 20241231
+----------------------------------------
+Row 2:
+port_code: 0102
+port_name: Bangor, Maine
+previous_port_name: None
+country_name: United States
+latitude: None
+longitude: None
+country_code: US
+jurisdiction: Maine
+load_date: 20241231
+----------------------------------------
+Row 3:
+port_code: 0103
+port_name: Eastport, Maine
+previous_port_name: None
+country_name: United States
+latitude: None
+longitude: None
+country_code: US
+jurisdiction: Maine
+load_date: 20241231
+----------------------------------------
+Row 4:
+port_code: 0104
+port_name: Jackman, Maine
+previous_port_name: None
+country_name: United States
+latitude: None
+longitude: None
+country_code: US
+jurisdiction: Maine
+load_date: 20241231
+----------------------------------------
+Row 5:
+port_code: 0105
+port_name: Vanceboro, Maine
+previous_port_name: None
+country_name: United States
+latitude: None
+longitude: None
+country_code: US
+jurisdiction: Maine
+load_date: 20241231
+----------------------------------------

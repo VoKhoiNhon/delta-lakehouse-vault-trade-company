@@ -1,0 +1,58 @@
+model:
+  table_name: data4seo
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/data4seo/{{ env }}company"
+  # data_location: "s3a://lakehouse-bronze/data4seo/company"
+  # partition_by:
+    # - "load_date"
+    # - "country_code"
+  unique_key: entity_name
+  data_format: delta
+  load_date: "{{ load_date }}"
+  options:
+    mergeSchema: true
+  env: "{{ env }}"
+input_resources:
+  - table_name: raw_data4seo
+    env: "{{ env }}"
+    format: csv
+    # data_location: "s3a://lakehouse-raw/test_on_s3/data4seo/company-{{load_date}}/data/head_16000_records_01.csv"
+    data_location: "s3a://lakehouse-raw/data4seo/company-{{load_date}}/data/*.csv"
+    record_source: "https://downloads.dataforseo.com/databasesV3/google_business/f74b708b-0c8f-40b1-a4e3-69d6da446d9a/list.txt"
+    process_job: jobs/bronze/data4seo.py
+    options:
+      header: true
+      sep: ","
+      multiline: true
+      quote: "\""
+      escape: "\""
+    load_date: "{{ load_date }}"
+    spark_resources:
+      # Custom Resource
+      spark.driver.memory: "10g"
+      spark.driver.memoryOverhead: "512mb"
+      spark.executor.memory: "40g"
+      spark.executor.memoryOverhead: "10g"
+      spark.executor.cores: "20"
+      spark.executor.instances: "4"
+      spark.dynamicAllocation.enabled: "true"
+      spark.dynamicAllocation.minExecutors: "1"
+      spark.dynamicAllocation.maxExecutors: "4"
+      spark.sql.autoBroadcastJoinThreshold: "100MB"
+      spark.sql.execution.arrow.pyspark.enabled: "true"
+      # spark.sql.shuffle.partitions: "1"
+      spark.sql.files.openCostInBytes: "134217728"
+      spark.sql.files.maxPartitionBytes: "256MB"
+
+      # Fault Tolerance
+      spark.executor.heartbeatInterval: "60s"
+      spark.network.timeout: "900s"
+      spark.task.maxFailures: "10"
+      spark.stage.maxConsecutiveAttempts: "4"
+
+      spark.databricks.delta.snapshotCache.validation.enabled: "false"
+      spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+      spark.databricks.delta.retentionDurationCheck.enabled: "false"
+      # spark.databricks.delta.autoCompact.enabled: "true"
+      spark.databricks.delta.optimizeWrite.enabled: "true"
+      spark.delta.targetFileSize: "209715200"

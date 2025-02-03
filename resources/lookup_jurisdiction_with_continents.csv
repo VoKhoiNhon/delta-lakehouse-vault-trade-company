@@ -1,0 +1,316 @@
+country_name,jurisdiction,is_state,country_code,alpha2_code,alpha3_code,numeric_code,official_name,continent
+Afghanistan,Afghanistan,False,AF,AF,AFG,004,Islamic Republic of Afghanistan,asia
+Albania,Albania,False,AL,AL,ALB,008,Republic of Albania,europe
+Algeria,Algeria,False,DZ,DZ,DZA,012,People's Democratic Republic of Algeria,africa
+American Samoa,American Samoa,False,AS,AS,ASM,016,American Samoa,north_america
+Andorra,Andorra,False,AD,AD,AND,020,Principality of Andorra,europe
+Angola,Angola,False,AO,AO,AGO,024,Republic of Angola,africa
+Anguilla,Anguilla,False,AI,AI,AIA,660,Anguilla,north_america
+Antarctica,Antarctica,False,AQ,AQ,ATA,010,Antarctica,oceania
+Antigua and Barbuda,Antigua and Barbuda,False,AG,AG,ATG,028,Antigua and Barbuda,north_america
+Argentina,Argentina,False,AR,AR,ARG,032,Argentine Republic,south_america
+Armenia,Armenia,False,AM,AM,ARM,051,Republic of Armenia,asia
+Aruba,Aruba,False,AW,AW,ABW,533,Aruba,north_america
+Australia,Australia,False,AU,AU,AUS,036,Australia,oceania
+Austria,Austria,False,AT,AT,AUT,040,Republic of Austria,europe
+Azerbaijan,Azerbaijan,False,AZ,AZ,AZE,031,Republic of Azerbaijan,asia
+Bahamas,Bahamas,False,BS,BS,BHS,044,Commonwealth of the Bahamas,north_america
+Bahrain,Bahrain,False,BH,BH,BHR,048,Kingdom of Bahrain,asia
+Bangladesh,Bangladesh,False,BD,BD,BGD,050,People's Republic of Bangladesh,asia
+Barbados,Barbados,False,BB,BB,BRB,052,Barbados,north_america
+Belarus,Belarus,False,BY,BY,BLR,112,Republic of Belarus,europe
+Belgium,Belgium,False,BE,BE,BEL,056,Kingdom of Belgium,europe
+Belize,Belize,False,BZ,BZ,BLZ,084,Belize,north_america
+Benin,Benin,False,BJ,BJ,BEN,204,Republic of Benin,africa
+Bermuda,Bermuda,False,BM,BM,BMU,060,Bermuda,north_america
+Bhutan,Bhutan,False,BT,BT,BTN,064,Kingdom of Bhutan,asia
+Bolivia,Bolivia,False,BO,BO,BOL,068,Plurinational State of Bolivia,south_america
+"Bonaire, Sint Eustatius and Saba","Bonaire, Sint Eustatius and Saba",False,BQ,BQ,BES,535,"Bonaire, Sint Eustatius and Saba",north_america
+Bosnia and Herzegovina,Bosnia and Herzegovina,False,BA,BA,BIH,070,Republic of Bosnia and Herzegovina,europe
+Botswana,Botswana,False,BW,BW,BWA,072,Republic of Botswana,africa
+Bouvet Island,Bouvet Island,False,BV,BV,BVT,074,Bouvet Island,oceania
+Brazil,Brazil,False,BR,BR,BRA,076,Federative Republic of Brazil,south_america
+British Indian Ocean Territory,British Indian Ocean Territory,False,IO,IO,IOT,086,British Indian Ocean Territory,asia
+Brunei,Brunei,False,BN,BN,BRN,096,Brunei Darussalam,asia
+Bulgaria,Bulgaria,False,BG,BG,BGR,100,Republic of Bulgaria,europe
+Burkina Faso,Burkina Faso,False,BF,BF,BFA,854,Burkina Faso,africa
+Burundi,Burundi,False,BI,BI,BDI,108,Republic of Burundi,africa
+Cabo Verde,Cabo Verde,False,CV,CV,CPV,132,Republic of Cabo Verde,africa
+Cambodia,Cambodia,False,KH,KH,KHM,116,Kingdom of Cambodia,asia
+Cameroon,Cameroon,False,CM,CM,CMR,120,Republic of Cameroon,africa
+Canada,CA.Alberta,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.British Columbia,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Manitoba,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.New Brunswick,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Newfoundland and Labrador,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Northwest Territories,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Nova Scotia,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Nunavut,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Ontario,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Prince Edward Island,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Quebec,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Saskatchewan,True,CA,CA,CAN,124,Canada,north_america
+Canada,CA.Yukon,True,CA,CA,CAN,124,Canada,north_america
+Canada,Canada,False,CA,CA,CAN,124,Canada,north_america
+Cayman Islands,Cayman Islands,False,KY,KY,CYM,136,Cayman Islands,north_america
+Central African Republic,Central African Republic,False,CF,CF,CAF,140,Central African Republic,africa
+Chad,Chad,False,TD,TD,TCD,148,Republic of Chad,africa
+Chile,Chile,False,CL,CL,CHL,152,Republic of Chile,south_america
+China,China,False,CN,CN,CHN,156,People's Republic of China,asia
+Christmas Island,Christmas Island,False,CX,CX,CXR,162,Christmas Island,oceania
+Cocos (Keeling) Islands,Cocos (Keeling) Islands,False,CC,CC,CCK,166,Cocos (Keeling) Islands,oceania
+Colombia,Colombia,False,CO,CO,COL,170,Republic of Colombia,south_america
+Comoros,Comoros,False,KM,KM,COM,174,Union of the Comoros,africa
+Congo,Congo,False,CG,CG,COG,178,Republic of the Congo,africa
+"Congo, The Democratic Republic of the","Congo, The Democratic Republic of the",False,CD,CD,COD,180,"Congo, The Democratic Republic of the",africa
+Cook Islands,Cook Islands,False,CK,CK,COK,184,Cook Islands,oceania
+Costa Rica,Costa Rica,False,CR,CR,CRI,188,Republic of Costa Rica,north_america
+Croatia,Croatia,False,HR,HR,HRV,191,Republic of Croatia,europe
+Cuba,Cuba,False,CU,CU,CUB,192,Republic of Cuba,north_america
+Curaçao,Curaçao,False,CW,CW,CUW,531,Curaçao,north_america
+Cyprus,Cyprus,False,CY,CY,CYP,196,Republic of Cyprus,asia
+Czechia,Czechia,False,CZ,CZ,CZE,203,Czech Republic,europe
+Côte d'Ivoire,Côte d'Ivoire,False,CI,CI,CIV,384,Republic of Côte d'Ivoire,africa
+Denmark,Denmark,False,DK,DK,DNK,208,Kingdom of Denmark,europe
+Djibouti,Djibouti,False,DJ,DJ,DJI,262,Republic of Djibouti,africa
+Dominica,Dominica,False,DM,DM,DMA,212,Commonwealth of Dominica,north_america
+Dominican Republic,Dominican Republic,False,DO,DO,DOM,214,Dominican Republic,north_america
+Ecuador,Ecuador,False,EC,EC,ECU,218,Republic of Ecuador,south_america
+Egypt,Egypt,False,EG,EG,EGY,818,Arab Republic of Egypt,africa
+El Salvador,El Salvador,False,SV,SV,SLV,222,Republic of El Salvador,north_america
+Equatorial Guinea,Equatorial Guinea,False,GQ,GQ,GNQ,226,Republic of Equatorial Guinea,africa
+Eritrea,Eritrea,False,ER,ER,ERI,232,the State of Eritrea,africa
+Estonia,Estonia,False,EE,EE,EST,233,Republic of Estonia,europe
+Eswatini,Eswatini,False,SZ,SZ,SWZ,748,Kingdom of Eswatini,africa
+Ethiopia,Ethiopia,False,ET,ET,ETH,231,Federal Democratic Republic of Ethiopia,africa
+Falkland Islands (Malvinas),Falkland Islands (Malvinas),False,FK,FK,FLK,238,Falkland Islands (Malvinas),south_america
+Faroe Islands,Faroe Islands,False,FO,FO,FRO,234,Faroe Islands,europe
+Fiji,Fiji,False,FJ,FJ,FJI,242,Republic of Fiji,oceania
+Finland,Finland,False,FI,FI,FIN,246,Republic of Finland,europe
+France,France,False,FR,FR,FRA,250,French Republic,europe
+French Guiana,French Guiana,False,GF,GF,GUF,254,French Guiana,south_america
+French Polynesia,French Polynesia,False,PF,PF,PYF,258,French Polynesia,oceania
+French Southern Territories,French Southern Territories,False,TF,TF,ATF,260,French Southern Territories,oceania
+Gabon,Gabon,False,GA,GA,GAB,266,Gabonese Republic,africa
+Gambia,Gambia,False,GM,GM,GMB,270,Republic of the Gambia,africa
+Georgia,Georgia,False,GE,GE,GEO,268,Georgia,asia
+Germany,Germany,False,DE,DE,DEU,276,Federal Republic of Germany,europe
+Ghana,Ghana,False,GH,GH,GHA,288,Republic of Ghana,africa
+Gibraltar,Gibraltar,False,GI,GI,GIB,292,Gibraltar,europe
+Greece,Greece,False,GR,GR,GRC,300,Hellenic Republic,europe
+Greenland,Greenland,False,GL,GL,GRL,304,Greenland,north_america
+Grenada,Grenada,False,GD,GD,GRD,308,Grenada,north_america
+Guadeloupe,Guadeloupe,False,GP,GP,GLP,312,Guadeloupe,north_america
+Guam,Guam,False,GU,GU,GUM,316,Guam,oceania
+Guatemala,Guatemala,False,GT,GT,GTM,320,Republic of Guatemala,north_america
+Guernsey,Guernsey,False,GG,GG,GGY,831,Guernsey,europe
+Guinea,Guinea,False,GN,GN,GIN,324,Republic of Guinea,africa
+Guinea-Bissau,Guinea-Bissau,False,GW,GW,GNB,624,Republic of Guinea-Bissau,africa
+Guyana,Guyana,False,GY,GY,GUY,328,Republic of Guyana,south_america
+Haiti,Haiti,False,HT,HT,HTI,332,Republic of Haiti,north_america
+Heard Island and McDonald Islands,Heard Island and McDonald Islands,False,HM,HM,HMD,334,Heard Island and McDonald Islands,oceania
+Holy See (Vatican City State),Holy See (Vatican City State),False,VA,VA,VAT,336,Holy See (Vatican City State),europe
+Honduras,Honduras,False,HN,HN,HND,340,Republic of Honduras,north_america
+Hong Kong,Hong Kong,False,HK,HK,HKG,344,Hong Kong Special Administrative Region of China,asia
+Hungary,Hungary,False,HU,HU,HUN,348,Hungary,europe
+Iceland,Iceland,False,IS,IS,ISL,352,Republic of Iceland,europe
+India,India,False,IN,IN,IND,356,Republic of India,asia
+Indonesia,Indonesia,False,ID,ID,IDN,360,Republic of Indonesia,asia
+Iran,Iran,False,IR,IR,IRN,364,Islamic Republic of Iran,asia
+Iraq,Iraq,False,IQ,IQ,IRQ,368,Republic of Iraq,asia
+Ireland,Ireland,False,IE,IE,IRL,372,Ireland,europe
+Isle of Man,Isle of Man,False,IM,IM,IMN,833,Isle of Man,europe
+Israel,Israel,False,IL,IL,ISR,376,State of Israel,asia
+Italy,Italy,False,IT,IT,ITA,380,Italian Republic,europe
+Jamaica,Jamaica,False,JM,JM,JAM,388,Jamaica,north_america
+Japan,Japan,False,JP,JP,JPN,392,Japan,asia
+Jersey,Jersey,False,JE,JE,JEY,832,Jersey,europe
+Jordan,Jordan,False,JO,JO,JOR,400,Hashemite Kingdom of Jordan,asia
+Kazakhstan,Kazakhstan,False,KZ,KZ,KAZ,398,Republic of Kazakhstan,asia
+Kenya,Kenya,False,KE,KE,KEN,404,Republic of Kenya,africa
+Kiribati,Kiribati,False,KI,KI,KIR,296,Republic of Kiribati,oceania
+North Korea,North Korea,False,KP,KP,PRK,408,Democratic People's Republic of Korea,asia
+South Korea,South Korea,False,KR,KR,KOR,410,"Korea, Republic of",asia
+Kuwait,Kuwait,False,KW,KW,KWT,414,State of Kuwait,asia
+Kyrgyzstan,Kyrgyzstan,False,KG,KG,KGZ,417,Kyrgyz Republic,asia
+Laos,Laos,False,LA,LA,LAO,418,Lao People's Democratic Republic,asia
+Latvia,Latvia,False,LV,LV,LVA,428,Republic of Latvia,europe
+Lebanon,Lebanon,False,LB,LB,LBN,422,Lebanese Republic,asia
+Lesotho,Lesotho,False,LS,LS,LSO,426,Kingdom of Lesotho,africa
+Liberia,Liberia,False,LR,LR,LBR,430,Republic of Liberia,africa
+Libya,Libya,False,LY,LY,LBY,434,Libya,africa
+Liechtenstein,Liechtenstein,False,LI,LI,LIE,438,Principality of Liechtenstein,europe
+Lithuania,Lithuania,False,LT,LT,LTU,440,Republic of Lithuania,europe
+Luxembourg,Luxembourg,False,LU,LU,LUX,442,Grand Duchy of Luxembourg,europe
+Macao,Macao,False,MO,MO,MAC,446,Macao Special Administrative Region of China,asia
+Madagascar,Madagascar,False,MG,MG,MDG,450,Republic of Madagascar,africa
+Malawi,Malawi,False,MW,MW,MWI,454,Republic of Malawi,africa
+Malaysia,Malaysia,False,MY,MY,MYS,458,Malaysia,asia
+Maldives,Maldives,False,MV,MV,MDV,462,Republic of Maldives,asia
+Mali,Mali,False,ML,ML,MLI,466,Republic of Mali,africa
+Malta,Malta,False,MT,MT,MLT,470,Republic of Malta,europe
+Marshall Islands,Marshall Islands,False,MH,MH,MHL,584,Republic of the Marshall Islands,oceania
+Martinique,Martinique,False,MQ,MQ,MTQ,474,Martinique,north_america
+Mauritania,Mauritania,False,MR,MR,MRT,478,Islamic Republic of Mauritania,africa
+Mauritius,Mauritius,False,MU,MU,MUS,480,Republic of Mauritius,africa
+Mayotte,Mayotte,False,YT,YT,MYT,175,Mayotte,africa
+Mexico,Mexico,False,MX,MX,MEX,484,United Mexican States,north_america
+Micronesia,Micronesia,False,FM,FM,FSM,583,Federated States of Micronesia,oceania
+Moldova,Moldova,False,MD,MD,MDA,498,Republic of Moldova,europe
+Monaco,Monaco,False,MC,MC,MCO,492,Principality of Monaco,europe
+Mongolia,Mongolia,False,MN,MN,MNG,496,Mongolia,asia
+Montenegro,Montenegro,False,ME,ME,MNE,499,Montenegro,europe
+Montserrat,Montserrat,False,MS,MS,MSR,500,Montserrat,north_america
+Morocco,Morocco,False,MA,MA,MAR,504,Kingdom of Morocco,africa
+Mozambique,Mozambique,False,MZ,MZ,MOZ,508,Republic of Mozambique,africa
+Myanmar,Myanmar,False,MM,MM,MMR,104,Republic of Myanmar,asia
+Namibia,Namibia,False,NA,NA,NAM,516,Republic of Namibia,africa
+Nauru,Nauru,False,NR,NR,NRU,520,Republic of Nauru,oceania
+Nepal,Nepal,False,NP,NP,NPL,524,Federal Democratic Republic of Nepal,asia
+Netherlands,Netherlands,False,NL,NL,NLD,528,Kingdom of the Netherlands,europe
+New Caledonia,New Caledonia,False,NC,NC,NCL,540,New Caledonia,oceania
+New Zealand,New Zealand,False,NZ,NZ,NZL,554,New Zealand,oceania
+Nicaragua,Nicaragua,False,NI,NI,NIC,558,Republic of Nicaragua,north_america
+Niger,Niger,False,NE,NE,NER,562,Republic of the Niger,africa
+Nigeria,Nigeria,False,NG,NG,NGA,566,Federal Republic of Nigeria,africa
+Niue,Niue,False,NU,NU,NIU,570,Niue,oceania
+Norfolk Island,Norfolk Island,False,NF,NF,NFK,574,Norfolk Island,oceania
+North Macedonia,North Macedonia,False,MK,MK,MKD,807,Republic of North Macedonia,europe
+Northern Mariana Islands,Northern Mariana Islands,False,MP,MP,MNP,580,Commonwealth of the Northern Mariana Islands,oceania
+Norway,Norway,False,NO,NO,NOR,578,Kingdom of Norway,europe
+Oman,Oman,False,OM,OM,OMN,512,Sultanate of Oman,asia
+Pakistan,Pakistan,False,PK,PK,PAK,586,Islamic Republic of Pakistan,asia
+Palau,Palau,False,PW,PW,PLW,585,Republic of Palau,oceania
+Palestine,Palestine,False,PS,PS,PSE,275,the State of Palestine,asia
+Panama,Panama,False,PA,PA,PAN,591,Republic of Panama,north_america
+Papua New Guinea,Papua New Guinea,False,PG,PG,PNG,598,Independent State of Papua New Guinea,oceania
+Paraguay,Paraguay,False,PY,PY,PRY,600,Republic of Paraguay,south_america
+Peru,Peru,False,PE,PE,PER,604,Republic of Peru,south_america
+Philippines,Philippines,False,PH,PH,PHL,608,Republic of the Philippines,asia
+Pitcairn,Pitcairn,False,PN,PN,PCN,612,Pitcairn,oceania
+Poland,Poland,False,PL,PL,POL,616,Republic of Poland,europe
+Portugal,Portugal,False,PT,PT,PRT,620,Portuguese Republic,europe
+Puerto Rico,Puerto Rico,False,PR,PR,PRI,630,Puerto Rico,north_america
+Qatar,Qatar,False,QA,QA,QAT,634,State of Qatar,asia
+Romania,Romania,False,RO,RO,ROU,642,Romania,europe
+Russian Federation,Russian Federation,False,RU,RU,RUS,643,Russian Federation,europe
+Rwanda,Rwanda,False,RW,RW,RWA,646,Rwandese Republic,africa
+Réunion,Réunion,False,RE,RE,REU,638,Réunion,africa
+Saint Barthélemy,Saint Barthélemy,False,BL,BL,BLM,652,Saint Barthélemy,north_america
+Saint Helena,Saint Helena,False,SH,SH,SHN,654,"Saint Helena, Ascension and Tristan da Cunha",africa
+Saint Kitts and Nevis,Saint Kitts and Nevis,False,KN,KN,KNA,659,Saint Kitts and Nevis,north_america
+Saint Lucia,Saint Lucia,False,LC,LC,LCA,662,Saint Lucia,north_america
+Saint Martin (French part),Saint Martin (French part),False,MF,MF,MAF,663,Saint Martin (French part),north_america
+Saint Pierre and Miquelon,Saint Pierre and Miquelon,False,PM,PM,SPM,666,Saint Pierre and Miquelon,north_america
+Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,False,VC,VC,VCT,670,Saint Vincent and the Grenadines,north_america
+Samoa,Samoa,False,WS,WS,WSM,882,Independent State of Samoa,oceania
+San Marino,San Marino,False,SM,SM,SMR,674,Republic of San Marino,europe
+Sao Tome and Principe,Sao Tome and Principe,False,ST,ST,STP,678,Democratic Republic of Sao Tome and Principe,africa
+Saudi Arabia,Saudi Arabia,False,SA,SA,SAU,682,Kingdom of Saudi Arabia,asia
+Senegal,Senegal,False,SN,SN,SEN,686,Republic of Senegal,africa
+Serbia,Serbia,False,RS,RS,SRB,688,Republic of Serbia,europe
+Seychelles,Seychelles,False,SC,SC,SYC,690,Republic of Seychelles,africa
+Sierra Leone,Sierra Leone,False,SL,SL,SLE,694,Republic of Sierra Leone,africa
+Singapore,Singapore,False,SG,SG,SGP,702,Republic of Singapore,asia
+Sint Maarten (Dutch part),Sint Maarten (Dutch part),False,SX,SX,SXM,534,Sint Maarten (Dutch part),north_america
+Slovakia,Slovakia,False,SK,SK,SVK,703,Slovak Republic,europe
+Slovenia,Slovenia,False,SI,SI,SVN,705,Republic of Slovenia,europe
+Solomon Islands,Solomon Islands,False,SB,SB,SLB,090,Solomon Islands,oceania
+Somalia,Somalia,False,SO,SO,SOM,706,Federal Republic of Somalia,africa
+South Africa,South Africa,False,ZA,ZA,ZAF,710,Republic of South Africa,africa
+South Georgia and the South Sandwich Islands,South Georgia and the South Sandwich Islands,False,GS,GS,SGS,239,South Georgia and the South Sandwich Islands,oceania
+South Sudan,South Sudan,False,SS,SS,SSD,728,Republic of South Sudan,africa
+Spain,Spain,False,ES,ES,ESP,724,Kingdom of Spain,europe
+Sri Lanka,Sri Lanka,False,LK,LK,LKA,144,Democratic Socialist Republic of Sri Lanka,asia
+Sudan,Sudan,False,SD,SD,SDN,729,Republic of the Sudan,africa
+Suriname,Suriname,False,SR,SR,SUR,740,Republic of Suriname,south_america
+Svalbard and Jan Mayen,Svalbard and Jan Mayen,False,SJ,SJ,SJM,744,Svalbard and Jan Mayen,europe
+Sweden,Sweden,False,SE,SE,SWE,752,Kingdom of Sweden,europe
+Switzerland,Switzerland,False,CH,CH,CHE,756,Swiss Confederation,europe
+Syrian Arab Republic,Syrian Arab Republic,False,SY,SY,SYR,760,Syrian Arab Republic,asia
+Taiwan,Taiwan,False,TW,TW,TWN,158,"Taiwan, Province of China",asia
+Tajikistan,Tajikistan,False,TJ,TJ,TJK,762,Republic of Tajikistan,asia
+Tanzania,Tanzania,False,TZ,TZ,TZA,834,United Republic of Tanzania,africa
+Thailand,Thailand,False,TH,TH,THA,764,Kingdom of Thailand,asia
+Timor-Leste,Timor-Leste,False,TL,TL,TLS,626,Democratic Republic of Timor-Leste,asia
+Togo,Togo,False,TG,TG,TGO,768,Togolese Republic,africa
+Tokelau,Tokelau,False,TK,TK,TKL,772,Tokelau,oceania
+Tonga,Tonga,False,TO,TO,TON,776,Kingdom of Tonga,oceania
+Trinidad and Tobago,Trinidad and Tobago,False,TT,TT,TTO,780,Republic of Trinidad and Tobago,north_america
+Tunisia,Tunisia,False,TN,TN,TUN,788,Republic of Tunisia,africa
+Turkmenistan,Turkmenistan,False,TM,TM,TKM,795,Turkmenistan,asia
+Turks and Caicos Islands,Turks and Caicos Islands,False,TC,TC,TCA,796,Turks and Caicos Islands,north_america
+Tuvalu,Tuvalu,False,TV,TV,TUV,798,Tuvalu,oceania
+Türkiye,Türkiye,False,TR,TR,TUR,792,Republic of Türkiye,asia
+Uganda,Uganda,False,UG,UG,UGA,800,Republic of Uganda,africa
+Ukraine,Ukraine,False,UA,UA,UKR,804,Ukraine,europe
+United Arab Emirates,United Arab Emirates,False,AE,AE,ARE,784,United Arab Emirates,asia
+United Kingdom,United Kingdom,False,GB,GB,GBR,826,United Kingdom of Great Britain and Northern Ireland,europe
+United States,US.Alabama,True,US,US,USA,840,United States of America,united_states
+United States,US.Alaska,True,US,US,USA,840,United States of America,united_states
+United States,US.Arizona,True,US,US,USA,840,United States of America,united_states
+United States,US.Arkansas,True,US,US,USA,840,United States of America,united_states
+United States,US.California,True,US,US,USA,840,United States of America,united_states
+United States,US.Colorado,True,US,US,USA,840,United States of America,united_states
+United States,US.Connecticut,True,US,US,USA,840,United States of America,united_states
+United States,US.Delaware,True,US,US,USA,840,United States of America,united_states
+United States,US.District of Columbia,True,US,US,USA,840,United States of America,united_states
+United States,US.Florida,True,US,US,USA,840,United States of America,united_states
+United States,US.Georgia,True,US,US,USA,840,United States of America,united_states
+United States,US.Hawaii,True,US,US,USA,840,United States of America,united_states
+United States,US.Idaho,True,US,US,USA,840,United States of America,united_states
+United States,US.Illinois,True,US,US,USA,840,United States of America,united_states
+United States,US.Indiana,True,US,US,USA,840,United States of America,united_states
+United States,US.Iowa,True,US,US,USA,840,United States of America,united_states
+United States,US.Kansas,True,US,US,USA,840,United States of America,united_states
+United States,US.Kentucky,True,US,US,USA,840,United States of America,united_states
+United States,US.Louisiana,True,US,US,USA,840,United States of America,united_states
+United States,US.Maine,True,US,US,USA,840,United States of America,united_states
+United States,US.Maryland,True,US,US,USA,840,United States of America,united_states
+United States,US.Massachusetts,True,US,US,USA,840,United States of America,united_states
+United States,US.Michigan,True,US,US,USA,840,United States of America,united_states
+United States,US.Minnesota,True,US,US,USA,840,United States of America,united_states
+United States,US.Mississippi,True,US,US,USA,840,United States of America,united_states
+United States,US.Missouri,True,US,US,USA,840,United States of America,united_states
+United States,US.Montana,True,US,US,USA,840,United States of America,united_states
+United States,US.Nebraska,True,US,US,USA,840,United States of America,united_states
+United States,US.Nevada,True,US,US,USA,840,United States of America,united_states
+United States,US.New Hampshire,True,US,US,USA,840,United States of America,united_states
+United States,US.New Jersey,True,US,US,USA,840,United States of America,united_states
+United States,US.New Mexico,True,US,US,USA,840,United States of America,united_states
+United States,US.New York,True,US,US,USA,840,United States of America,united_states
+United States,US.North Carolina,True,US,US,USA,840,United States of America,united_states
+United States,US.North Dakota,True,US,US,USA,840,United States of America,united_states
+United States,US.Ohio,True,US,US,USA,840,United States of America,united_states
+United States,US.Oklahoma,True,US,US,USA,840,United States of America,united_states
+United States,US.Oregon,True,US,US,USA,840,United States of America,united_states
+United States,US.Pennsylvania,True,US,US,USA,840,United States of America,united_states
+United States,US.Rhode Island,True,US,US,USA,840,United States of America,united_states
+United States,US.South Carolina,True,US,US,USA,840,United States of America,united_states
+United States,US.South Dakota,True,US,US,USA,840,United States of America,united_states
+United States,US.Tennessee,True,US,US,USA,840,United States of America,united_states
+United States,US.Texas,True,US,US,USA,840,United States of America,united_states
+United States,US.Utah,True,US,US,USA,840,United States of America,united_states
+United States,US.Vermont,True,US,US,USA,840,United States of America,united_states
+United States,US.Virginia,True,US,US,USA,840,United States of America,united_states
+United States,US.Washington,True,US,US,USA,840,United States of America,united_states
+United States,US.West Virginia,True,US,US,USA,840,United States of America,united_states
+United States,US.Wisconsin,True,US,US,USA,840,United States of America,united_states
+United States,US.Wyoming,True,US,US,USA,840,United States of America,united_states
+United States,United States,False,US,US,USA,840,United States of America,united_states
+United States Minor Outlying Islands,United States Minor Outlying Islands,False,UM,UM,UMI,581,United States Minor Outlying Islands,united_states
+Uruguay,Uruguay,False,UY,UY,URY,858,Eastern Republic of Uruguay,south_america
+Uzbekistan,Uzbekistan,False,UZ,UZ,UZB,860,Republic of Uzbekistan,asia
+Vanuatu,Vanuatu,False,VU,VU,VUT,548,Republic of Vanuatu,oceania
+"Venezuela, Bolivarian Republic of","Venezuela, Bolivarian Republic of",False,VE,VE,VEN,862,Bolivarian Republic of Venezuela,south_america
+Viet Nam,Viet Nam,False,VN,VN,VNM,704,Socialist Republic of Viet Nam,asia
+"Virgin Islands, British","Virgin Islands, British",False,VG,VG,VGB,092,British Virgin Islands,north_america
+"Virgin Islands, U.S.","Virgin Islands, U.S.",False,VI,VI,VIR,850,Virgin Islands of the United States,united_states
+Wallis and Futuna,Wallis and Futuna,False,WF,WF,WLF,876,Wallis and Futuna,oceania
+Western Sahara,Western Sahara,False,EH,EH,ESH,732,Western Sahara,africa
+Yemen,Yemen,False,YE,YE,YEM,887,Republic of Yemen,asia
+Zambia,Zambia,False,ZM,ZM,ZMB,894,Republic of Zambia,africa
+Zimbabwe,Zimbabwe,False,ZW,ZW,ZWE,716,Republic of Zimbabwe,africa
+Åland Islands,Åland Islands,False,AX,AX,ALA,248,Åland Islands,europe
+São Tomé and Príncipe,São Tomé and Príncipe,False,ST,ST,STP,678,Democratic Republic of São Tomé and Príncipe,africa
+Kosovo,Kosovo,False,,,,,Republic of Kosovo,europe

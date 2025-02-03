@@ -1,0 +1,140 @@
+Row 1:
+bill_id: -274936217
+bill_no: 554724
+billid: 274936217
+buyer: shanghai xiongxing imp & expor
+buyer_country: China
+cargo_value_local_currency: 5859892.79
+customs_office_code: 101
+customs_office_name: Custom House, Dhaka
+date: 2024-06-13
+descript: LIVE CRABS
+exporter_address: PLOT NO-39, GAREB-E-NEWAZ AVENUE,,SECTOR-13; Uttara PS; Dhaka-1230;,Bangladesh, 
+g_weight_kg: 7644
+hs: 03063310
+hs_code_desc: Crabs
+n_weight_kg: 7152
+origin_country: other
+qty: 0
+qty_unit: None
+seller: z b international
+seller_country: Bangladesh
+seller_port: Custom House, Dhaka
+weight: 7152
+weight_unit: KG
+name: z b international
+load_date: 20241217
+pure_name: z b international
+----------------------------------------
+Row 2:
+bill_id: -274936234
+bill_no: 557089
+billid: 274936234
+buyer: guangzhou paulo trade co ltd
+buyer_country: China
+cargo_value_local_currency: 4481587.16
+customs_office_code: 101
+customs_office_name: Custom House, Dhaka
+date: 2024-06-13
+descript: LIVE CRABS
+exporter_address: 32/B,NIGAR,PLAZA,FLAT-8/A,ROAD-2,SECTOR-3,UTTA,RA; Uttara West PS; Dhaka-1230;,Bangladesh
+g_weight_kg: 6984
+hs: 03063310
+hs_code_desc: Crabs
+n_weight_kg: 6352
+origin_country: other
+qty: 0
+qty_unit: None
+seller: armaan international
+seller_country: Bangladesh
+seller_port: Custom House, Dhaka
+weight: 6352
+weight_unit: KG
+name: armaan international
+load_date: 20241217
+pure_name: armaan international
+----------------------------------------
+Row 3:
+bill_id: -274936333
+bill_no: 554460
+billid: 274936333
+buyer: henan shunshui interntional trade
+buyer_country: China
+cargo_value_local_currency: 3496927.07
+customs_office_code: 101
+customs_office_name: Custom House, Dhaka
+date: 2024-06-13
+descript: LIVE EEL FISH
+exporter_address: 241-242,TARARTEK, DIABARI; Turag,PS; Dhaka-1230; Bangladesh, , 
+g_weight_kg: 10476
+hs: 03019290
+hs_code_desc: Live Eels, Excl. Fry
+n_weight_kg: 9312
+origin_country: other
+qty: 0
+qty_unit: None
+seller: tasmi enterprise
+seller_country: Bangladesh
+seller_port: Custom House, Dhaka
+weight: 9312
+weight_unit: KG
+name: tasmi enterprise
+load_date: 20241217
+pure_name: tasmi enterprise
+----------------------------------------
+Row 4:
+bill_id: -274936346
+bill_no: 554723
+billid: 274936346
+buyer: henan shunshui interntional trade
+buyer_country: China
+cargo_value_local_currency: 2136009.58
+customs_office_code: 101
+customs_office_name: Custom House, Dhaka
+date: 2024-06-13
+descript: LIVE EEL FISH
+exporter_address: H-91/1, Bir Uttam ziaur rahman,Road, Banani, Dhaka-1213; Banani,PS; Dhaka-1213; Bangladesh, 
+g_weight_kg: 6399
+hs: 03019290
+hs_code_desc: Live Eels, Excl. Fry
+n_weight_kg: 5688
+origin_country: other
+qty: 0
+qty_unit: None
+seller: bang chung trade & tourism
+seller_country: Bangladesh
+seller_port: Custom House, Dhaka
+weight: 5688
+weight_unit: KG
+name: bang chung trade & tourism
+load_date: 20241217
+pure_name: bang chung trade tourism
+----------------------------------------
+Row 5:
+bill_id: -274936372
+bill_no: 557121
+billid: 274936372
+buyer: paulo interntional china
+buyer_country: China
+cargo_value_local_currency: 1952933.45
+customs_office_code: 101
+customs_office_name: Custom House, Dhaka
+date: 2024-06-13
+descript: LIVE CRABS
+exporter_address: Plot-21, Faidabad, Birmuktijodda,Kutub Uddin Sarani, Faidabad,Madrasha; Dakshin Khan PS;,Dhaka-1230; Bangladesh
+g_weight_kg: 3044
+hs: 03063390
+hs_code_desc: Crabs
+n_weight_kg: 2768
+origin_country: other
+qty: 0
+qty_unit: None
+seller: z. l. international
+seller_country: Bangladesh
+seller_port: Custom House, Dhaka
+weight: 2768
+weight_unit: KG
+name: z. l. international
+load_date: 20241217
+pure_name: z l international
+----------------------------------------

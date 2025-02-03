@@ -1,0 +1,41 @@
+model:
+  table_name   : belize
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/belize/company"
+  partition_by : ["load_date"]
+  unique_key   : Name
+  data_format  : delta
+  load_date    : "20241128"
+  # columns:
+  # - name: "registration_no"
+  #   type: string
+  # - name: "registration_date"
+  #   type: string
+  # - name: "business_entity_name"
+  #   type: string
+  # - name: "foreign_character_name"
+  #   type: string
+  # - name: "business_entity_type"
+  #   type: string
+  # - name: "business_entity_category"
+  #   type: string
+  # - name: "business_entity_status"
+  #   type: string
+  # - name: "load_date"
+  #   type: string
+  options:
+    mergeSchema: true
+input_resources:
+  - table_name   : raw_belize
+    format       : json
+    data_location: "s3a://lakehouse-raw/belize/company-{load_date}/data/*.json"
+    record_source: "offical"
+    process_job  : jobs/bronze/belize.py
+    options:
+      multiline          : true
+      inferschema        : true
+    load_date    : "20241128"
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"

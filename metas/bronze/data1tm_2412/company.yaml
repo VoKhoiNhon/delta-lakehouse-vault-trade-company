@@ -1,0 +1,21 @@
+
+note: 1tm_2412
+
+model:
+  table_name: bronze.company_1tm
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/1tm_2412/company
+  # data_location: data/lakehouse-bronze/1tm_2412/company
+  data_format: delta
+  load_date: "20241225"
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+- table_name: 1tm_2412.company
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_2412/company_full
+  process_job: jobs/bronze/1tm_2412/company.py
+  load_date    : "20241219"

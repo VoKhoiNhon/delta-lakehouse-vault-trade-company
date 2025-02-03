@@ -1,0 +1,15 @@
+model:
+  table_name: industry
+  database_name: gold_company_service
+  data_location: s3a://lakehouse-gold/company_service/industry
+  data_format: delta
+  unique_key : ["id"]
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": true
+
+input_resources:
+  - table_name: silver.h_industry
+    format: delta
+    data_location: s3a://lakehouse-silver/h_industry
+    record_source: silver.h_industry

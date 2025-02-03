@@ -1,0 +1,25 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - main
+  variables:
+    JOB_NAME: "Deploy Process"
+    CICD_ROOT_DIR: "/opt/itc_process"
+  script:
+    - echo "Start to Deploy Process"
+    - sudo ssh spark-00 "sh ${CICD_ROOT_DIR}/cicd/pull-code.sh"
+    - sudo ssh spark-09 "sh ${CICD_ROOT_DIR}/cicd/pull-code.sh"
+    - echo "Pull successful"
+  when: on_success
+  after_script:
+    # Notify Telegram based on job success or failure
+    - |
+      if [ $CI_JOB_STATUS == 'success' ]; then
+        MESSAGE="✅ Job '${CI_JOB_NAME}' in '${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}:${CI_COMMIT_MESSAGE}' succeeded!"
+      else
+        MESSAGE="❌ Job '${CI_JOB_NAME}' in '${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}:${CI_COMMIT_MESSAGE}' failed!"
+      fi
+      python3 cicd/send_msg.py --message "$MESSAGE"

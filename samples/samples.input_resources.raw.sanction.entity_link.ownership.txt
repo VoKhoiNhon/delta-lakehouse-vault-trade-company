@@ -1,0 +1,60 @@
+Row 1:
+caption: Ownership
+datasets: ['ext_gleif']
+first_seen: 2025-01-23T10:22:02
+id: NK-39qecE6qqkarHDLU7D8okD
+last_change: 2025-01-23T10:22:02
+last_seen: 2025-01-23T10:22:02
+properties: Row(asset=['lei-300300D1005231000097'], date=None, description=None, endDate=None, modifiedAt=None, owner=['NK-PtU6Z6RqJEPTAbo6Q9yRMT'], percentage=None, publisher=None, recordId=None, role=['IS ULTIMATELY CONSOLIDATED BY', 'IS DIRECTLY CONSOLIDATED BY'], sharesCount=None, sharesCurrency=None, sharesValue=None, sourceUrl=None, startDate=['1997-09-30'], status=['NULL'], summary=None)
+referents: ['lei-300300D1005231000097-is-directly-consolidated-by-300300AY5BEBCYDR2F31', 'lei-300300D1005231000097-is-ultimately-consolidated-by-300300AY5BEBCYDR2F31']
+schema: Ownership
+target: False
+----------------------------------------
+Row 2:
+caption: Ownership
+datasets: ['ext_gleif']
+first_seen: 2025-01-23T10:22:02
+id: NK-3QnwwHejZdomb5TEK6k8SF
+last_change: 2025-01-23T10:22:02
+last_seen: 2025-01-23T10:22:02
+properties: Row(asset=['NK-cHYZ5ykejEaTot2sueN9ZL'], date=None, description=None, endDate=None, modifiedAt=None, owner=['NK-hErpKj3RZPtzUehfN7mgTa'], percentage=None, publisher=None, recordId=None, role=['IS DIRECTLY CONSOLIDATED BY', 'IS ULTIMATELY CONSOLIDATED BY'], sharesCount=None, sharesCurrency=None, sharesValue=None, sourceUrl=None, startDate=['2021-08-05', '2018-09-17'], status=['NULL'], summary=None)
+referents: ['lei-529900N90QS8ARRHWY83-is-directly-consolidated-by-253400V1H6ART1UQ0N98', 'lei-529900N90QS8ARRHWY83-is-ultimately-consolidated-by-253400V1H6ART1UQ0N98']
+schema: Ownership
+target: False
+----------------------------------------
+Row 3:
+caption: Ownership
+datasets: ['ext_gleif']
+first_seen: 2025-01-23T10:22:02
+id: NK-3rdEAu66cTdgtgpxfNiZbr
+last_change: 2025-01-23T10:22:02
+last_seen: 2025-01-23T10:22:02
+properties: Row(asset=['NK-LxYxuEw4zVk98NFbpSFh2e'], date=None, description=None, endDate=None, modifiedAt=None, owner=['NK-fpuTseWgtWWDig9sWGCkUh'], percentage=['100'], publisher=None, recordId=None, role=['IS ULTIMATELY CONSOLIDATED BY', 'IS DIRECTLY CONSOLIDATED BY'], sharesCount=None, sharesCurrency=None, sharesValue=None, sourceUrl=None, startDate=['2005-05-27'], status=['ACTIVE'], summary=None)
+referents: ['lei-253400S8T8CGUUR3P751-is-ultimately-consolidated-by-253400XEMNQ5WBPN5635', 'lei-253400S8T8CGUUR3P751-is-directly-consolidated-by-253400XEMNQ5WBPN5635']
+schema: Ownership
+target: False
+----------------------------------------
+Row 4:
+caption: Ownership
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-446pjMYyJcTisLBzRKYbHD
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(asset=['icijol-82003980'], date=None, description=None, endDate=None, modifiedAt=None, owner=['icijol-80037149'], percentage=None, publisher=['Paradise Papers - Appleby'], recordId=None, role=['co-trustee of', 'beneficiary of'], sharesCount=None, sharesCurrency=None, sharesValue=None, sourceUrl=None, startDate=['1999-09-13'], status=['Appointed'], summary=None)
+referents: ['icijol-80037149-82003980-co-trustee-of', 'icijol-80037149-82003980-beneficiary-of']
+schema: Ownership
+target: False
+----------------------------------------
+Row 5:
+caption: Ownership
+datasets: ['ext_icij_offshoreleaks']
+first_seen: 2023-07-26T00:00:00
+id: NK-4G5XSKhZmHAXithUXQZFUu
+last_change: 2023-07-26T00:00:00
+last_seen: 2023-07-26T00:00:00
+properties: Row(asset=['NK-AmNCVTDG5hd7dpoakzqwXg'], date=None, description=None, endDate=None, modifiedAt=None, owner=['Q4398633'], percentage=None, publisher=['Paradise Papers - Appleby'], recordId=None, role=['beneficial owner of', 'ultimate beneficial owner of'], sharesCount=None, sharesCurrency=None, sharesValue=None, sourceUrl=None, startDate=None, status=['Appointed'], summary=None)
+referents: ['icijol-80118991-82016440-ultimate-beneficial-owner-of', 'icijol-80118991-82016440-beneficial-owner-of']
+schema: Ownership
+target: False
+----------------------------------------

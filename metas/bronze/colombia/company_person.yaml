@@ -1,0 +1,27 @@
+
+note: first source using new ETL
+
+model:
+  table_name   : colombia_company_person
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/colombia/company_person"
+  partition_by : ["load_date"]
+  unique_key   : registration_number
+  data_format  : delta
+  load_date    : "20241228"
+  options:
+    mergeSchema: true
+input_resources:
+  - table_name   : raw_colombia_com_per
+    format       : csv
+    # data_location: "s3a://lakehouse-raw/colombia/company_person/{{ load_date }}/*.csv"
+    data_location: "s3a://lakehouse-raw/colombia/company_person/20241228/*.csv"
+    record_source: "https://www.datos.gov.co/en/Comercio-Industria-y-Turismo/Personas-Naturales-Personas-Jur-dicas-y-Entidades-/c82u-588k/about_data"
+    process_job  : jobs/bronze/colombia/company_person/colombia.py
+    options:
+      header          : true
+      escape        : '"'
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"

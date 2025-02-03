@@ -1,0 +1,127 @@
+note: first source using new ETL
+# Example run:
+# python3 jobs/bronze/trade_dat_data/trade_dat_data.py
+# --payload '{"load_date":"20241231", "dv_source_version":"NBD Data;https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch", "env":""}'
+model:
+  table_name: trade_nbd_data
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze{{ env }}/trade_data/trade_nbd"
+  partition_by: ["load_date"]
+  unique_key: entity_name
+  data_format: delta
+  load_date: "{{ load_date }}"
+  options:
+    mergeSchema: true
+  env: "{{ env }}"
+input_resources:
+- table_name: raw_data
+  format: parquet
+  data_location: "s3a://lakehouse-raw/trade_nbd/{{ load_date}}/*"
+  record_source: "https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  process_job: jobs/bronze/trade_nbd_data/trade_nbd_data.py
+  dv_source_version: "NBD Data;{{ load_date}}"
+  spark_resources:
+    spark.driver.memory: "{{spark_driver}}"
+    spark.executor.memory: "{{spark_executor_memory}}"
+    spark.executor.cores: "{{spark_executor_cores}}"
+    spark.executor.instances: "{{spark_executor_instances}}"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "{{spark_executor_instances}}"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"
+- table_name: raw_data.csv
+  format: csv
+  data_location: "s3a://lakehouse-raw/raw_trade_data/csv/*/"
+  record_source: "https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  process_job: jobs/bronze/trade_dat_data/trade_dat_data.py
+  options:
+    header   : true
+    multiline: true
+    escape   : "\""
+    quote    : "\""
+  dv_source_version: "NBD Data;https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  spark_resources:
+    spark.driver.memory: "2g"
+    spark.executor.memory: "24g"
+    spark.executor.cores: "8"
+    spark.executor.instances: "2"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "2"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"
+
+- table_name: raw_data_172
+  format: delta
+  data_location: "s3a://lakehouse-bronze/trade_data_6000"
+  record_source: "https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  process_job: jobs/bronze/trade_dat_data/trade_dat_data.py
+  dv_source_version: "NBD Data;https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  spark_resources:
+    spark.driver.memory: "2g"
+    spark.executor.memory: "24g"
+    spark.executor.cores: "8"
+    spark.executor.instances: "2"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "2"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"
+
+- table_name: jurisdiction
+  format: delta
+  data_location: "s3a://warehouse/lookup_jurisdiction"
+  record_source: "https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  process_job: jobs/bronze/trade_dat_data/trade_dat_data.py
+  spark_resources:
+    spark.driver.memory: "2g"
+    spark.executor.memory: "24g"
+    spark.executor.cores: "8"
+    spark.executor.instances: "2"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "2"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"
+
+- table_name: lookup_port
+  format: delta
+  data_location: "s3a://lakehouse-silver/lookup_port"
+  record_source: "https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch"
+  process_job: jobs/bronze/trade_dat_data/trade_dat_data.py
+  spark_resources:
+    spark.driver.memory: "2g"
+    spark.executor.memory: "24g"
+    spark.executor.cores: "8"
+    spark.executor.instances: "2"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "2"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"

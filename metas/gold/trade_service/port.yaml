@@ -1,0 +1,80 @@
+model:
+  table_name: port
+  database_name: port
+  data_location: s3a://lakehouse-gold/trade_service/port
+  unique_key: id
+  data_format: delta
+
+  columns:
+  - name: id
+    type: string
+    nullable: false
+    description: dv hashkey
+  - name: port_code
+    type: string
+  - name: port_name
+    type: string
+  - name: emails
+    type: string
+  - name: address
+    type: string
+  - name: phone_number
+    type: string
+  - name: fax_number
+    type: string
+  - name: port_type
+    type: string
+  - name: port_size
+    type: string
+  - name: website
+    type: string
+  - name: terminal
+    type: boolean
+  - name: state
+    type: string
+  - name: locode
+    type: string
+  - name: status
+    type: string
+  - name: latitude
+    type: float
+  - name: longitude
+    type: float
+  - name: country_name
+    type: string
+  - name: country_code
+    type: string
+  - name: previous_port_name
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+  - name: dv_loaddts
+    type: timestamp
+    nullable: false
+
+  - name: dv_recsrc
+    nullable: false
+    type: string
+    description: dv columns
+
+  - name: dv_source_version
+    type: string
+    description: dv columns
+
+  - name: created_at
+    type: timestamp
+    nullable: false
+
+  - name: updated_at
+    type: timestamp
+    nullable: false
+
+
+input_resources:
+- table_name: silver.lookup_port
+  format: delta
+  data_location: s3a://lakehouse-silver/lookup_port
+  record_source: silver.lookup_port
+  process_job: jobs/gold/trade_service/port.py

@@ -1,0 +1,137 @@
+note: 1tm_2412
+
+model:
+  table_name: bronze.colombia.import
+  database_name: lakehouse_bronze
+  data_location:  s3a://lakehouse-bronze/colombia/Trade/2016-2024
+  data_format: delta
+  load_date: "20241227"
+  options:
+    mergeSchema: true
+    "delta.autoOptimize.optimizeWrite": "true"
+
+input_resources:
+- table_name: colombia.import_2016
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2016/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2017
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2017/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2018
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2018/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2019
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2019/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2020
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2020/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2021
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2021/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+
+- table_name: colombia.import_2022
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2022/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2023
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2023/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+- table_name: colombia.import_2024
+  record_source: https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+  format: csv
+  options:
+    header : True
+    sep: ","
+    quote: '"'
+    escape: '"'
+    multiline: True
+  data_location: s3a://lakehouse-raw/colombia/Trade-20241227/Import/2024/data/*.csv
+  load_date    : "20241227"
+  process_job: jobs/bronze/colombia/trade/import_2016_to_2024.py
+
+  # spark_resources:
+  #   spark.driver.memory  : "10g"
+  #   spark.executor.memory: "10g"
+  #   spark.executor.cores : "4"
+  #   spark.memory.fraction: 0.8
+  #   spark.memory.storageFraction: 0.3

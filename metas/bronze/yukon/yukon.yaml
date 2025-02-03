@@ -1,0 +1,28 @@
+
+note: first source using new ETL
+
+model:
+  table_name: yukon
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/yukon/company
+  partition_by: ["load_date"]
+  unique_key: id
+  data_format: delta
+  load_date: "20241125"
+  options:
+    mergeSchema: true
+
+input_resources:
+- table_name: raw_yukon
+  format: json
+  data_location: s3a://lakehouse-raw/yukon/company-{load_date}/data/transformed_Yukon.json
+  record_source: source_a
+  process_job: jobs/bronze/yukon/yukon.py
+  options:
+    multiline: true
+    inferschema: true
+  load_date    : "20241125"
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"

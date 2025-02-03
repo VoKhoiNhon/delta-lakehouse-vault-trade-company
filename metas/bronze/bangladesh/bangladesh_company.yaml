@@ -1,0 +1,53 @@
+note: first source using new ETL
+# Example run:
+# python3 jobs/bronze/bangladesh/bangladesh_company.py
+# --payload '{"load_date":"20241128", "env":"/test_on_s3"}'
+model:
+  table_name: bangladesh
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze{{env}}/bangladesh/company"
+  partition_by: ["load_date"]
+  unique_key: entity_name
+  data_format: delta
+  load_date: "{{load_date}}"
+  options:
+    mergeSchema: true
+  env: "{{env}}"
+input_resources:
+  - table_name: raw_bangladesh_company
+    format: json
+    data_location: "s3a://lakehouse-raw{{env}}/bangladesh/company-{{load_date}}/data/*.jsonl"
+    record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+    process_job: jobs/bronze/bangladesh/bangladesh_company.py
+    load_date: "{{load_date}}"
+    dv_source_version: "bangladesh_company;{{load_date}}"
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"
+

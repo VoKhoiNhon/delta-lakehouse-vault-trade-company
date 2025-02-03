@@ -1,0 +1,171 @@
+model:
+  table_name: l_bol
+  database_name: database_name
+  data_location: "s3a://lakehouse-silver{{env}}/l_bol"
+  unique_key: [dv_hashkey_l_bol, dv_hashkey_bol]
+  data_format: delta
+  options:
+    "delta.autoOptimize.optimizeWrite": "true"
+  partition_by:
+  - jurisdiction
+
+  columns:
+    - name: dv_hashkey_l_bol
+      type: string
+      nullable: false
+      description: dv hashkey
+
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: source_name;link
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: jurisdiction
+      type: string
+      nullable: false
+
+    - name: dv_source_version
+      nullable: false
+      type: string
+      description: US import;20240912
+
+    - name: dv_hashkey_bol
+      type: string
+    - name: buyer_dv_hashkey_company
+      type: string
+    - name: supplier_dv_hashkey_company
+      type: string
+    - name: shipper_dv_hashkey_company
+      type: string
+    - name: import_port
+      type: string
+    - name: export_port
+      type: string
+    - name: bol
+      type: string
+    - name: actual_arrival_date
+      type: date
+
+input_resources:
+
+- table_name: 1tm_2412.bol
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/bol
+  record_source: bronze.1tm_2412
+- table_name: 1tm_2412.company_unique_id
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/company_unique_id
+  record_source: bronze.1tm_2412
+- table_name: 1tm_2412.port
+  format: delta
+  data_location: s3a://lakehouse-bronze/1tm_2412/port
+  record_source: bronze.1tm_2412
+- table_name: 6k_usd.bol
+  format: delta
+  data_location: s3a://lakehouse-bronze/trade_data_6000_new
+  record_source: bronze.trade_data_6000
+  filter: load_date == {{load_date}}
+- table_name: lookup_port
+  format: delta
+  data_location: s3a://lakehouse-silver/lookup_port
+  record_source: bronze.port
+- table_name: 172_Dat.bol
+  format: delta
+  data_location: s3a://lakehouse-bronze{{env}}/trade_data/trade_dat_data
+  filter: load_date == {{load_date}}
+  record_source: NBD Data;https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch
+# - table_name: bronze.us.import
+#   format: delta
+#   data_location: s3a://lakehouse-bronze/us_import
+#   record_source: From_Tristan_11_2024
+- table_name: trade_nbd
+  format: delta
+  data_location: s3a://lakehouse-bronze/trade_data/trade_nbd
+  record_source: https://data.nbd.ltd/en/login?r=%2Fcn%2Ftransaction%2Fsearch
+  process_job: jobs/silver/l_bol/l_bol__src_trade_nbd.py
+  filter: load_date == {{load_date}}
+  spark_resources:
+    spark.driver.memory: "{{spark_driver}}"
+    spark.executor.memory: "{{spark_executor_memory}}"
+    spark.executor.cores: "{{spark_executor_cores}}"
+    spark.executor.instances: "{{spark_executor_instances}}"
+    spark.dynamicAllocation.enabled: "true"
+    spark.dynamicAllocation.minExecutors: "1"
+    spark.dynamicAllocation.maxExecutors: "{{spark_executor_instances}}"
+    spark.executor.heartbeatInterval: "60s"
+    spark.network.timeout: "900s"
+    spark.sql.autoBroadcastJoinThreshold: "100MB"
+    spark.sql.execution.arrow.pyspark.enabled: "true"
+    spark.sql.shuffle.partitions: "1"
+    spark.sql.files.openCostInBytes: "134217728"
+    spark.sql.files.maxPartitionBytes: "256MB"
+
+
+- table_name: colombia.import_2016-2024
+  format: delta
+  data_location: s3a://lakehouse-bronze/colombia/Trade/2016-2024
+  record_source: gov_colombia_trade;https://www.dian.gov.co/dian/cifras/Paginas/Bases-Estadisticas-de-Comercio-Exterior-Importaciones-y-Exportaciones.aspx
+###############
+# Bangladesh 
+###############
+- table_name: silver.bangladesh.export
+  format: delta
+  data_location: "s3a://lakehouse-silver{{env}}/s_bol"
+  record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+  process_job: "jobs/silver/s_bol/s_bol__src_bangladesh_export.py"
+  dv_source_version: "gov_bangladesh_export;{{load_date}}"
+  filter: "dv_source_version == 'gov_bangladesh_export;{{load_date}}'"
+
+- table_name: silver.bangladesh.import
+  format: delta
+  data_location: "s3a://lakehouse-silver{{env}}/s_bol"
+  record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+  process_job: "jobs/silver/s_bol/s_bol__src_bangladesh_import.py"
+  dv_source_version: "gov_bangladesh_import;{{load_date}}"
+  filter: "dv_source_version == 'gov_bangladesh_import;{{load_date}}'"
+- table_name: silver.h_company.bangladesh
+  format: delta
+  data_location: "s3a://lakehouse-silver{{env}}/h_company"
+  record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+  process_job: "jobs/silver/s_bol/s_bol__src_bangladesh_import.py"
+  filter: "jurisdiction == 'Bangladesh' and dv_source_version == 'gov_bangladesh_company;{{load_date}}'"
+- table_name: silver.h_company.all
+  format: delta
+  data_location: "s3a://lakehouse-silver{{env}}/h_company"
+  record_source: "Government of the People's Republic of Bangladesh;http://123.49.32.36:7781/psp/nc_search"
+  process_job: "jobs/silver/s_bol/s_bol__src_bangladesh_import.py"
+
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"

@@ -1,0 +1,390 @@
+[
+    {
+        "Chapter Code": "Chapter 01",
+        "Chapter Description": "HS Code for Live animals"
+    },
+    {
+        "Chapter Code": "Chapter 02",
+        "Chapter Description": "HS Code for Meat and edible meat"
+    },
+    {
+        "Chapter Code": "Chapter 03",
+        "Chapter Description": "HS Code for Fish and crustaceans, molluscs and other aquatic invertebrates"
+    },
+    {
+        "Chapter Code": "Chapter 04",
+        "Chapter Description": "HS Code for Dairy produce; birds 'eggs; natural honey; animal edible products not specified or included elsewhere"
+    },
+    {
+        "Chapter Code": "Chapter 05",
+        "Chapter Description": "HS Code for Products of animal origin, not specified or included elsewhere"
+    },
+    {
+        "Chapter Code": "Chapter 06",
+        "Chapter Description": "HS Code for Live plants and products of floricultura"
+    },
+    {
+        "Chapter Code": "Chapter 07",
+        "Chapter Description": "HS Code for Vegetables, roots and tubers edible"
+    },
+    {
+        "Chapter Code": "Chapter 08",
+        "Chapter Description": "HS Code for Fruit; peel of citrus (citrus *) or melons"
+    },
+    {
+        "Chapter Code": "Chapter 09",
+        "Chapter Description": "HS Code for Coffee, tea, mate and spices"
+    },
+    {
+        "Chapter Code": "Chapter 10",
+        "Chapter Description": "HS Code for Cereals"
+    },
+    {
+        "Chapter Code": "Chapter 11",
+        "Chapter Description": "HS Code for Products of the milling industry; malt; starches; inulin; wheat gluten"
+    },
+    {
+        "Chapter Code": "Chapter 12",
+        "Chapter Description": "HS Code for Seeds and oleaginous fruits; grains, seeds and fruit; industrial or medicinal plants; straw and fodder"
+    },
+    {
+        "Chapter Code": "Chapter 13",
+        "Chapter Description": "HS Code for Gums, resins and other vegetable saps and extracts"
+    },
+    {
+        "Chapter Code": "Chapter 14",
+        "Chapter Description": "HS Code for Plaiting materials and other vegetable products, not specified or included elsewhere"
+    },
+    {
+        "Chapter Code": "Chapter 15",
+        "Chapter Description": "HS Code for Animal fats, oils or vegetables; their cleavage products; edible fat used; waxes animal or vegetable"
+    },
+    {
+        "Chapter Code": "Chapter 16",
+        "Chapter Description": "HS Code for Preparations of meat, fish or crustaceans, molluscs or other aquatic invertebrates"
+    },
+    {
+        "Chapter Code": "Chapter 17",
+        "Chapter Description": "HS Code for Sugar and sweets"
+    },
+    {
+        "Chapter Code": "Chapter 18",
+        "Chapter Description": "HS Code for Cocoa and cocoa preparations"
+    },
+    {
+        "Chapter Code": "Chapter 19",
+        "Chapter Description": "HS Code for Preparations for cereals, flour, starch or milk; pastry products"
+    },
+    {
+        "Chapter Code": "Chapter 20",
+        "Chapter Description": "HS Code for Preparations of vegetables, fruit or other parts of plants"
+    },
+    {
+        "Chapter Code": "Chapter 21",
+        "Chapter Description": "HS Code for Miscellaneous edible preparations"
+    },
+    {
+        "Chapter Code": "Chapter 22",
+        "Chapter Description": "HS Code for Beverages, spirits and vinegar"
+    },
+    {
+        "Chapter Code": "Chapter 23",
+        "Chapter Description": "HS Code for Waste and waste from the food industries; prepared animal food"
+    },
+    {
+        "Chapter Code": "Chapter 24",
+        "Chapter Description": "HS Code for Tobacco and its substitutes manufactured"
+    },
+    {
+        "Chapter Code": "Chapter 25",
+        "Chapter Description": "HS Code for Salt; sulfur; earths and stone; gypsum, lime and cement"
+    },
+    {
+        "Chapter Code": "Chapter 26",
+        "Chapter Description": "HS Code for Ore, slim and gray"
+    },
+    {
+        "Chapter Code": "Chapter 27",
+        "Chapter Description": "HS Code for Mineral fuels, mineral oils and products of their distillation; betuminous substances; mineral waxes"
+    },
+    {
+        "Chapter Code": "Chapter 28",
+        "Chapter Description": "HS Code for Inorganic chemicals;inorganic or organic compounds of precious metals, radioactive elements, rare land metals or isotope metals"
+    },
+    {
+        "Chapter Code": "Chapter 29",
+        "Chapter Description": "HS Code for Organic chemicals"
+    },
+    {
+        "Chapter Code": "Chapter 30",
+        "Chapter Description": "HS Code for Pharmaceutical products"
+    },
+    {
+        "Chapter Code": "Chapter 31",
+        "Chapter Description": "HS Code for Fertilizer (fertilizers)"
+    },
+    {
+        "Chapter Code": "Chapter 32",
+        "Chapter Description": "HS Code for Extracts from tanning or dyeing; tannins and their derivatives; dyes, pigments and other coloring matter; paints and varnishes; mastics; inks"
+    },
+    {
+        "Chapter Code": "Chapter 33",
+        "Chapter Description": "HS Code for Essential oils and resinoids; perfumery products or toilet preparations cosmetics"
+    },
+    {
+        "Chapter Code": "Chapter 34",
+        "Chapter Description": "HS Code for Soap, organic surface-agents, washing preparations, lubricating preparations, artificial waxes, prepared waxes, storage and cleaning products, candles and similar articles, masses or modeling pastes, \"dental waxes\" and dental to gypsum"
+    },
+    {
+        "Chapter Code": "Chapter 35",
+        "Chapter Description": "HS Code for Albuminoidel substances; products or starches the base modified starches; colas; enzymes"
+    },
+    {
+        "Chapter Code": "Chapter 36",
+        "Chapter Description": "HS Code for Explosives; pyrotechnics; matches; pyrophoric alloys; flammable materials"
+    },
+    {
+        "Chapter Code": "Chapter 37",
+        "Chapter Description": "HS Code for Photographic or cinematographic"
+    },
+    {
+        "Chapter Code": "Chapter 38",
+        "Chapter Description": "HS Code for Miscellaneous chemical products"
+    },
+    {
+        "Chapter Code": "Chapter 39",
+        "Chapter Description": "HS Code for Plastics and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 40",
+        "Chapter Description": "HS Code for Rubber and articles"
+    },
+    {
+        "Chapter Code": "Chapter 41",
+        "Chapter Description": "HS Code for Skins, except as with the skins and leather"
+    },
+    {
+        "Chapter Code": "Chapter 42",
+        "Chapter Description": "HS Code for Of leather; saddlery or harness articles; travel goods, handbags and the like; rags"
+    },
+    {
+        "Chapter Code": "Chapter 43",
+        "Chapter Description": "HS Code for Furs and articles thereof; skins with the artificial"
+    },
+    {
+        "Chapter Code": "Chapter 44",
+        "Chapter Description": "HS Code for Wood charcoal and wood works"
+    },
+    {
+        "Chapter Code": "Chapter 45",
+        "Chapter Description": "HS Code for Wood charcoal"
+    },
+    {
+        "Chapter Code": "Chapter 46",
+        "Chapter Description": "HS Code for Of esparto or basket weaving"
+    },
+    {
+        "Chapter Code": "Chapter 47",
+        "Chapter Description": "HS Code for Pulp of wood or of other fibrous cellulosic material; paper or card recovered (waste and scrap)"
+    },
+    {
+        "Chapter Code": "Chapter 48",
+        "Chapter Description": "HS Code for Paper and paperboard; works of paper pulp, of paper or card"
+    },
+    {
+        "Chapter Code": "Chapter 49",
+        "Chapter Description": "HS Code for Books, newspapers, pictures and other products of the printing industry; manuscripts, typescripts and plans"
+    },
+    {
+        "Chapter Code": "Chapter 50",
+        "Chapter Description": "HS Code for Silk"
+    },
+    {
+        "Chapter Code": "Chapter 51",
+        "Chapter Description": "HS Code for Wool, fine or by coarse horsehair yarn and fabrics"
+    },
+    {
+        "Chapter Code": "Chapter 52",
+        "Chapter Description": "HS Code for Cotton"
+    },
+    {
+        "Chapter Code": "Chapter 53",
+        "Chapter Description": "HS Code for Other vegetable textile fibers; wire paper and paper yarn fabrics"
+    },
+    {
+        "Chapter Code": "Chapter 54",
+        "Chapter Description": "HS Code for Synthetic or artificial filaments;blades and similar forms of synthetic or artificial textile materials"
+    },
+    {
+        "Chapter Code": "Chapter 55",
+        "Chapter Description": "HS Code for Synthetic or artificial fibers, discontinued"
+    },
+    {
+        "Chapter Code": "Chapter 56",
+        "Chapter Description": "HS Code for Outstanding, felt and false fabrics; special wires; cordes, strings and cables;cordoba items"
+    },
+    {
+        "Chapter Code": "Chapter 57",
+        "Chapter Description": "HS Code for Carpets and other textile floor coverings (pavements)"
+    },
+    {
+        "Chapter Code": "Chapter 58",
+        "Chapter Description": "HS Code for Special fabrics;fabrics;income;tapestry;passamanarias;embroidery"
+    },
+    {
+        "Chapter Code": "Chapter 59",
+        "Chapter Description": "HS Code for Impregnated, coated, covered or stretched fabrics;articles for technical uses of textile materials"
+    },
+    {
+        "Chapter Code": "Chapter 60",
+        "Chapter Description": "HS Code for Knitted fabrics"
+    },
+    {
+        "Chapter Code": "Chapter 61",
+        "Chapter Description": "HS Code for Articles of apparel and clothing accessories, knitted or crocheted"
+    },
+    {
+        "Chapter Code": "Chapter 62",
+        "Chapter Description": "HS Code for Apparel and clothing accessories, except mesh"
+    },
+    {
+        "Chapter Code": "Chapter 63",
+        "Chapter Description": "HS Code for Other items up textile articles; sets; textile articles and use items like, used; rags"
+    },
+    {
+        "Chapter Code": "Chapter 64",
+        "Chapter Description": "HS Code for Footwear, gaiters and the like; parts"
+    },
+    {
+        "Chapter Code": "Chapter 65",
+        "Chapter Description": "HS Code for Hats and similar use items, and parts"
+    },
+    {
+        "Chapter Code": "Chapter 66",
+        "Chapter Description": "HS Code for Umbrellas, parasols, sun umbrellas, walking sticks, seat-sticks, whips, riding-crops, and parts"
+    },
+    {
+        "Chapter Code": "Chapter 67",
+        "Chapter Description": "HS Code for Feather and down prepared and glassware; artificial flowers; hair works"
+    },
+    {
+        "Chapter Code": "Chapter 68",
+        "Chapter Description": "HS Code for Stone, plaster, cement, asbestos, mica or similar materials"
+    },
+    {
+        "Chapter Code": "Chapter 69",
+        "Chapter Description": "HS Code for Ceramic products"
+    },
+    {
+        "Chapter Code": "Chapter 70",
+        "Chapter Description": "HS Code for Glass and glassware"
+    },
+    {
+        "Chapter Code": "Chapter 71",
+        "Chapter Description": "HS Code for Natural or cultured pearls, precious or semi-precious, precious metals, clad metals and precious metals plated (plaque), and articles thereof; jewelry; coins"
+    },
+    {
+        "Chapter Code": "Chapter 72",
+        "Chapter Description": "HS Code for Iron and steel"
+    },
+    {
+        "Chapter Code": "Chapter 73",
+        "Chapter Description": "HS Code for Cast iron works, iron or steel"
+    },
+    {
+        "Chapter Code": "Chapter 74",
+        "Chapter Description": "HS Code for Copper and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 75",
+        "Chapter Description": "HS Code for Nickel and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 76",
+        "Chapter Description": "HS Code for Aluminum and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 77",
+        "Chapter Description": "HS Code for (reserved for any future use in the harmonized system)"
+    },
+    {
+        "Chapter Code": "Chapter 78",
+        "Chapter Description": "HS Code for Lead and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 79",
+        "Chapter Description": "HS Code for Zinc and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 80",
+        "Chapter Description": "HS Code for Tin and articles thereof"
+    },
+    {
+        "Chapter Code": "Chapter 81",
+        "Chapter Description": "HS Code for Other common metals; cermets;works of such articles"
+    },
+    {
+        "Chapter Code": "Chapter 82",
+        "Chapter Description": "HS Code for Tools, cutlery & cutlery, and articles thereof, of common metal"
+    },
+    {
+        "Chapter Code": "Chapter 83",
+        "Chapter Description": "HS Code for Miscellaneous articles of base metal"
+    },
+    {
+        "Chapter Code": "Chapter 84",
+        "Chapter Description": "HS Code for Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof"
+    },
+    {
+        "Chapter Code": "Chapter 85",
+        "Chapter Description": "HS Code for Electrical machinery and equipment, and parts thereof;sound recorders and reproducers, television image and sound recorders and reproducers, and parts and accessories of such articles"
+    },
+    {
+        "Chapter Code": "Chapter 86",
+        "Chapter Description": "HS Code for Vehicles and equipment for roads tramways, and parts thereof; mechanical (including electromechanical) traffic signaling equipment of all kinds"
+    },
+    {
+        "Chapter Code": "Chapter 87",
+        "Chapter Description": "HS Code for Vehicles, tractors, cycles and other land vehicles, parts and accessories"
+    },
+    {
+        "Chapter Code": "Chapter 88",
+        "Chapter Description": "HS Code for Aircraft, spacecraft, and parts"
+    },
+    {
+        "Chapter Code": "Chapter 89",
+        "Chapter Description": "HS Code for Boats and floating structures"
+    },
+    {
+        "Chapter Code": "Chapter 90",
+        "Chapter Description": "HS Code for Instruments and optical, photographic, cinematographic, measuring, accuracy or control; instruments and devices medical or surgical; parts and accessories"
+    },
+    {
+        "Chapter Code": "Chapter 91",
+        "Chapter Description": "HS Code for Clocks and watches"
+    },
+    {
+        "Chapter Code": "Chapter 92",
+        "Chapter Description": "HS Code for Musical instruments; parts and accessories"
+    },
+    {
+        "Chapter Code": "Chapter 93",
+        "Chapter Description": "HS Code for Arms and ammunition; parts and accessories"
+    },
+    {
+        "Chapter Code": "Chapter 94",
+        "Chapter Description": "HS Code for Furniture; furniture medical-surgical; mattress, pillows and similar; lighting equipment not specified or included elsewhere; ads, posters or tablets and signs, illuminated and the like; prefabricated buildings"
+    },
+    {
+        "Chapter Code": "Chapter 95",
+        "Chapter Description": "HS Code for Toys, games and fun items and sports; parts and accessories"
+    },
+    {
+        "Chapter Code": "Chapter 96",
+        "Chapter Description": "HS Code for Miscellaneous"
+    },
+    {
+        "Chapter Code": "Chapter 97",
+        "Chapter Description": "HS Code for Objects of art, antiques and collection"
+    }
+]

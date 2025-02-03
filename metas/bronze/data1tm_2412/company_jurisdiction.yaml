@@ -1,0 +1,31 @@
+
+
+model:
+  table_name: 1tm_2412.company
+  database_name: lakehouse_bronze
+  data_location: tests/resources/lakehouse-bronze/1tm_2412/company_jurisdiction
+  data_format: delta
+  load_date: "20241223"
+  options:
+    mergeSchema: true
+
+input_resources:
+- table_name: 1tm_2412.company
+  record_source: 1tm
+  format: delta
+  data_location: s3a://lakehouse-raw/1tm_alldata_2412/company_address_1tm_with_full_address
+  process_job: jobs/bronze/1tm_2412/company_jurisdiction.py
+  load_date    : "20241223"
+
+- table_name: jurisdiction
+  record_source: jurisdiction
+  format: csv
+  data_location: resources/jurisdiction.csv
+  process_job: jobs/bronze/1tm_2412/company_jurisdiction.py
+  options:
+    header : True
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"
+

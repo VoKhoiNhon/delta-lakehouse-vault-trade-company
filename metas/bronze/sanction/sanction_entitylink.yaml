@@ -1,0 +1,71 @@
+
+model:
+  table_name   : "bronze.sanction.entity_link"
+  database_name: "lakehouse_bronze"
+  data_location: "s3a://lakehouse-bronze{{env}}/sanction/entity_link"
+  partition_by : ["load_date"]
+  data_format  : "delta"
+  load_date    : "{{load_date}}"
+  # options:
+  #   mergeSchema: true
+input_resources:
+  - table_name: "raw.sanction.entity_link.family"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/Family*"
+    record_source: "sanction_family;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_family.py"
+  - table_name: "raw.sanction.entity_link.membership"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/Membership*"
+    record_source: "sanction_membership;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_membership.py"
+  - table_name: "raw.sanction.entity_link.ownership"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/Ownership*"
+    record_source: "sanction_ownership;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_ownership.py"
+  - table_name: "raw.sanction.entity_link.directorship"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/Directorship*"
+    record_source: "sanction_directorship;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_directorship.py"
+  - table_name: "raw.sanction.entity_link.employment"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/Employment*"
+    record_source: "sanction_employment;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_employment.py"
+  - table_name: "raw.sanction.entity_link.unknownlink"
+    format: "json"
+    data_location: "s3a://lakehouse-raw{{env}}/sanction/entity_link-{{load_date}}/data/UnknownLink*"
+    record_source: "sanction_unknown_link;{{load_date}}"
+    process_job  : "jobs/bronze/sanction/sanction_unknown_link.py"
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"
+

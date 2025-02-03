@@ -1,0 +1,42 @@
+model:
+  table_name: saskatchewan
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/saskatchewan/company
+  partition_by: ["load_date"]
+  unique_key: entity_number
+  data_format: delta
+  load_date: "20241022"
+  options:
+    mergeSchema: true
+  # columns:
+  # - name: "id"
+  #   type: integer
+  # - name: "entity_name"
+  #   type: string
+  # - name: "entity_number"
+  #   type: string
+  # - name: "entity_type"
+  #   type: string
+  # - name: "entity_status"
+  #   type: string
+  # - name: "jurisdiction"
+  #   type: string
+  # - name: "load_date"
+  #   type: date
+input_resources:
+  - table_name   : raw_saskatchewan
+    format       : csv
+    data_location: s3a://lakehouse-raw/saskatchewan/company-{load_date}/data
+    record_source: https://corporateregistry.isc.ca/
+    process_job  : jobs/bronze/saskatchewan/saskatchewan.py
+    options:
+      header: true
+      sep: ","
+      quote: '"'
+      escape: '"'
+      multiline: "true"
+    load_date: "20241022"
+    spark_resources:
+      spark.driver.memory  : "4g"
+      spark.executor.memory: "4g"
+      spark.executor.cores : "4"

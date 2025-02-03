@@ -1,0 +1,48 @@
+model:
+  table_name: tanzania_company
+  database_name: lakehouse_bronze
+  data_location: s3a://lakehouse-bronze/tanzania/company
+  partition_by: ["load_date"]
+  unique_key: cert_number
+  data_format: delta
+  load_date    : "20241205"
+  options:
+    mergeSchema: true
+  # columns:
+  # - name: registration_number
+  #   type: string
+  # - name: registration_date
+  #   type: date
+  # - name: incorporation_date
+  #   type: date
+  # - name: company_name
+  #   type: string
+  # - name: company_type
+  #   type: string
+  # - name: status
+  #   type: string
+  # - name: address
+  #   type: string
+  # - name: cess_date
+  #   type: timestamp
+  # - name: load_date
+  #   type: date
+
+input_resources:
+- table_name: raw_tanzania
+  format: csv
+  data_location: s3a://lakehouse-raw/tanzania/company-{load_date}/data
+  record_source: https://ors.brela.go.tz/orsreg/searchbusinesspublic
+  process_job: jobs/bronze/tanzania.py
+  options:
+    header: true
+    delimiter: ","
+    multiline: true
+    inferSchema: true
+    quote: "\""
+    escape: "\""
+  load_date: "20241205"
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"

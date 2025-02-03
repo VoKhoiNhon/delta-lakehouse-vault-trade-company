@@ -1,0 +1,74 @@
+model:
+  table_name: australia
+  database_name: lakehouse_bronze
+  data_location: "s3a://lakehouse-bronze/australia/company"
+  unique_key: key
+  partition_by: ["load_date"]
+  data_format: delta
+  load_date    : "20241129"
+  options:
+    mergeSchema: true
+  # columns:
+  # - name: dv_hashkey_
+  #   type: string
+  #   nullable: false
+  #   tests:
+  #   - check: isComplete
+  #   - check: isUnique
+  #   description: dv hashkey
+  # - name: dv_recsrc
+  #   type: string
+  #   nullable: false
+  #   tests:
+  #   - check: isComplete
+  #   description: dv columns
+  # - name: dv_loaddts
+  #   nullable: false
+  #   type: timestamp
+  #   description: dv columns
+  # - name: company_name
+  #   type: string
+  # - name: acn
+  #   type: integer
+  # - name: type
+  #   type: string
+  # - name: class
+  #   type: string
+  # - name: sub_class
+  #   type: string
+  # - name: status
+  #   type: string
+  # - name: date_of_registration
+  #   type: string
+  # - name: previous_state_of_registration
+  #   type: string
+  # - name: state_registration_number
+  #   type: string
+  # - name: modified_since_last_report
+  #   type: string
+  # - name: current_name_indicator
+  #   type: string
+  # - name: abn
+  #   type: integer
+  # - name: current_name
+  #   type: string
+  # - name: current_name_start_date
+  #   type: string
+  # - name: load_date
+  #   type: date
+
+input_resources:
+- table_name: raw_australia
+  format: csv
+  data_location: "s3a://lakehouse-raw/australia/company-{load_date}/data/*.csv"
+  load_date    : "20241129"
+  record_source: jobs/bronze/australia/australia.py
+  filter:
+  options:
+    header : True
+    sep : "\t"
+  spark_resources:
+    spark.driver.memory  : "4g"
+    spark.executor.memory: "4g"
+    spark.executor.cores : "4"
+

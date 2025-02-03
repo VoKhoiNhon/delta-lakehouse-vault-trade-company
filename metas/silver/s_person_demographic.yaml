@@ -1,0 +1,188 @@
+model:
+  table_name: "silver.s_person_demographic"
+  database_name: "lakehouse-silver"
+  data_location: "s3a://lakehouse-silver{{env}}/s_person_demographic"
+  unique_key: ["jurisdiction", "dv_hashkey_person"]
+  data_format: "delta"
+  partition_by:
+    - jurisdiction
+
+  columns:
+    - name: dv_hashkey_person
+      type: string
+      nullable: false
+      description: dv hashkey
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      description: dv columns
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: dv_hashdiff
+      nullable: false
+      type: string
+      description: dv columns
+
+    - name: dv_source_version
+      nullable: false
+      type: string
+      description: dv columns
+
+    - name: jurisdiction
+      type: string
+    - name: name
+      type: string
+    - name: full_address
+      type: string
+
+    - name: first_name
+      type: string
+      nullable: true
+    - name: last_name
+      type: string
+      nullable: true
+    - name: middle_name
+      type: string
+      nullable: true
+    - name: is_person
+      type: boolean
+      nullable: false
+    - name: image_url
+      type: string
+      nullable: true
+    - name: dob
+      type: string
+      nullable: true
+    - name: birthplace
+      type: string
+      nullable: true
+    - name: nationality
+      type: string
+      nullable: true
+    - name: country_of_residence
+      type: string
+      nullable: true
+    - name: accuracy_level
+      type: float
+      nullable: true
+    - name: gender
+      type: integer
+      nullable: true
+    - name: skills
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: job_summary
+      type: string
+      nullable: true
+    - name: salary
+      type: string
+      nullable: true
+    - name: yoe
+      type: integer
+      nullable: true
+    - name: industry
+      type: string
+      nullable: true
+    - name: phone_numbers
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: emails
+      type:
+        type: array
+        elementType: string
+        containsNull: true
+      nullable: true
+    - name: linkedin_url
+      type: string
+      nullable: true
+    - name: twitter_url
+      type: string
+      nullable: true
+    - name: facebook_url
+      type: string
+      nullable: true
+
+input_resources:
+  # 1tm
+  - table_name: 1tm_2412.person
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/person
+    record_source: 1tm
+    process_job: jobs/silver/s_person_demographic/s_person_address__src_1tm_person.py
+
+  ##
+  - table_name: bronze.kentucky
+    format: delta
+    data_location: s3a://lakehouse-bronze/kentucky/company
+    record_source: https://web.sos.ky.gov/BusSearchNProfile/search.aspx
+    process_job: jobs/silver/s_person_demographic/s_person_demographic__src_kentucky.py
+
+  - table_name: bronze.opensanction
+    format: delta
+    data_location: s3a://lakehouse-bronze/sanction
+    record_source: https://www.opensanctions.org/datasets/default/
+    process_job: jobs/silver/s_person_demographic/s_person_demographic__src_opensanction.py
+
+  - table_name: bronze.person
+    format: delta
+    data_location: s3a://lakehouse-bronze/1tm_2412/person
+    record_source: 1tm
+    process_job: jobs/silver/s_person_demographic/s_person_demographic__src_1tm.py
+
+  - table_name: bronze.newfoundland_and_labrador
+    format: delta
+    data_location: s3a://lakehouse-bronze{{env}}/canada/newfoundland_and_labrador/company_person
+    record_source: https://cado.eservices.gov.nl.ca/Company/CompanyNameNumberSearch.aspx
+    process_job: jobs/silver/s_person_demographic/s_person_demographic__src_newfoundland_and_labrador.py
+
+  ##################
+  # Bronze Sanction
+  ##################
+  - table_name: "bronze.sanction.person"
+    format: "delta"
+    data_location: "s3a://lakehouse-bronze{{env}}/sanction/person"
+    record_source: "https://www.opensanctions.org/datasets/default/"
+    process_job: "jobs/silver/s_person_demographic/s_person_demographic__src_sanction.py"
+    dv_source_version: "gov_sanction_person;{{load_date}}"
+
+#################
+# Spark Resources
+#################
+spark_resources:
+  # Custom Resource
+  spark.driver.memory  : "{{spark_driver_memory|default('10g')}}"
+  spark.executor.memory: "{{spark_executor_memory|default('32g')}}"
+  spark.executor.cores : "{{spark_executor_cores|default(8)}}"
+  spark.executor.instances : "{{spark_executor_instances|default(1)}}"
+  spark.driver.memoryOverhead: "{{spark_driver_memoryOverhead|default('512mb')}}"
+  spark.executor.memoryOverhead: "{{spark_executor_memoryOverhead|default('10g')}}"
+  spark.dynamicAllocation.enabled: "true"
+  spark.dynamicAllocation.minExecutors: "1"
+  spark.dynamicAllocation.maxExecutors: "{{spark_dynamicAllocation_maxExecutors|default(1)}}"
+  spark.sql.autoBroadcastJoinThreshold: "{{spark_sql_autoBroadcastJoinThreshold|default('100MB')}}"
+
+  spark.sql.execution.arrow.pyspark.enabled: "true"
+  spark.sql.files.openCostInBytes: "134217728"
+  spark.sql.files.maxPartitionBytes: "256MB"
+
+  # Fault Tolerance
+  spark.executor.heartbeatInterval: "60s"
+  spark.network.timeout: "900s"
+  spark.task.maxFailures: "10"
+  spark.stage.maxConsecutiveAttempts: "4"
+
+  spark.databricks.delta.snapshotCache.validation.enabled: "false"
+  spark.databricks.delta.optimize.snapshotRead.enabled : "true"
+  spark.databricks.delta.retentionDurationCheck.enabled: "false"
+  # spark.databricks.delta.autoCompact.enabled: "true"
+  spark.databricks.delta.optimizeWrite.enabled: "true"
+  spark.delta.targetFileSize: "{{spark_delta_targetFileSize|default('256mb')}}"

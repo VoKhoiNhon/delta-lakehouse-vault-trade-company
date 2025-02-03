@@ -1,0 +1,85 @@
+version: 1.0.0
+
+model:
+  table_name: sat_account
+  database_name: db_silver
+  data_location: data/test/write
+  unique_key: key
+  partition_by:
+    - dv_recsrc
+  data_format: delta
+  columns:
+    - name: key
+      type: string
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: key
+
+    - name: dv_hashdiff
+      type: string
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: dv_hashdiff
+
+    - name: dv_recsrc
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isContainedIn
+          params:
+            - ["b1", "a2"]
+      description: dv columns
+
+    - name: dv_loaddts
+      nullable: false
+      type: timestamp
+      description: dv columns
+
+    - name: dv_status
+      nullable: false
+      type: integer
+      description: dv columns
+
+    - name: dv_valid_from
+      nullable: false
+      type: date
+      description: dv columns
+
+    - name: dv_valid_to
+      nullable: false
+      type: date
+      description: dv columns
+
+    - name: account_code
+      nullable: false
+      type: string
+      tests:
+        - check: isComplete
+        - check: isUnique
+      description: business key
+
+    - name: count
+      type: integer
+      tests:
+        - check: isComplete
+        - check: hasMax
+          params:
+            - "lambda x: x == 20"
+
+input_resources:
+  - table_name: gaccount
+    format: delta
+    data_location: data/test/src_1
+    record_source: source_a
+    filter: null
+    process_job: bronze.yukon.py
+
+  - table_name: laccount
+    data_location: data/test/src_2
+    format: delta
+    record_source: source_b
+    filter: null
+    process_job: bronze.yukon.py

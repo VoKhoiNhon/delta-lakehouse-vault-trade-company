@@ -1,0 +1,34 @@
+model:
+  table_name: company_trade
+  database_name: gold_company_trade
+  data_location: s3a://lakehouse-gold/trade_service/company_trade
+  unique_key: id
+  data_format: delta
+  partition_by:
+    - jurisdiction
+  columns:
+    - name: id
+      type: string
+      nullable: false
+      tests:
+        - check: isComplete
+        - check: isUnique
+    - name: name
+      type: string
+      nullable: true
+    - name: description
+      type: string
+      nullable: true
+    - name: country_code
+      type: string
+      nullable: false
+    - name: country_name
+      type: string
+      nullable: false
+
+input_resources:
+  - table_name: gold.entity
+    format: delta
+    data_location: s3a://lakehouse-gold/trade_service/entity
+    record_source: gold.entity
+

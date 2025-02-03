@@ -1,0 +1,45 @@
+model:
+  table_name: bridge_company_verified_reg
+  database_name: database_name
+  data_location: s3a://lakehouse-silver/bridge_company_verified_reg
+  data_format: delta
+  unique_key:
+    - jurisdiction
+    - to_key
+    - from_key
+  partition_by:
+    - jurisdiction
+  columns:
+  - name: dv_source_version
+    type: string
+    description: dv columns
+  - name: dv_recsrc
+    type: string
+  - name: dv_loaddts
+    nullable: false
+    type: timestamp
+    description: dv columns
+  - name: from_key
+    type: string
+    nullable: false
+  - name: to_key
+    type: string
+    nullable: false
+  - name: jurisdiction
+    type: string
+    nullable: false
+
+input_resources:
+- table_name: silver.h_company
+  format: delta
+  record_source: silver.h_company
+  data_location: s3a://lakehouse-silver/h_company
+  process_job: jobs/silver/bridge_company_verified_reg/bridge_company_verified_reg.py
+  filter:  "{{ filter }}"
+
+- table_name: silver.l_company_verification
+  format: delta
+  record_source: silver.l_company_verification
+  data_location: s3a://lakehouse-silver/l_company_verification
+  process_job: jobs/silver/s_company_levenshtein_verification/s_company_levenshtein_verification.py
+  filter:  "{{ filter }}"
